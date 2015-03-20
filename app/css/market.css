@@ -1,0 +1,89 @@
+body{}
+.Area{ height:100%; min-height:1000px; overflow:hidden; }
+.Area .centerArea{ width: 80%; margin: 0 auto 150px; padding-top: 120px;-webkit-animation:p201503031119 1.5s;animation:p201503031119 1.5s;}
+@-webkit-keyframes p201503031119{
+	0%{ opacity:0; }
+	50%{opacity:0; }
+	100%{opacity:1; }
+}
+@keyframes p201503031119{
+	0%{  opacity:0;  }
+	50%{ opacity:0; }
+	100%{opacity:1; }
+}
+.topbg{width:100%; height:400px;background:url(../img/market/bg2.jpg) fixed;  margin:0 auto;position:relative;}
+html.agent-ie .topbg{width:100%; height:400px;background:url(../img/market/bg2.jpg);  margin:0 auto;position:relative;}
+.topbg  .title1{ width:450px; position:absolute;  left:50%; margin-left:-220px; margin-top:200px;}
+
+.Area .centerArea .contantArea{ width:90%; margin:0 auto; }
+.Area .centerArea .contantArea  h1{ display: block; height: 50px; font-size: 30px; line-height: 50px; font-weight: 900; color: #555; background: url(../img/product/lines_bar.jpg) bottom no-repeat; letter-spacing: 3px; margin-bottom:30px; }
+.Area .centerArea .contantArea  h1 .floatright { font-size: 10px; font-weight: 100; color: #999; letter-spacing: 3px; }
+.Area .centerArea .contantArea  h1 .small{font-size:22px;}
+
+.Area .centerArea .contantArea .boxArea{width: 100%; margin-top:30px; margin-bottom:80px; }
+.Area .centerArea .contantArea .boxArea .topTitle{ width:300px; margin: 50px auto; height:50px;}
+.Area .centerArea .contantArea .boxArea .topTitle h2{float:left;margin-left:10px;font-size:28px; color:#afc440; margin-bottom:50px;letter-spacing:3px; }
+.Area .centerArea .contantArea .boxArea .topTitle .icon{width:60px;float:left; margin-top:-10px; margin-left:50px;}
+.Area .centerArea .contantArea .boxArea .topTitle .icon.H2{width:80px;margin-top:-30px;  margin-left:30px;}
+
+.Area .centerArea .contantArea .boxArea .pic{width:100%;margin-bottom:30px; position:relative; overflow:hidden; }
+.Area .centerArea .contantArea .boxArea .pic img{width:100%; float:left; }
+.Area .centerArea .contantArea .boxArea .pic .hoverBox{ position: absolute; left: 0; top: 0;width:100%;height:100%; overflow:hidden;-webkit-transition: all 0.8s; transition: all 0.8s; -webkit-transform: translate(-70%, 0); transform: translate(-70%, 0);background:url(../img/product/hover_bg.png) right;}
+.Area .centerArea .contantArea .boxArea .pic:hover .hoverBox{ -webkit-transform: translate(-58px, 0);transform: translate(-58px, 0); }
+.Area .centerArea .contantArea .boxArea .pic .hoverBox .title{  display:block; width:20%; float:right; margin-top:-1.5%; margin-right:6%;font-size:24px;color:#afc440 ;line-height:32px;  }
+.Area .centerArea .contantArea .boxArea .pic .hoverBox .title img{ float:left; width:100%;}
+.Area .centerArea .contantArea .boxArea .pic .hoverBox .text { margin-top: 5%; width:500px; font-size:14px; margin-left:100px; }
+@media screen and (max-width: 1024px) {
+	.Area .centerArea .contantArea .boxArea .pic:hover .hoverBox{ -webkit-transform: translate(-70%, 0);transform: translate(-70%, 0); }
+	.Area .centerArea .contantArea .boxArea .pic .hoverBox .text { display: none; }
+}
+
+.Area .centerArea .contantArea .boxArea .pic .hoverBox .text p{ display:block; float:left; line-height:200%; font-size: 14px; color:#fff;letter-spacing:2px; opacity:0; }
+.Area .centerArea .contantArea .boxArea .pic:hover .hoverBox .text p:nth-of-type(1){-webkit-animation:p201503031177 1.8s;animation:p201503031177 1.8s; opacity:1; }
+.Area .centerArea .contantArea .boxArea .pic:hover .hoverBox .text p:nth-of-type(2){-webkit-animation:p201503031177 2s;animation:p201503031177 2s; opacity:1; }
+@-webkit-keyframes p201503031177{
+	0%{-webkit-transform:translate(0px, 25px) ; opacity:0; }
+	50%{-webkit-transform:translate(0px, 25px) ; opacity:0; }
+	100%{-webkit-transform:translate(0px, 0px) ; opacity:1; }
+}
+@keyframes p201503031177{
+	0%{transform:translate(0px, 25px) ; opacity:0; }
+	50%{transform:translate(0px, 25px) ; opacity:0; }
+	100%{transform:translate(0px, 0px) ; opacity:1; }
+}
+
+.Area .centerArea .contantArea .boxArea .textArea{width: 100%;}
+.Area .centerArea .contantArea .boxArea .listBox{width: 100%; height:280px;margin-top:50px; padding-left:15px;}
+.Area .centerArea .contantArea .boxArea .listBox .listBox_title{ margin-bottom:20px;display:block;width:100px;height:25px;line-height:27px; color:#fff;letter-spacing:; padding:5px; border:2px solid #43a7d8;  background-color:#43a7d8; text-align:center; margin-left:20px; margin-top:50px; }
+.Area .centerArea .contantArea .boxArea .listBox .box{width: 28%;height:250px; float:left; font-size:14px; letter-spacing:2px; padding:15px;border-radius:10px; margin-right:10px; margin-bottom:10px; }
+
+.Area .centerArea .contantArea .boxArea .listBox .box .listBox_item{display:block;font-size:20px; padding:3px; color:#43a7d8;padding-left:10px; padding-bottom:10px; }
+.Area .centerArea .contantArea .boxArea .listBox .box .dotBorder{width:100%; height:10px; overflow:hidden;margin-bottom:10px; background:url(../img/product/dot.jpg) left bottom no-repeat;}
+.Area .centerArea .contantArea .boxArea .listBox .box .listBox_series{color:#43a7d8;margin-bottom:10px;padding-left:10px; }
+.Area .centerArea .contantArea .boxArea .listBox .box a{display:block;color:#6d6d6d;margin-bottom:8px;font-size:14px; padding-left:10px; position:relative;}
+.Area .centerArea .contantArea .boxArea .listBox .box a:hover{color:#43a7d8;}
+.Area .centerArea .contantArea .boxArea .listBox .box .dot{width:6px; height:6px; background-color:#44a6d7; position:absolute; left:-3px;top:11px; border-radius:3px;display:none;}
+.Area .centerArea .contantArea .boxArea .listBox .box a:hover .dot{display:block;}
+
+
+.Area .centerArea .contantArea .boxArea .textArea .set{width: 100%; padding-bottom:50px; margin-bottom:20px; overflow: hidden;}
+.Area .centerArea .contantArea .boxArea .textArea .set.one{ width: 100%; }
+.Area .centerArea .contantArea .boxArea .textArea .set.two{ width: 100%; }
+.Area .centerArea .contantArea .boxArea .textArea .set.three{ width: 100%; margin-top:-30px; }
+.Area .centerArea .contantArea .boxArea .textArea .set h3{display:block;width:240px;height:25px;line-height:27px;font-size:18px;color:#fff; margin-bottom:30px;letter-spacing:3px;margin-top:50px; padding:5px; text-align:center; border:2px solid #43a7d8; margin-left:auto; margin-right:auto; background-color:#43a7d8; }
+.Area .centerArea .contantArea .boxArea .textArea .set  .p1{ margin-left:auto; margin-right:auto;text-align:center; width:80%;font-size:14px; letter-spacing:4px; line-height:22px; color:#666;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

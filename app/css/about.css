@@ -1,0 +1,37 @@
+body{}
+.bg1{ width:100%;    }
+.topbg{width:100%; height:400px;background:url(../img/about/bg3.jpg) center top fixed;  margin:0 auto;position:relative;}
+html.agent-ie .topbg{background:url(../img/about/bg3.jpg) center center; }
+.topbg .title1{ width:350px; position:absolute;  left:150px; bottom:0px;}
+.leftArea{ height:90%; position:relative;overflow:hidden;z-index:2; margin-left:auto; margin-right:auto; margin-bottom:30px;}
+html.agent-ie .contant{padding-left:50px; }
+.leftArea .contant{width:80%;margin-left:auto; margin-right:auto;  padding-left:150px;  position:relative;z-index:1;}
+
+.leftArea .buttonArea{width:10%; border-radius:10px;overflow:hidden; margin-top:130px;float:left; margin-left:100px; background-color:#999;}
+.leftArea  .buttonArea .box{width:100%; height:40px; font-size:12px;line-height:40px;text-align:center; color:#fff; background-color:rgba(0,0,0,0.3); letter-spacing:3px;cursor:pointer; border-bottom:1px solid rgba(255,255,255,0.1); position:relative;}
+.leftArea  .buttonArea .box img { display:none;position:absolute; right:16px; top:15px;width:8px;}
+.leftArea  .buttonArea .box:hover{background-color:rgba(0,0,0,0.4);}
+.leftArea  .buttonArea .box.clicked{background-color:rgba(0,0,0,0.4);}
+.leftArea  .buttonArea .box.clicked  img {display:block;}
+
+.leftArea .story{display:none;float:left; width:80%; font-size: 14px; padding:30px;padding-top:80px; margin-bottom:50px;color:#666; line-height:20px; position:relative;z-index:3;margin-left:auto; margin-right:auto; padding-left:50px;-webkit-animation:p201502111207 1.5s;animation:p201502111207 1.5s; background-position:fixed;}
+.leftArea .story .pic{width: 50%; overflow:hidden; background-color:#777; margin: 0 10px 0px 0; border:3px solid #fff; float:left; }
+.leftArea .story img{ float:left ; width:100%;}
+.leftArea .story.us.hover{display:block;}
+@-webkit-keyframes p201502111207{
+	0%{-webkit-transform: translate(30px,0px); opacity:0; }
+	100%{-webkit-transform: translate(0px,0px);opacity:1; }
+}
+@keyframes p201502111207{
+	0%{ transform: translate(30px,0px); opacity:0;  }
+	100%{ transform: translate(0px,0px);opacity:1; }
+}
+.us.opacity{}
+
+.leftArea .story h1{ display: block; height: 50px; font-size: 30px; line-height: 50px; font-weight: 900; color: #555; background: url(../img/product/lines_bar.jpg) bottom left no-repeat; letter-spacing: 3px; margin-bottom:30px; }
+.leftArea .story p{ text-indent :2em;letter-spacing:2px; margin-bottom: 20px; }
+.leftArea .story.Value.hover{display:block;}
+.leftArea .story.Vision.hover{display:block;}
+.leftArea .story.Team.hover{display:block;}
+.leftArea .story.Ideas.hover{display:block;}
+.leftArea .story.History.hover{display:block;}
