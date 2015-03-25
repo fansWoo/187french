@@ -20,7 +20,7 @@
 		$('.cycle-pager').removeClass('clicked');
 		$(this).addClass('clicked');
   
-    });
+		});
     $(document).scroll(function(){
         var scroll_top = $(document).scrollTop();
         if(scroll_top == 0){
@@ -86,7 +86,10 @@
 			<div class="bottomArea">
 				<div class="box">
 					<div class="picBox">
-						<img src="app/img/index/hover_pic2.jpg" class="pic">
+						<div class="img">
+							<img src="app/img/index/hover_pic2.jpg" class="pic">
+						</div>
+						<div class="border"></div>
 						<div class="hoverBox">
 							<img src="app/img/index/text_about.png">
 						</div>
@@ -97,9 +100,12 @@
 						<div class="enter"></div>
 					</div>
 				</div>
-				<div class="box">
-					<div class="picBox">
-						<img src="app/img/index/hover_pic.jpg" class="pic">
+				<div class="box ">
+					<div class="picBox ">
+						<div class="img">
+							<img src="app/img/index/hover_pic.jpg" class="pic">
+						</div>
+						<div class="border two"></div>
 						<div class="hoverBox">
 							<img src="app/img/index/text1.png">
 						</div>
@@ -112,7 +118,10 @@
 				</div>
 				<div class="box">
 					<div class="picBox">
-						<img src="app/img/index/hover_pic3.jpg" class="pic"> 
+						<div class="img">
+							<img src="app/img/index/hover_pic3.jpg" class="pic"> 
+						</div>
+						<div class="border"></div>
 						<div class="hoverBox">
 							<img src="app/img/index/text_news.png">
 						</div>

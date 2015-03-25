@@ -1,3 +1,17 @@
+ <script>
+$(document).scroll(function(){
+        var scroll_top = $(document).scrollTop();
+        if(scroll_top == 0){
+            $('.scroll_arrow ' ).removeClass('hover');
+    
+        }
+        else if(scroll_top >= 100 && scroll_top < 99999){
+            $('.scroll_arrow').removeClass('hover');
+            $('.scroll_arrow').addClass('hover');
+        }
+		 
+    });
+ </script>
 <div class="topHeader">
 	<div class="contant">
 	
@@ -31,10 +45,10 @@
 			<div class="li">
 				<p>關於我們<br>About us</p>
 				<div class="downbox about">
-					<a href="page/" class="item">品牌故事 <br>Story</a>
-					<a href="page/" class="item">環境介紹 <br>Environment</a>
+					<a href="page/about" class="item">品牌故事 <br>Story</a>
+					<a href="page/about_class" class="item">現場直擊 <br>About class </a>
 					<a href="page/" class="item">甜點介紹&販售 <br>Dessert</a>
-					<a href="page/" class="item">食材&器材販售 <br>Sales</a>
+					<a href="page/about_sales" class="item">食材&器材販售 <br>Sales</a>
 				</div>
 			</div>	
 		</div>
