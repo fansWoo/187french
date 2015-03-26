@@ -33,15 +33,17 @@ $(document).on('click', '.scroll_arrow', function(){
 </script>
 <?=$temp['header_down']?>
 <?=$temp['topheader']?>	
+	<img src="app/img/index/dessert02.png" class="dessert02">
+	
 <div class="Area">
 		<img src="app/img/scroll_arrow.png" class="scroll_arrow">
-		<img src="app/img/index/dessert02.png" class="dessert02">
+		<img src="app/img/index/dessert05.png" class="dessert05">
 		<img src="app/img/index/dessert03.png" class="dessert03">
-		
+		<img src="app/img/about/sales/pie.png" class="pie">
 		<div class="contantArea">
 				<img src="app/img/about/sales/title.png" class="title">
 			<div class="boxArea one">
-				<h1>食材販售</h1>
+				<h1>器材販售</h1>
 				<div class="item">
 					<div class="pic">
 						<div class="img">
@@ -171,8 +173,8 @@ $(document).on('click', '.scroll_arrow', function(){
 		
 		</div>	
 
+		<img src="app/img/index/dessert01.png" class="dessert01">	
 		
-		<img src="app/img/index/dessert01.png" class="dessert01">
 	</div>
-		
+	
 <?=$temp['footer']?>
