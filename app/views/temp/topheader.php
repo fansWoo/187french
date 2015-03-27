@@ -23,15 +23,15 @@ $(document).scroll(function(){
 			<div class="line2"></div>
 			<div class="line3"></div>
 			
-			<a href="page/contact"><div class="li">
+			<a href=""><div class="li">
 				線上報名<br>Register
 				<div class="borderTop"></div>
 			</div></a>
 			<div class="li">
 				<p>最新消息<br>News</p>
 				<div class="downbox news">
-					<a href="news" class="item">最新消息 <br>News</a>
-					<a href="activity" class="item">烘焙大小事 <br>Knowledge</a>
+					<a href="" class="item">最新消息 <br>News</a>
+					<a href="" class="item">烘焙大小事 <br>Knowledge</a>
 				</div>
 			</div>
 			<div class="li">

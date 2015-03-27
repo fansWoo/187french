@@ -201,7 +201,7 @@ $(document).on('click', '.scroll_arrow', function(){
 				<div class="itemArea">
 					<div class="picBox">
 						<div class="pic">
-							<img src="app/img/about/dessert/pic.png" class="img">
+							<img src="app/img/about/dessert/pic6.png" class="img">
 							<img src="app/img/about/dessert/dot.png" class="dot">
 						</div>
 						<img src="app/img/about/dessert/shadow2.png" class="shadow2">
@@ -277,7 +277,7 @@ $(document).on('click', '.scroll_arrow', function(){
 					<div class="itemArea">
 					<div class="picBox">
 						<div class="pic">
-							<img src="app/img/about/dessert/pic.png" class="img">
+							<img src="app/img/about/dessert/pic8.png" class="img">
 							<img src="app/img/about/dessert/dot.png" class="dot">
 						</div>
 						<img src="app/img/about/dessert/shadow2.png" class="shadow2">
@@ -353,7 +353,7 @@ $(document).on('click', '.scroll_arrow', function(){
 				<div class="itemArea">
 					<div class="picBox">
 						<div class="pic">
-							<img src="app/img/about/dessert/pic.png" class="img">
+							<img src="app/img/about/dessert/pic10.png" class="img">
 							<img src="app/img/about/dessert/dot.png" class="dot">
 						</div>
 						<img src="app/img/about/dessert/shadow2.png" class="shadow2">
@@ -391,7 +391,7 @@ $(document).on('click', '.scroll_arrow', function(){
 					<div class="itemArea">
 					<div class="picBox">
 						<div class="pic">
-							<img src="app/img/about/dessert/pic.png" class="img">
+							<img src="app/img/about/dessert/pic11.png" class="img">
 							<img src="app/img/about/dessert/dot.png" class="dot">
 						</div>
 						<img src="app/img/about/dessert/shadow2.png" class="shadow2">
@@ -429,7 +429,7 @@ $(document).on('click', '.scroll_arrow', function(){
 					<div class="itemArea">
 					<div class="picBox">
 						<div class="pic">
-							<img src="app/img/about/dessert/pic.png" class="img">
+							<img src="app/img/about/dessert/pic12.png" class="img">
 							<img src="app/img/about/dessert/dot.png" class="dot">
 						</div>
 						<img src="app/img/about/dessert/shadow2.png" class="shadow2">
@@ -467,7 +467,7 @@ $(document).on('click', '.scroll_arrow', function(){
 					<div class="itemArea">
 					<div class="picBox">
 						<div class="pic">
-							<img src="app/img/about/dessert/pic.png" class="img">
+							<img src="app/img/about/dessert/pic13.png" class="img">
 							<img src="app/img/about/dessert/dot.png" class="dot">
 						</div>
 						<img src="app/img/about/dessert/shadow2.png" class="shadow2">
@@ -505,7 +505,7 @@ $(document).on('click', '.scroll_arrow', function(){
 					<div class="itemArea">
 					<div class="picBox">
 						<div class="pic">
-							<img src="app/img/about/dessert/pic.png" class="img">
+							<img src="app/img/about/dessert/pic14.png" class="img">
 							<img src="app/img/about/dessert/dot.png" class="dot">
 						</div>
 						<img src="app/img/about/dessert/shadow2.png" class="shadow2">
@@ -543,7 +543,7 @@ $(document).on('click', '.scroll_arrow', function(){
 				<div class="itemArea">
 					<div class="picBox">
 						<div class="pic">
-							<img src="app/img/about/dessert/pic.png" class="img">
+							<img src="app/img/about/dessert/pic15.png" class="img">
 							<img src="app/img/about/dessert/dot.png" class="dot">
 						</div>
 						<img src="app/img/about/dessert/shadow2.png" class="shadow2">
@@ -619,7 +619,7 @@ $(document).on('click', '.scroll_arrow', function(){
 				<div class="itemArea">
 					<div class="picBox">
 						<div class="pic">
-							<img src="app/img/about/dessert/pic.png" class="img">
+							<img src="app/img/about/dessert/pic17.png" class="img">
 							<img src="app/img/about/dessert/dot.png" class="dot">
 						</div>
 						<img src="app/img/about/dessert/shadow2.png" class="shadow2">
@@ -657,7 +657,7 @@ $(document).on('click', '.scroll_arrow', function(){
 					<div class="itemArea">
 					<div class="picBox">
 						<div class="pic">
-							<img src="app/img/about/dessert/pic.png" class="img">
+							<img src="app/img/about/dessert/pic18.png" class="img">
 							<img src="app/img/about/dessert/dot.png" class="dot">
 						</div>
 						<img src="app/img/about/dessert/shadow2.png" class="shadow2">
@@ -809,7 +809,7 @@ $(document).on('click', '.scroll_arrow', function(){
 					<div class="itemArea">
 					<div class="picBox">
 						<div class="pic">
-							<img src="app/img/about/dessert/pic.png" class="img">
+							<img src="app/img/about/dessert/pic22.png" class="img">
 							<img src="app/img/about/dessert/dot.png" class="dot">
 						</div>
 						<img src="app/img/about/dessert/shadow2.png" class="shadow2">
@@ -885,7 +885,7 @@ $(document).on('click', '.scroll_arrow', function(){
 					<div class="itemArea">
 					<div class="picBox">
 						<div class="pic">
-							<img src="app/img/about/dessert/pic.png" class="img">
+							<img src="app/img/about/dessert/pic24.png" class="img">
 							<img src="app/img/about/dessert/dot.png" class="dot">
 						</div>
 						<img src="app/img/about/dessert/shadow2.png" class="shadow2">
