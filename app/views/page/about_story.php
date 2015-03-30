@@ -17,7 +17,7 @@ $(document).on('click', '.scroll_arrow', function(){
 <?=$temp['header_down']?>
 <?=$temp['topheader']?>	
 <div class="Area">
-		<img src="app/img/scroll_arrow.png" class="scroll_arrow">
+		
 		<img src="app/img/index/dessert02.png" class="dessert02">
 		<img src="app/img/index/dessert03.png" class="dessert03">
 		<div class="topArea">

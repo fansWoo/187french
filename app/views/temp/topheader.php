@@ -11,8 +11,19 @@ $(document).scroll(function(){
         }
 		 
     });
+	$(function () {
+            $('a[href^=#]').click(function () {
+                var speed = 500;
+                var href = $(this).attr("href");
+                var target = $(href == "#" || href == "" ? 'html' : href);
+                var position = target.offset().top;
+              $("html, body").animate({scrollTop: position}, speed, "swing");
+                    return false;
+            });
+        });//ie 適用 
+
  </script>
-<div class="topHeader">
+<div class="topHeader" id="topHeader">
 	<div class="contant">
 	
 		<a href=""><div class="logoArea">
@@ -23,15 +34,15 @@ $(document).scroll(function(){
 			<div class="line2"></div>
 			<div class="line3"></div>
 			
-			<a href=""><div class="li">
+			<a href="page/contact"><div class="li">
 				線上報名<br>Register
 				<div class="borderTop"></div>
 			</div></a>
 			<div class="li">
 				<p>最新消息<br>News</p>
 				<div class="downbox news">
-					<a href="" class="item">最新消息 <br>News</a>
-					<a href="" class="item">烘焙大小事 <br>Knowledge</a>
+					<a href="page/news_news" class="item">最新消息 <br>News</a>
+					<a href="page/news_knowledge" class="item">烘焙大小事 <br>Knowledge</a>
 				</div>
 			</div>
 			<div class="li">
@@ -55,3 +66,4 @@ $(document).scroll(function(){
 	</div>
 		
 </div>
+<a href="#topHeader"><img src="app/img/scroll_arrow.png" class="scroll_arrow"></a>

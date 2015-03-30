@@ -36,7 +36,7 @@ $(document).on('click', '.scroll_arrow', function(){
 	<img src="app/img/index/dessert02.png" class="dessert02">
 	
 <div class="Area">
-		<img src="app/img/scroll_arrow.png" class="scroll_arrow">
+		
 		<img src="app/img/index/dessert05.png" class="dessert05">
 		<img src="app/img/index/dessert03.png" class="dessert03">
 		<img src="app/img/about/sales/pie.png" class="pie">

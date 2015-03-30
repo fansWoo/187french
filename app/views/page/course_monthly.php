@@ -36,7 +36,6 @@ $(document).on('click', '.scroll_arrow', function(){
 	<img src="app/img/index/dessert02.png" class="dessert02">
 	
 <div class="Area">
-		<img src="app/img/scroll_arrow.png" class="scroll_arrow">
 		<img src="app/img/index/dessert05.png" class="dessert05">
 		<img src="app/img/index/dessert03.png" class="dessert03">
 		<img src="app/img/index/dessert06.png" class="dessert06">
@@ -53,13 +52,14 @@ $(document).on('click', '.scroll_arrow', function(){
 								</div>
 								<img src="app/img/about/dessert/shadow2.png" class="shadow2">
 								<div class="hoverBox">
-									<p>這款來自法國的經典小蛋糕Financier，直接音譯便是大家所熟悉的「費南雪」...</p>
+									<p>這款來自法國的經典小蛋糕Fin<br>ancier，直接音譯便是大家所熟悉的「費南雪」...</p>
+									
 								</div>
 							</div>
 						</a>
 					</div>
 					<div class="textBox">
-						<img src="app/img/course/title2.png" class="title2">
+						
 						<h2>費南雪-原味、榛果、抹茶栗子</h2>
 						<p>上課時間：</p>
 						<p>3/07(六)14:00~17:00</p>
@@ -79,13 +79,13 @@ $(document).on('click', '.scroll_arrow', function(){
 								</div>
 								<img src="app/img/about/dessert/shadow2.png" class="shadow2">
 								<div class="hoverBox">
-									<p>這款來自法國的經典小蛋糕Financier，直接音譯便是大家所熟悉的「費南雪」...</p>
+									<p>這款來自法國的經典小蛋糕Fin<br>ancier，直接音譯便是大家所熟悉的「費南雪」...</p>
 								</div>
 							</div>
 						</a>
 					</div>
 					<div class="textBox">
-						<img src="app/img/course/title2.png" class="title2">
+						
 						<h2>費南雪-原味、榛果、抹茶栗子</h2>
 						<p>上課時間：</p>
 						<p>3/07(六)14:00~17:00</p>
@@ -105,13 +105,13 @@ $(document).on('click', '.scroll_arrow', function(){
 								</div>
 								<img src="app/img/about/dessert/shadow2.png" class="shadow2">
 								<div class="hoverBox">
-									<p>這款來自法國的經典小蛋糕Financier，直接音譯便是大家所熟悉的「費南雪」...</p>
+									<p>這款來自法國的經典小蛋糕Fin<br>ancier，直接音譯便是大家所熟悉的「費南雪」...</p>
 								</div>
 							</div>
 						</a>
 					</div>
 					<div class="textBox">
-						<img src="app/img/course/title2.png" class="title2">
+						
 						<h2>費南雪-原味、榛果、抹茶栗子</h2>
 						<p>上課時間：</p>
 						<p>3/07(六)14:00~17:00</p>
@@ -131,13 +131,13 @@ $(document).on('click', '.scroll_arrow', function(){
 								</div>
 								<img src="app/img/about/dessert/shadow2.png" class="shadow2">
 								<div class="hoverBox">
-									<p>這款來自法國的經典小蛋糕Financier，直接音譯便是大家所熟悉的「費南雪」...</p>
+									<p>這款來自法國的經典小蛋糕Fin<br>ancier，直接音譯便是大家所熟悉的「費南雪」...</p>
 								</div>
 							</div>
 						</a>
 					</div>
 					<div class="textBox">
-						<img src="app/img/course/title2.png" class="title2">
+						
 						<h2>費南雪-原味、榛果、抹茶栗子</h2>
 						<p>上課時間：</p>
 						<p>3/07(六)14:00~17:00</p>
@@ -157,13 +157,13 @@ $(document).on('click', '.scroll_arrow', function(){
 								</div>
 								<img src="app/img/about/dessert/shadow2.png" class="shadow2">
 								<div class="hoverBox">
-									<p>這款來自法國的經典小蛋糕Financier，直接音譯便是大家所熟悉的「費南雪」...</p>
+									<p>這款來自法國的經典小蛋糕Fin<br>ancier，直接音譯便是大家所熟悉的「費南雪」...</p>
 								</div>
 							</div>
 						</a>
 					</div>
 					<div class="textBox">
-						<img src="app/img/course/title2.png" class="title2">
+						
 						<h2>費南雪-原味、榛果、抹茶栗子</h2>
 						<p>上課時間：</p>
 						<p>3/07(六)14:00~17:00</p>
@@ -183,13 +183,13 @@ $(document).on('click', '.scroll_arrow', function(){
 								</div>
 								<img src="app/img/about/dessert/shadow2.png" class="shadow2">
 								<div class="hoverBox">
-									<p>這款來自法國的經典小蛋糕Financier，直接音譯便是大家所熟悉的「費南雪」...</p>
+									<p>這款來自法國的經典小蛋糕Fin<br>ancier，直接音譯便是大家所熟悉的「費南雪」...</p>
 								</div>
 							</div>
 						</a>
 					</div>
 					<div class="textBox">
-						<img src="app/img/course/title2.png" class="title2">
+						
 						<h2>費南雪-原味、榛果、抹茶栗子</h2>
 						<p>上課時間：</p>
 						<p>3/07(六)14:00~17:00</p>
@@ -209,13 +209,13 @@ $(document).on('click', '.scroll_arrow', function(){
 								</div>
 								<img src="app/img/about/dessert/shadow2.png" class="shadow2">
 								<div class="hoverBox">
-									<p>這款來自法國的經典小蛋糕Financier，直接音譯便是大家所熟悉的「費南雪」...</p>
+									<p>這款來自法國的經典小蛋糕Fin<br>ancier，直接音譯便是大家所熟悉的「費南雪」...</p>
 								</div>
 							</div>
 						</a>
 					</div>
 					<div class="textBox">
-						<img src="app/img/course/title2.png" class="title2">
+				
 						<h2>費南雪-原味、榛果、抹茶栗子</h2>
 						<p>上課時間：</p>
 						<p>3/07(六)14:00~17:00</p>
@@ -235,13 +235,13 @@ $(document).on('click', '.scroll_arrow', function(){
 								</div>
 								<img src="app/img/about/dessert/shadow2.png" class="shadow2">
 								<div class="hoverBox">
-									<p>這款來自法國的經典小蛋糕Financier，直接音譯便是大家所熟悉的「費南雪」...</p>
+									<p>這款來自法國的經典小蛋糕Fin<br>ancier，直接音譯便是大家所熟悉的「費南雪」...</p>
 								</div>
 							</div>
 						</a>
 					</div>
 					<div class="textBox">
-						<img src="app/img/course/title2.png" class="title2">
+						
 						<h2>費南雪-原味、榛果、抹茶栗子</h2>
 						<p>上課時間：</p>
 						<p>3/07(六)14:00~17:00</p>
@@ -261,13 +261,13 @@ $(document).on('click', '.scroll_arrow', function(){
 								</div>
 								<img src="app/img/about/dessert/shadow2.png" class="shadow2">
 								<div class="hoverBox">
-									<p>這款來自法國的經典小蛋糕Financier，直接音譯便是大家所熟悉的「費南雪」...</p>
+									<p>這款來自法國的經典小蛋糕Fin<br>ancier，直接音譯便是大家所熟悉的「費南雪」...</p>
 								</div>
 							</div>
 						</a>
 					</div>
 					<div class="textBox">
-						<img src="app/img/course/title2.png" class="title2">
+					
 						<h2>費南雪-原味、榛果、抹茶栗子</h2>
 						<p>上課時間：</p>
 						<p>3/07(六)14:00~17:00</p>

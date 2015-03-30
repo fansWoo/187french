@@ -37,7 +37,6 @@ $(document).on('click', '.scroll_arrow', function(){
 	
 <div class="Area">
 		<img src="app/img/index/dessert02.png" class="dessert02">
-		<img src="app/img/scroll_arrow.png" class="scroll_arrow">
 		<img src="app/img/index/dessert05.png" class="dessert05">
 
 		
@@ -58,7 +57,7 @@ $(document).on('click', '.scroll_arrow', function(){
 						</div>
 					</div>
 				</div>
-				<img src="app/img/course/title2.png" class="title2">
+				
 				<h2>費南雪-原味、榛果、抹茶栗子</h2>
 					<p>這款來自法國的經典小蛋糕Financier，直接音譯便是大家所熟悉的「費南雪」，由字義翻則是「金融家蛋糕」!
 

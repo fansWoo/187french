@@ -20,10 +20,9 @@ body{}
 .Area .contantArea  .boxArea .itemArea:hover .picBox .pic .img{-webkit-transform: scale(1.1);transform: scale(1.1);overflow:hidden;}
 .itemArea .picBox .pic .dot{position:absolute;bottom:0px;left:0px; width:110px;}
 .itemArea .picBox .shadow2{width:240px;height:240px;position:absolute;z-index:2;top:0px;left:0px;}
-.itemArea .picBox .hoverBox{position:absolute;bottom:0px;left:0px;width:240px;height:100px; background-color:rgba(0,0,0,0.6); z-index:55;opacity:1;-webkit-transition:all 0.5s; transition:all  0.5s;-webkit-transform: translate(0px, 160px);transform: translate(0px, 160px);}
-.itemArea .picBox .hoverBox p{font-size:14px; letter-spacing:2px;line-height:24px;color:#fff; padding:10px;}
+.itemArea .picBox .hoverBox{position:absolute;bottom:0px;left:0px;width:240px;height:70px; overflow:hidden; background-color:rgba(0,0,0,0.6); z-index:55;opacity:1;-webkit-transition:all 0.5s; transition:all  0.5s;-webkit-transform: translate(0px, 160px);transform: translate(0px, 160px);}
+.itemArea .picBox .hoverBox p{width:220px;height:100px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:14px; letter-spacing:2px;line-height:24px;color:#fff;padding:10px;display: }
 .itemArea:hover .hoverBox{opacity:1; -webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}
-
 
 .itemArea  .textBox{font-size:14px; letter-spacing:2px;line-height:24px;color:#6a3c22; font-weight:600; }
 .itemArea  .textBox .title2{width:100px;}

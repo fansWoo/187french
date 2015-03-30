@@ -61,7 +61,7 @@
 <?=$temp['topheader']?>
 
 	<div class="Area">
-		<img src="app/img/scroll_arrow.png" class="scroll_arrow">
+		
 		<img src="app/img/index/dessert02.png" class="dessert02">
 		<img src="app/img/index/dessert03.png" class="dessert03">
 		<div class="contantArea">
@@ -91,7 +91,7 @@
 						</div>
 						<div class="border"></div>
 						<div class="hoverBox">
-							<img src="app/img/index/text_about.png">
+							<img src="app/img/index/text1.png">
 						</div>
 						<img src="app/img/index/shadow.png" class="shadow">
 					</div>
@@ -107,7 +107,7 @@
 						</div>
 						<div class="border two"></div>
 						<div class="hoverBox">
-							<img src="app/img/index/text1.png">
+							<img src="app/img/index/text_news.png">
 						</div>
 						<img src="app/img/index/shadow.png" class="shadow">
 					</div>
@@ -123,7 +123,7 @@
 						</div>
 						<div class="border"></div>
 						<div class="hoverBox">
-							<img src="app/img/index/text_news.png">
+							<img src="app/img/index/text_about.png">
 						</div>
 						<img src="app/img/index/shadow.png" class="shadow">
 					</div>

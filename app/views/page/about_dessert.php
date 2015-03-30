@@ -35,7 +35,7 @@ $(document).on('click', '.scroll_arrow', function(){
 <?=$temp['topheader']?>	
 <img src="app/img/index/dessert04.png" class="dessert04">
 <div class="Area">
-		<img src="app/img/scroll_arrow.png" class="scroll_arrow">
+		
 		<img src="app/img/index/dessert02.png" class="dessert02">
 		<img src="app/img/index/dessert03.png" class="dessert03">
 		
@@ -57,10 +57,6 @@ $(document).on('click', '.scroll_arrow', function(){
 							<tr>
 								<td class="small">類型</td>
 								<td>常溫點心</td>
-							</tr>
-							<tr>
-								<td class="small">法文名</td>
-								<td>Madeleine</td>
 							</tr>
 							<tr>
 								<td class="small">售價</td>
@@ -99,10 +95,6 @@ $(document).on('click', '.scroll_arrow', function(){
 								<td>常溫點心</td>
 							</tr>
 							<tr>
-								<td class="small">法文名</td>
-								<td>Cannelé</td>
-							</tr>
-							<tr>
 								<td class="small">售價</td>
 								<td></td>
 							</tr>
@@ -139,10 +131,6 @@ $(document).on('click', '.scroll_arrow', function(){
 								<td>常溫點心</td>
 							</tr>
 							<tr>
-								<td class="small">法文名</td>
-								<td>Tigre</td>
-							</tr>
-							<tr>
 								<td class="small">售價</td>
 								<td></td>
 							</tr>
@@ -175,10 +163,6 @@ $(document).on('click', '.scroll_arrow', function(){
 							<tr>
 								<td class="small">類型</td>
 								<td>常溫點心</td>
-							</tr>
-							<tr>
-								<td class="small">法文名</td>
-								<td></td>
 							</tr>
 							<tr>
 								<td class="small">售價</td>
@@ -215,10 +199,6 @@ $(document).on('click', '.scroll_arrow', function(){
 								<td>常溫點心</td>
 							</tr>
 							<tr>
-								<td class="small">法文名</td>
-								<td>Quatre-quarts</td>
-							</tr>
-							<tr>
 								<td class="small">售價</td>
 								<td></td>
 							</tr>
@@ -251,10 +231,6 @@ $(document).on('click', '.scroll_arrow', function(){
 							<tr>
 								<td class="small">類型</td>
 								<td>其他點心</td>
-							</tr>
-							<tr>
-								<td class="small">法文名</td>
-								<td>Truffle</td>
 							</tr>
 							<tr>
 								<td class="small">售價</td>
@@ -291,10 +267,6 @@ $(document).on('click', '.scroll_arrow', function(){
 								<td>其他點心</td>
 							</tr>
 							<tr>
-								<td class="small">法文名</td>
-								<td>Macaron</td>
-							</tr>
-							<tr>
 								<td class="small">售價</td>
 								<td></td>
 							</tr>
@@ -327,10 +299,6 @@ $(document).on('click', '.scroll_arrow', function(){
 							<tr>
 								<td class="small">類型</td>
 								<td>其他點心</td>
-							</tr>
-							<tr>
-								<td class="small">法文名</td>
-								<td>Panforte</td>
 							</tr>
 							<tr>
 								<td class="small">售價</td>
@@ -367,10 +335,6 @@ $(document).on('click', '.scroll_arrow', function(){
 								<td>其他點心</td>
 							</tr>
 							<tr>
-								<td class="small">法文名</td>
-								<td>Confiture</td>
-							</tr>
-							<tr>
 								<td class="small">售價</td>
 								<td></td>
 							</tr>
@@ -403,10 +367,6 @@ $(document).on('click', '.scroll_arrow', function(){
 							<tr>
 								<td class="small">類型</td>
 								<td>其他點心</td>
-							</tr>
-							<tr>
-								<td class="small">法文名</td>
-								<td>Dacquoise</td>
 							</tr>
 							<tr>
 								<td class="small">售價</td>
@@ -443,10 +403,6 @@ $(document).on('click', '.scroll_arrow', function(){
 								<td>餅乾</td>
 							</tr>
 							<tr>
-								<td class="small">法文名</td>
-								<td></td>
-							</tr>
-							<tr>
 								<td class="small">售價</td>
 								<td></td>
 							</tr>
@@ -479,10 +435,6 @@ $(document).on('click', '.scroll_arrow', function(){
 							<tr>
 								<td class="small">類型</td>
 								<td>餅乾</td>
-							</tr>
-							<tr>
-								<td class="small">法文名</td>
-								<td></td>
 							</tr>
 							<tr>
 								<td class="small">售價</td>
@@ -519,10 +471,6 @@ $(document).on('click', '.scroll_arrow', function(){
 								<td>慕斯蛋糕</td>
 							</tr>
 							<tr>
-								<td class="small">法文名</td>
-								<td></td>
-							</tr>
-							<tr>
 								<td class="small">售價</td>
 								<td></td>
 							</tr>
@@ -555,10 +503,6 @@ $(document).on('click', '.scroll_arrow', function(){
 							<tr>
 								<td class="small">類型</td>
 								<td>慕斯蛋糕</td>
-							</tr>
-							<tr>
-								<td class="small">法文名</td>
-								<td></td>
 							</tr>
 							<tr>
 								<td class="small">售價</td>
@@ -595,10 +539,6 @@ $(document).on('click', '.scroll_arrow', function(){
 								<td>慕斯蛋糕</td>
 							</tr>
 							<tr>
-								<td class="small">法文名</td>
-								<td>Fraisier</td>
-							</tr>
-							<tr>
 								<td class="small">售價</td>
 								<td></td>
 							</tr>
@@ -631,10 +571,6 @@ $(document).on('click', '.scroll_arrow', function(){
 							<tr>
 								<td class="small">類型</td>
 								<td>塔派</td>
-							</tr>
-							<tr>
-								<td class="small">法文名</td>
-								<td></td>
 							</tr>
 							<tr>
 								<td class="small">售價</td>
@@ -671,10 +607,6 @@ $(document).on('click', '.scroll_arrow', function(){
 								<td>塔派</td>
 							</tr>
 							<tr>
-								<td class="small">法文名</td>
-								<td></td>
-							</tr>
-							<tr>
 								<td class="small">售價</td>
 								<td></td>
 							</tr>
@@ -707,10 +639,6 @@ $(document).on('click', '.scroll_arrow', function(){
 							<tr>
 								<td class="small">類型</td>
 								<td>塔派</td>
-							</tr>
-							<tr>
-								<td class="small">法文名</td>
-								<td></td>
 							</tr>
 							<tr>
 								<td class="small">售價</td>
@@ -747,10 +675,6 @@ $(document).on('click', '.scroll_arrow', function(){
 								<td>塔派</td>
 							</tr>
 							<tr>
-								<td class="small">法文名</td>
-								<td></td>
-							</tr>
-							<tr>
 								<td class="small">售價</td>
 								<td></td>
 							</tr>
@@ -783,10 +707,6 @@ $(document).on('click', '.scroll_arrow', function(){
 							<tr>
 								<td class="small">類型</td>
 								<td>塔派</td>
-							</tr>
-							<tr>
-								<td class="small">法文名</td>
-								<td></td>
 							</tr>
 							<tr>
 								<td class="small">售價</td>
@@ -823,10 +743,6 @@ $(document).on('click', '.scroll_arrow', function(){
 								<td>塔派</td>
 							</tr>
 							<tr>
-								<td class="small">法文名</td>
-								<td></td>
-							</tr>
-							<tr>
 								<td class="small">售價</td>
 								<td></td>
 							</tr>
@@ -859,10 +775,6 @@ $(document).on('click', '.scroll_arrow', function(){
 							<tr>
 								<td class="small">類型</td>
 								<td>塔派</td>
-							</tr>
-							<tr>
-								<td class="small">法文名</td>
-								<td></td>
 							</tr>
 							<tr>
 								<td class="small">售價</td>
@@ -899,10 +811,6 @@ $(document).on('click', '.scroll_arrow', function(){
 								<td>塔派</td>
 							</tr>
 							<tr>
-								<td class="small">法文名</td>
-								<td></td>
-							</tr>
-							<tr>
 								<td class="small">售價</td>
 								<td></td>
 							</tr>
@@ -937,10 +845,6 @@ $(document).on('click', '.scroll_arrow', function(){
 								<td>塔派</td>
 							</tr>
 							<tr>
-								<td class="small">法文名</td>
-								<td>Galette des rois</td>
-							</tr>
-							<tr>
 								<td class="small">售價</td>
 								<td>1400元/7吋</td>
 							</tr>
@@ -973,10 +877,6 @@ $(document).on('click', '.scroll_arrow', function(){
 							<tr>
 								<td class="small">類型</td>
 								<td>塔派</td>
-							</tr>
-							<tr>
-								<td class="small">法文名</td>
-								<td></td>
 							</tr>
 							<tr>
 								<td class="small">售價</td>

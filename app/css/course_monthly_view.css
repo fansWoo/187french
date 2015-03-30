@@ -14,6 +14,7 @@ body{}
 .Area .contantArea .topBox{width:100%; border-bottom:1px solid #eee; height:60px; position:relative;}
 .Area .contantArea .topBox  img{ float:left;}
 .Area .contantArea .topBox  p{float:right; position:absolute;bottom:10px; right:0px; color:#fff;font-size:14px; letter-spacing:3px;}
+
 .Area .contantArea  .boxArea{ clear:both;width:900px; margin:50px auto;padding-left:20px; position:relative; }
 
 .Area .contantArea  .boxArea .itemArea{width:358px;  margin-right:40px; float:left; margin-bottom:0px; padding-bottom:15px; }

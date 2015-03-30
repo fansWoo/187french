@@ -1,71 +1,62 @@
-.Area{ height:100%; min-height:1100px; overflow:hidden; background:;}
-.Area .bg1{ position:absolute; right:-200px; top:100px; opacity:0.5; overflow:hidden; }
-.Area .centerArea{ width: 960px; margin: 0 auto 150px; padding-top: 60px;-webkit-animation:p201503031119 1.5s;animation:p201503031119 1.5s;margin-left:auto; margin-right:auto; position:relative; z-index:88; overflow:hidden; }
-@-webkit-keyframes p201503031119{
-	0%{ opacity:0; }
-	50%{opacity:0; }
-	100%{opacity:1; }
-}
-@keyframes p201503031119{
-	0%{  opacity:0;  }
-	50%{ opacity:0; }
-	100%{opacity:1; }
-}
+body{}
+/**********************左邊選單*********************************/
+.Area{width:100%;  margin-bottom:50px; padding-bottom:50px; overflow:hidden;position:relative;}
 
-.topbg{width:100%; height:400px;background:url(../img/contact/bg3.jpg)fixed;  margin:0 auto;position:relative;}
-html.agent-ie .topbg{background:url(../img/contact/bg2.jpg); margin:0 auto;position:relative;}
-.topbg  .title1{ width:450px; position:absolute;  left:50%; margin-left:-240px; margin-top:200px;}
-
-.Area .centerArea .contantArea{ width:960px; margin-left:auto; margin-right:auto; }
-.Area .centerArea .contantArea  h1{ display: block; width:960px; height: 50px; font-size: 30px; line-height: 50px; font-weight: 900; color: #555; background: url(../img/product/lines_bar.jpg) bottom  left no-repeat; letter-spacing: 3px; margin-bottom:30px; }
-
-.Area .centerArea .contantArea .leftBoxArea{ width:476px;float:left;}
-.Area .centerArea .contantArea .leftBoxArea .contactBox{width:100%;height:250px; }
-.Area .centerArea .contantArea .leftBoxArea .contactBox .textBox{width:195px; height:210px;  float:left; font-size:14px; color:#fff;  padding:20px; position:relative;background-color:#666;-webkit-transition:all  0.1s; transition:all  0.1s;  }
-.Area .centerArea .contantArea .leftBoxArea .contactBox .textBox.one{background-color:#43a7d8;}
-.Area .centerArea .contantArea .leftBoxArea .contactBox .textBox.two{background-color:#afc440;}
-.Area .centerArea .contantArea .leftBoxArea .contactBox .textBox .arrow{background-color:#afc440;}
-.Area .centerArea .contantArea .leftBoxArea .contactBox .textBox .arrow1{background-color:#43a7d8;}
-
-.Area .centerArea .contantArea .leftBoxArea .contactBox .textBox .arrow{width:25px; height:25px; -webkit-transform:rotate(-45deg);position:absolute;left:-10px;top:110px;}
-.Area .centerArea .contantArea .leftBoxArea .contactBox .textBox .arrow1{width:25px; height:25px; -webkit-transform:rotate(-45deg);position:absolute;right:-10px;top:110px; z-index:1; }
-
-.Area .centerArea .contantArea .leftBoxArea .contactBox .textBox p{margin-left:10px; letter-spacing:1px; line-height:22px; position:relative; z-index:3;}
-.Area .centerArea .contantArea .leftBoxArea .contactBox:nth-of-type(3)  .textBox{text-align:center;}
-.Area .centerArea .contantArea .leftBoxArea .contactBox:nth-of-type(3)  .textBox img{margin-top:30px;}
-.Area .centerArea .contantArea .leftBoxArea .contactBox .textBox h2{text-align:center; font-size:18px; padding-bottom:5px; margin-bottom:5px; border-bottom:1px solid rgba(255,255,255,0.2);}
-.Area .centerArea .contantArea .leftBoxArea .contactBox .textBox .pic{ display:block; margin-left:auto; margin-right:auto; width:29%; margin-top:5px;}
-.Area .centerArea .contantArea .leftBoxArea .contactBox #mapBox{width:235px;height:249px;background-color:#888; float:left;overflow :hidden; border-right:1px solid #43a7d8;border-top:1px solid #43a7d8;}
-.Area .centerArea .contantArea .leftBoxArea .contactBox #mapBox2{width:235px;height:249px;background-color:#888; float:left;overflow :hidden;border-left:1px solid #afc440;}
-.Area .centerArea .contantArea .leftBoxArea .contactBox #mapBox3{width:235px;height:249px;background-color:#888; float:left;overflow :hidden; border-right:1px solid #43a7d8;border-bottom:1px solid #43a7d8;}
+.dessert01{position:absolute;z-index:1;width:350px;left:-80px;top:1150px;}
+.Area .dessert02{position:absolute;z-index:1;width:350px; right:0px; bottom:950px;}
+.Area .dessert03{display:none;position:absolute;z-index:1;width:250px; left:-60px; top:600px;}
+.Area .pic1{position:absolute;z-index:1; right:-550px; top:120px;}
+.Area .contantArea{width:100%;margin:0px auto;position:relative; z-index:2;overflow:hidden; margin-top:250px; }
+.contantArea .contactBox{width:800px;height:840px;margin:0px auto; font-size:14px;letter-spacing:3px; line-height:24px;color:#fff; margin-bottom:0px;position:relative; }
+.contantArea .contactBox .title{width:400px;}
+.contantArea .contactBox .slogan{width:700px; margin-top:20px;}
+.contantArea .contactBox .textBox{width:470px; color:#fff; margin-top:10px;}
+.contantArea .contactBox .textBox  .course{width:470px; margin-bottom:30px; }
+.contantArea .contactBox .textBox  .course p{margin-bottom:5px; font-weight:600;}
+.contantArea .contactBox .textBox  .course .big{font-size:18px; margin-right:10px;}
+.contantArea .contactBox .textBox  .box{width:470px;height:50px;  padding-bottom:20px; border-bottom:1px solid rgba(255,255,255,0.5); }
+.contantArea .contactBox .textBox  .box .pic {float:left; width:60px; height:60px; }
+.contantArea .contactBox .textBox  .box .pic img{ width:100%;}
+.contantArea .contactBox .textBox  .box .right{float:left; margin-left:20px; margin-top:20px;font-weight:600; font-size:16px; }
+.contantArea .contactBox .textBox  .box.map{width:500px;height:380px; }
+.contantArea .contactBox .textBox  .box.map #mapBox{width:470px;height:250px;float:left;overflow:hidden; margin-top:30px; border-radius:10px; border:1px solid #fff; margin-bottom:20px;}
+.contantArea .contactBox .bottomtext{clear:both; font-weight:600; }
 
 
-.Area .centerArea .contantArea .rightBoxArea{width:480px; float:left; color:#666;}
-.Area .centerArea .contantArea .rightBoxArea  h3{text-align:center; font-size:26px; letter-spacing:3px;margin:0px auto 0px auto;font-weight:600;position:relative; z-index:9; padding-top:80px;}
-.Area .centerArea .contantArea .rightBoxArea  h2{ width:430px;text-align:center; font-size:13px;letter-spacing:3px;margin:20px auto 40px auto;position:relative; z-index:9; line-height:22px; }
-.Area .centerArea .contantArea .rightBoxArea .form{width:400px;margin:0px auto 0px auto; }
-.Area .centerArea .contantArea .rightBoxArea .box{width:400px; height:30px;margin-bottom:5px;}
-.Area .centerArea .contantArea .rightBoxArea .box p{float:left; letter-spacing:2px; padding-top:3px;}
-.Area .centerArea .contantArea .rightBoxArea .box .input1{float:left;width:290px; background-color:rgba(255,255,255,0.7); border:1 solid #bababa;border-radius:8px; color:#888; float:right; font-size:12px;padding:2px; padding-left:6px; }
-.Area .centerArea .contantArea .rightBoxArea .box:nth-of-type(5){width:300px; height:250px;border-bottom:none; }
-.Area .centerArea .contantArea .rightBoxArea .box textarea{width:380px;background-color:rgba(255,255,255,0.7); height:200px;border-radius:10px; margin-top:20px; padding:10px; color:#888; font-size:12px; }
-html.agent-ie .Area .centerArea .contantArea .rightBoxArea .box textarea{ border-radius:0px;  }
-.Area .centerArea .contantArea .rightBoxArea .box select{ background-color:rgba(255,255,255,0.7);border-radius:8px; font-size:12px; margin-left:20px;padding:2px;}
-html.agent-ie .Area .centerArea .contantArea .rightBoxArea .box select{ border-radius:0px;  }
-.bottom{width:110px;height:25px; background-color:#eee;color:#43a7d8;padding:5px; line-height:25px; text-align:center; border:1px solid #bababa; box-shadow:1px 1px 1px rgba(0,0,0,0.3); margin:30px auto 80px auto;border-radius:5px;letter-spacing:2px }
-::-webkit-input-placeholder { /* WebKit browsers */
-    color:    rgba(255,255,255,0.5);
-	letter-spacing:2px;
-}
-:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-    color:    rgba(255,255,255,0.5);
-	letter-spacing:2px;
-}
-::-moz-placeholder { /* Mozilla Firefox 19+ */
-    color:    rgba(255,255,255,0.5);
-	letter-spacing:2px;
-}
-:-ms-input-placeholder { /* Internet Explorer 10+ */
-    color:    rgba(255,255,255,0.5);
-	letter-spacing:2px;
-}
+
+
+.contantArea .SignUpBox {width:850px;margin:0px auto; margin-bottom:50px;position:relative; color:#fff;letter-spacing:3px;font-weight:600;position:relative;}
+.contantArea .SignUpBox .pic2{position:absolute;left:-450px;top:780px;width:750px;}
+.contantArea .SignUpBox  .title{width:400px;}
+.contantArea .SignUpBox .processBox{width:810px; position:relative; padding-left:40px; }
+.contantArea .SignUpBox .processBox .line{width:1px; height:200px; border-left:1px dotted #fff; position:absolute; left:405px; top:80px; }
+.contantArea .SignUpBox  h1{font-size:22px; margin-top:50px; clear:both; margin-bottom:40px;}
+.contantArea .SignUpBox .processBox .box{width:360px; float:left;  margin-right:40px; margin-bottom:60px; } 
+.contantArea .SignUpBox .processBox .box h2{ width:180px; height:30px; line-height:30px; margin-left:auto; margin-right:auto;border:2px solid #fff;text-align:center; margin-bottom:30px; font-size:18px; background-color:rgba(255,255,255,0.3);}
+.contantArea .SignUpBox .processBox .box p{display:block; padding:10px; margin-bottom:5px;font-size:14px;  position:relative; }
+.contantArea .SignUpBox .processBox .box  span{display:block; width:17px; height:20px; background-color:#fff; border-radius:20px; color:#67bfaa; position:absolute; text-align:center; line-height:20px;font-size:12px; left:-19px; top:13px; padding-left:3px;}
+.contantArea .SignUpBox .precautions{width:810px; margin-bottom:80px;}
+.contantArea .SignUpBox .precautions p{font-size:14px;  line-height:22px; position:relative; margin-left:30px;}
+.contantArea .SignUpBox .precautions .circle{width:6px; height:6px; border-radius:3px; background-color:#fff; position:absolute;left:-15px;top:8px;}
+
+
+.contantArea .SignUpBox .form1{width:400px; float:right; padding-bottom:30px; clear:both; border-bottom:1px solid #fff;}
+.contantArea .SignUpBox .form1 h1{width:170px; height:30px; line-height:30px; border:2px solid #fff;text-align:center; margin-bottom:30px; font-size:18px; background-color:rgba(255,255,255,0.3);}
+.contantArea .SignUpBox .form1.one{margin-right:110px;}
+.contantArea .SignUpBox .form1.one textarea{width:360px; height:200px;background-color:rgba(255,255,255,0.7);border-radius:10px; margin-top:10px; padding:10px; color:#888; font-size:12px;margin-bottom:20px; }
+.contantArea .SignUpBox .form1.three{width:700px;margin-right:80px; border-bottom:0px solid #fff; }
+.contantArea .SignUpBox .form1.three .title{width:650px; font-size:13px; margin-bottom:30px;}
+.contantArea .SignUpBox .form1 .box{width:360px;margin-bottom:15px; float:left;}
+.contantArea .SignUpBox .form1 .box .checkbox{width:440px; clear:both;}
+.contantArea .SignUpBox .form1 .box .checkbox p{float:left; margin-right:10px;}
+.contantArea .SignUpBox .form1 .box .checkbox h3{font-weight:600; }
+.contantArea .SignUpBox .form1 .box p{float:left; letter-spacing:2px; padding-top:3px;}
+.contantArea .SignUpBox .form1 .box .input1{float:right;background-color:rgba(255,255,255,0.7); border:1 solid #bababa;border-radius:8px; color:#888;  font-size:12px;padding:2px; padding-left:6px;width:200px;}
+.contantArea .SignUpBox .form1 .box select{width:150px; background-color:rgba(255,255,255,0.7);border-radius:8px; font-size:12px;padding:2px; float:right; margin-right:3px;}
+.contantArea .SignUpBox .form1.three .bottom{clear:both;width:110px;height:25px; background-color:#eee;color:#43a7d8;padding:5px; line-height:25px; text-align:center; border:1px solid #bababa; box-shadow:1px 1px 1px rgba(0,0,0,0.3); margin:30px auto 30px auto;border-radius:5px;letter-spacing:2px }
+.contantArea .SignUpBox .form1.one .bottom{clear:both;width:110px;height:25px; background-color:#eee;color:#43a7d8;padding:5px; line-height:25px; text-align:center; border:1px solid #bababa; box-shadow:1px 1px 1px rgba(0,0,0,0.3); margin:0px auto 0px auto;border-radius:5px;letter-spacing:2px }
+
+.contantArea .SignUpBox .form1.three  textarea{width:300px;background-color:rgba(255,255,255,0.7); height:100px;border-radius:10px; margin-top:20px; padding:10px; color:#888; font-size:12px; float:right; margin-top:-85px;  margin-bottom:40px;  }
+
+
+
