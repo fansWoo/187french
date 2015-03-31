@@ -34,66 +34,119 @@ $(document).on('click', '.scroll_arrow', function(){
 <?=$temp['header_down']?>
 <?=$temp['topheader']?>	
 <img src="app/img/index/dessert04.png" class="dessert04">
+<img src="app/img/index/dessert02.png" class="dessert02">
+		<img src="app/img/index/dessert03.png" class="dessert03">
 <div class="Area">
 		
-		<img src="app/img/index/dessert02.png" class="dessert02">
-		<img src="app/img/index/dessert03.png" class="dessert03">
+		
 		
 		<div class="contantArea">
 				<img src="app/img/news/knowledge/title.png" class="title">
 			<div class="boxArea one">
 				<div class="news_item">
+					<a href="page/news_knowledge_view">
+						<div class="pic">
+							<img src="app/img/news/knowledge/pic1.jpg">
+						</div>
+					</a>
 					<div class="right_text">
 						<h2>187食安教室-玫瑰花瓣</h2>
-						<a href="page/news_knowledge_view"><div class="pic">
-							<img src="app/img/news/knowledge/pic1.jpg">
-						</div></a>
-						<p>美美的玫瑰花果醬和飲料是怎麼來的呢?</p>
-						<p>一般市售的玫瑰花是觀賞用途，為了美觀大都有灑農藥，不適合拿來做成食材入菜。
-							而大部分商家，為了省錢省時，都會選擇化學製成的玫瑰花香精和紅色色素來代替...
-						</p>
+						<div class="text">
+						<p>美美的玫瑰花果醬和飲料是怎麼來的呢?
+						一般市售的玫瑰花是觀賞用途，為了美觀大都有灑農藥...</p>
+						</div>
 					</div>
 					<a href="page/news_knowledge_view">
 						<div class="more">more</div>
 					</a>
 				</div>
 				<div class="news_item">
-					<div class="right_text">
-						<h2>Lorem Ipsum</h2>
-						<a href="page/news_knowledge_view"><div class="pic">
+					<a href="page/news_knowledge_view">
+						<div class="pic">
 							<img src="app/img/news/knowledge/pic1.jpg">
-						</div></a>
-						<p>Sed id dolor. In hac habitasse platea dictumst. Maecenas diam ligula, vulputate vitae, mollis at, ullamcorper non, velit. Donec in velit. Sed lacus nisl, vestibulum sed, vehicula et, commodo eu, ligula. Duis vel lacus. In tincidunt. Vestibulum elit. Praesent hendrerit. Suspendisse venenatis.</p>
+						</div>
+					</a>
+					<div class="right_text">
+						<h2>187食安教室-玫瑰花瓣</h2>
+						<div class="text">
+						<p>美美的玫瑰花果醬和飲料是怎麼來的呢?
+						一般市售的玫瑰花是觀賞用途，為了美觀大都有灑農藥...</p>
+						</div>
 					</div>
 					<a href="page/news_knowledge_view">
 						<div class="more">more</div>
 					</a>
 				</div>
 				<div class="news_item">
-					<div class="right_text">
-						<h2>Lorem Ipsum</h2>
-						<a href="page/news_knowledge_view"><div class="pic">
+					<a href="page/news_knowledge_view">
+						<div class="pic">
 							<img src="app/img/news/knowledge/pic1.jpg">
-						</div></a>
-						<p>Sed id dolor. In hac habitasse platea dictumst. Maecenas diam ligula, vulputate vitae, mollis at, ullamcorper non, velit. Donec in velit. Sed lacus nisl, vestibulum sed, vehicula et, commodo eu, ligula. Duis vel lacus. In tincidunt. Vestibulum elit. Praesent hendrerit. Suspendisse venenatis.</p>
+						</div>
+					</a>
+					<div class="right_text">
+						<h2>187食安教室-玫瑰花瓣</h2>
+						<div class="text">
+						<p>美美的玫瑰花果醬和飲料是怎麼來的呢?
+						一般市售的玫瑰花是觀賞用途，為了美觀大都有灑農藥...</p>
+						</div>
 					</div>
 					<a href="page/news_knowledge_view">
 						<div class="more">more</div>
 					</a>
 				</div>
 				<div class="news_item">
-					<div class="right_text">
-						<h2>Lorem Ipsum</h2>
-						<a href="page/news_knowledge_view"><div class="pic">
+					<a href="page/news_knowledge_view">
+						<div class="pic">
 							<img src="app/img/news/knowledge/pic1.jpg">
-						</div></a>
-						<p>Sed id dolor. In hac habitasse platea dictumst. Maecenas diam ligula, vulputate vitae, mollis at, ullamcorper non, velit. Donec in velit. Sed lacus nisl, vestibulum sed, vehicula et, commodo eu, ligula. Duis vel lacus. In tincidunt. Vestibulum elit. Praesent hendrerit. Suspendisse venenatis.</p>
-						<p>Sed id dolor. In hac habitasse platea dictumst. Maecenas diam ligula, vulputate vitae, mollis at, ullamcorper non, velit. Donec in velit. Sed lacus nisl, vestibulum sed, vehicula et, commodo eu, ligula. Duis vel lacus. In tincidunt. Vestibulum elit. Praesent hendrerit. Suspendisse venenatis.</p>
+						</div>
+					</a>
+					<div class="right_text">
+						<h2>187食安教室-玫瑰花瓣</h2>
+						<div class="text">
+						<p>美美的玫瑰花果醬和飲料是怎麼來的呢?
+						一般市售的玫瑰花是觀賞用途，為了美觀大都有灑農藥...</p>
+						</div>
 					</div>
 					<a href="page/news_knowledge_view">
 						<div class="more">more</div>
 					</a>
 				</div>
+				<div class="news_item">
+					<a href="page/news_knowledge_view">
+						<div class="pic">
+							<img src="app/img/news/knowledge/pic1.jpg">
+						</div>
+					</a>
+					<div class="right_text">
+						<h2>187食安教室-玫瑰花瓣</h2>
+						<div class="text">
+						<p>美美的玫瑰花果醬和飲料是怎麼來的呢?
+						一般市售的玫瑰花是觀賞用途，為了美觀大都有灑農藥...</p>
+						</div>
+					</div>
+					<a href="page/news_knowledge_view">
+						<div class="more">more</div>
+					</a>
+				</div>
+				<div class="news_item">
+					<a href="page/news_knowledge_view">
+						<div class="pic">
+							<img src="app/img/news/knowledge/pic1.jpg">
+						</div>
+					</a>
+					<div class="right_text">
+						<h2>187食安教室-玫瑰花瓣</h2>
+						<div class="text">
+						<p>美美的玫瑰花果醬和飲料是怎麼來的呢?
+						一般市售的玫瑰花是觀賞用途，為了美觀大都有灑農藥...</p>
+						</div>
+					</div>
+					<a href="page/news_knowledge_view">
+						<div class="more">more</div>
+					</a>
+				</div>
+				
+				
 				
 			</div>
 

@@ -43,7 +43,7 @@ body{}
 .contantArea .SignUpBox .form1{width:400px; float:right; padding-bottom:30px; clear:both; border-bottom:1px solid #fff;}
 .contantArea .SignUpBox .form1 h1{width:170px; height:30px; line-height:30px; border:2px solid #fff;text-align:center; margin-bottom:30px; font-size:18px; background-color:rgba(255,255,255,0.3);}
 .contantArea .SignUpBox .form1.one{margin-right:110px;}
-.contantArea .SignUpBox .form1.one textarea{width:360px; height:200px;background-color:rgba(255,255,255,0.7);border-radius:10px; margin-top:10px; padding:10px; color:#888; font-size:12px;margin-bottom:20px; }
+.contantArea .SignUpBox .form1.one textarea{width:360px; height:100px;background-color:rgba(255,255,255,0.7);border-radius:10px; margin-top:10px; padding:10px; color:#888; font-size:12px;margin-bottom:20px; }
 .contantArea .SignUpBox .form1.three{width:700px;margin-right:80px; border-bottom:0px solid #fff; }
 .contantArea .SignUpBox .form1.three .title{width:650px; font-size:13px; margin-bottom:30px;}
 .contantArea .SignUpBox .form1 .box{width:360px;margin-bottom:15px; float:left;}
@@ -52,7 +52,7 @@ body{}
 .contantArea .SignUpBox .form1 .box .checkbox h3{font-weight:600; }
 .contantArea .SignUpBox .form1 .box p{float:left; letter-spacing:2px; padding-top:3px;}
 .contantArea .SignUpBox .form1 .box .input1{float:right;background-color:rgba(255,255,255,0.7); border:1 solid #bababa;border-radius:8px; color:#888;  font-size:12px;padding:2px; padding-left:6px;width:200px;}
-.contantArea .SignUpBox .form1 .box select{width:150px; background-color:rgba(255,255,255,0.7);border-radius:8px; font-size:12px;padding:2px; float:right; margin-right:3px;}
+.contantArea .SignUpBox .form1 .box select{background-color:rgba(255,255,255,0.7);border-radius:8px; font-size:12px;padding:2px; float:right; margin-right:3px;}
 .contantArea .SignUpBox .form1.three .bottom{clear:both;width:110px;height:25px; background-color:#eee;color:#43a7d8;padding:5px; line-height:25px; text-align:center; border:1px solid #bababa; box-shadow:1px 1px 1px rgba(0,0,0,0.3); margin:30px auto 30px auto;border-radius:5px;letter-spacing:2px }
 .contantArea .SignUpBox .form1.one .bottom{clear:both;width:110px;height:25px; background-color:#eee;color:#43a7d8;padding:5px; line-height:25px; text-align:center; border:1px solid #bababa; box-shadow:1px 1px 1px rgba(0,0,0,0.3); margin:0px auto 0px auto;border-radius:5px;letter-spacing:2px }
 

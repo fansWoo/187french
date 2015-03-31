@@ -130,14 +130,19 @@ $(document).on('click', '.scroll_arrow', function(){
 							<input  class="input1" name="lastName" placeholder="email">
 						</div>
 						<div class="box">
-							<p>備註:</p>
+							<p>匯款帳號後五碼:</p>
 							<input  class="input1" name="lastName" placeholder="">
 						</div>
 						<div class="box">
+							<p>匯款金額:</p>
+							<input  class="input1" name="lastName" placeholder="">
+						</div>
+					
+						<div class="box">
 							<p>課程名稱:</p>
 							<select >
-								<option>技術支援
-								<option>合作開發
+								<option>費南雪-原味、榛果、抹茶栗子
+								<option>費南雪-原味、榛果、抹茶栗子
 							</select>
 						</div>
 						<div class="box">
@@ -155,7 +160,7 @@ $(document).on('click', '.scroll_arrow', function(){
 								<p><input type="checkbox" value="1" name="Product_1"> 課程1</p>
 							</div>
 						</div>
-						<textarea ></textarea>
+						<textarea placeholder="備註"></textarea>
 							
 						<div class="bottom">
 							送出

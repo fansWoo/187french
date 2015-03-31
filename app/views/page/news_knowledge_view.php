@@ -61,11 +61,6 @@ $(document).on('click', '.scroll_arrow', function(){
 							而我們為了讓消費者吃得健康，特地向花農訂購新鮮的有機花瓣。
 							訂購當天現採的花瓣，不含農藥可以直接食用，色澤和和香氣也都特別濃郁。
 							</p>
-						</div>
-						<div class="box">
-							<div class="pic two">
-								<img src="app/img/news/knowledge/pic2.jpg">
-							</div>
 							<p>愛吃甜點的你，知道嗎?
 							玫瑰和荔枝其實是很好的朋友，搭配在一起甜甜的香氣，瞬間讓整個甜點高級起來。
 							我們在果醬和馬卡龍中，都做了荔枝玫瑰口味。
@@ -73,6 +68,9 @@ $(document).on('click', '.scroll_arrow', function(){
 							<p>有時間可以大家可以在家做看看，沒時間也可以來「187巷的法式」吃看看!
 							</p>
 						</div>
+						
+							
+						
 					</div>
 					
 				</div>

@@ -81,6 +81,9 @@ body{}
 .Area .contantArea .bottomArea .box:hover .hoverBox img{width:110px;  display:block; margin:80px auto 0px auto;}
 
 .Area .contantArea .bottomArea .box .shadow{position:absolute; top:0px;left:0px;width:100%;z-index:2; }
-.Area .contantArea .bottomArea .box .TextBox{padding:25px;color:#fff; letter-spacing:3px; line-height:22px;font-size:14px;}
-.Area .contantArea .bottomArea .box .TextBox p{display:block; text-align:center;}
+.Area .contantArea .bottomArea .box .TextBox{padding:25px;color:#fff;min-height:150px; letter-spacing:3px; line-height:22px;font-size:14px;}
+.Area .contantArea .bottomArea .box.one{font-size:12px;text-align:center;}
+.Area .contantArea .bottomArea .box.one span{font-size:18px;}
+.Area .contantArea .bottomArea .box .TextBox p{display:block; font-weight:600; margin-bottom:15px;opacity:0.7;-webkit-transition: all 0.8s; transition: all 0.8s;}
+.Area .contantArea .bottomArea .box .TextBox p:hover{opacity:1; }
 .Area .contantArea .bottomArea .box:nth-of-type(2) .TextBox{border-left:1px dotted rgba(255,255,255,0.8);border-right:1px dotted rgba(255,255,255,0.8);}

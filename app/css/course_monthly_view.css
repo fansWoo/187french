@@ -1,6 +1,6 @@
 body{}
 /**********************左邊選單*********************************/
-.Area{width:100%;  margin-bottom:30px; padding-bottom:100px; overflow:hidden;position:relative; margin-top:250px;}
+.Area{width:100%;padding-bottom:60px; overflow:hidden;position:relative; margin-top:250px;}
 
 .dessert01{position:absolute;z-index:1;width:400px;left:-160px; bottom:0px;}
  .dessert02{position:absolute;z-index:1;width:250px; right:0px; bottom:0px;}
@@ -15,7 +15,7 @@ body{}
 .Area .contantArea .topBox  img{ float:left;}
 .Area .contantArea .topBox  p{float:right; position:absolute;bottom:10px; right:0px; color:#fff;font-size:14px; letter-spacing:3px;}
 
-.Area .contantArea  .boxArea{ clear:both;width:900px; margin:50px auto;padding-left:20px; position:relative; }
+.Area .contantArea  .boxArea{ clear:both;width:900px; margin:30px auto;padding-left:20px; position:relative; }
 
 .Area .contantArea  .boxArea .itemArea{width:358px;  margin-right:40px; float:left; margin-bottom:0px; padding-bottom:15px; }
 .picBox_border{width:358px; height:358px;border:1px solid #fff;}
@@ -26,17 +26,20 @@ body{}
 .itemArea .picBox .pic .dot{position:absolute;bottom:0px;left:0px; width:110px;}
 .itemArea .picBox .shadow2{width:350px;height:350px;position:absolute;z-index:2;top:0px;left:0px;}
 
-.boxArea h2{font-size:24px; letter-spacing:2px;color:#fff;font-weight:600; margin-bottom:30px;}
+.boxArea h2{font-size:24px; letter-spacing:2px;color:#fff;font-weight:600; margin-bottom:40px;}
 .boxArea p{font-size:14px; letter-spacing:2px;line-height:24px;color:#6a3c22; margin-bottom:20px; font-weight:600;}
 
-.Area .contantArea  .boxArea .box2{clear:both; margin-top:80px; padding-top:70px;border-top:1px dotted #eee;  }
+.Area .contantArea  .boxArea .box2{float:right;}
 .Area .contantArea  .boxArea .box2 .leftbox{width:450px; float:left; margin-left:50px;}
 .Area .contantArea  .boxArea .box2 .leftbox p{margin-bottom:0px;}
-.Area .contantArea  .boxArea .box2 .leftbox .box{width:450px; margin-bottom:20px;clear:both; height:80px; }
-.Area .contantArea  .boxArea .box2 .leftbox .box .circle{float:left;width:88px; height:88px;border-radius:44px;background-color:#6a3c22; color:#fff; text-align:center; line-height:88px;  font-size:16px; letter-spacing:1px;}
-.Area .contantArea  .boxArea .box2 .leftbox .box .right{float:left; width:230px; margin-left:25px; margin-top:20px;}
+.Area .contantArea  .boxArea .box2 .leftbox .box{width:450px; margin-bottom:10px;clear:both; height:80px; }
+.Area .contantArea  .boxArea .box2 .leftbox .box .circle{float:left;width:76px; height:76px;border-radius:38px;background-color:#6a3c22; color:#fff; text-align:center; line-height:76px;  font-size:14px; letter-spacing:1px;}
+.Area .contantArea  .boxArea .box2 .leftbox .box .right{float:left; width:230px; margin-left:25px; margin-top:10px;}
 
-.Area .contantArea  .boxArea .box3 { float:right; width:230px; height:133px; margin-right:150px; margin-top:80px;position:relative;}
+.Area .contantArea  .boxArea .box1{clear:both;} 
+
+
+.Area .contantArea  .boxArea .box3 { width:230px; height:133px; margin-left:auto; margin-right:auto; margin-top:80px;position:relative;}
 
 .Area .contantArea  .boxArea .box3 img{width:100%;opacity:0.8;-webkit-transition: 0.5s; transition: 0.5s;}
 .Area .contantArea  .boxArea .box3:hover img{opacity:1;}

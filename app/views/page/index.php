@@ -84,7 +84,7 @@
 			</div>
 		</div>
 			<div class="bottomArea">
-				<div class="box">
+				<div class="box one">
 					<div class="picBox">
 						<div class="img">
 							<img src="app/img/index/hover_pic2.jpg" class="pic">
@@ -96,11 +96,14 @@
 						<img src="app/img/index/shadow.png" class="shadow">
 					</div>
 					<div class="TextBox">
-						<p>Sed id dolor. In hac habitasse platea dictumst. Maecenas diam ligula, vulputate vitae, mollis at, ullamcorper non, velit. Donec in velit. Sed lacus nisl, vestibulum sed, </p>
+						<p><span>當月單品課</span> <br>Monthly cours </p>
+						
+						<p><span>甜點系列課</span> <br> Series baking course</p>
+						<p><span>甜點專修班</span> <br> Specialize baking course</p>
 						<div class="enter"></div>
 					</div>
 				</div>
-				<div class="box ">
+				<div class="box two">
 					<div class="picBox ">
 						<div class="img">
 							<img src="app/img/index/hover_pic.jpg" class="pic">
@@ -112,11 +115,12 @@
 						<img src="app/img/index/shadow.png" class="shadow">
 					</div>
 					<div class="TextBox">
-						<p>Sed id dolor. In hac habitasse platea dictumst. Maecenas diam ligula, vulputate vitae, mollis at, ullamcorper non, velit. Donec in velit. Sed lacus nisl, vestibulum sed, </p>
+						<p>【每月課程】2月份課程資訊</p>
+ 
 						<div class="enter"></div>
 					</div>
 				</div>
-				<div class="box">
+				<div class="box three">
 					<div class="picBox">
 						<div class="img">
 							<img src="app/img/index/hover_pic3.jpg" class="pic"> 

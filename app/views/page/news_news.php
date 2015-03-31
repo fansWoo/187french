@@ -34,57 +34,87 @@ $(document).on('click', '.scroll_arrow', function(){
 <?=$temp['header_down']?>
 <?=$temp['topheader']?>	
 <img src="app/img/index/dessert04.png" class="dessert04">
-<div class="Area">
-		
-		<img src="app/img/index/dessert02.png" class="dessert02">
+<img src="app/img/index/dessert02.png" class="dessert02">
 		<img src="app/img/index/dessert03.png" class="dessert03">
-		
+<div class="Area">
 		<div class="contantArea">
 				<img src="app/img/news/title.png" class="title">
 			<div class="boxArea one">
 				<div class="news_item">
-					<div class="right_text">
-						<h2>【每月課程】2月份課程資訊</h2>
-						<a href="page/news_news_view"><div class="pic">
+					<a href="page/news_news_view">
+						<div class="pic">
 							<img src="app/img/news/pic1.jpg">
-						</div></a>
+						</div>
+					</a>
+					<div class="right_text">
+						<h2>【每月課程】2月份課程資訊 </h2>
+						<div class="text">
+						<p>2月份的課程資訊，歡迎下載!...</p>
+						</div>
 					</div>
 					<a href="page/news_news_view">
 						<div class="more">more</div>
 					</a>
 				</div>
-				<div class="news_item">
-					<div class="right_text">
-						<h2>Lorem Ipsum</h2>
-						<a href="page/news_news_view"><div class="pic">
+					<div class="news_item">
+					<a href="page/news_news_view">
+						<div class="pic">
 							<img src="app/img/news/pic1.jpg">
-						</div></a>
-						<p>Sed id dolor. In hac habitasse platea dictumst. Maecenas diam ligula, vulputate vitae, mollis at, ullamcorper non, velit. Donec in velit. Sed lacus nisl, vestibulum sed, vehicula et, commodo eu, ligula. Duis vel lacus. In tincidunt. Vestibulum elit. Praesent hendrerit. Suspendisse venenatis.</p>
+						</div>
+					</a>
+					<div class="right_text">
+						<h2>【每月課程】2月份課程資訊 </h2>
+						<div class="text">
+						<p>2月份的課程資訊，歡迎下載!...</p>
+						</div>
 					</div>
 					<a href="page/news_news_view">
 						<div class="more">more</div>
 					</a>
 				</div>
-				<div class="news_item">
-					<div class="right_text">
-						<h2>Lorem Ipsum</h2>
-						<a href="page/news_news_view"><div class="pic">
+					<div class="news_item">
+					<a href="page/news_news_view">
+						<div class="pic">
 							<img src="app/img/news/pic1.jpg">
-						</div></a>
-						<p>Sed id dolor. In hac habitasse platea dictumst. Maecenas diam ligula, vulputate vitae, mollis at, ullamcorper non, velit. Donec in velit. Sed lacus nisl, vestibulum sed, vehicula et, commodo eu, ligula. Duis vel lacus. In tincidunt. Vestibulum elit. Praesent hendrerit. Suspendisse venenatis.</p>
+						</div>
+					</a>
+					<div class="right_text">
+						<h2>【每月課程】2月份課程資訊 </h2>
+						<div class="text">
+						<p>2月份的課程資訊，歡迎下載!...</p>
+						</div>
 					</div>
 					<a href="page/news_news_view">
 						<div class="more">more</div>
 					</a>
 				</div>
-				<div class="news_item">
-					<div class="right_text">
-						<h2>Lorem Ipsum</h2>
-						<a href="page/news_news_view"><div class="pic">
+					<div class="news_item">
+					<a href="page/news_news_view">
+						<div class="pic">
 							<img src="app/img/news/pic1.jpg">
-						</div></a>
-						<p>Sed id dolor. In hac habitasse platea dictumst. Maecenas diam ligula, vulputate vitae, mollis at, ullamcorper non, velit. Donec in velit. Sed lacus nisl, vestibulum sed, vehicula et, commodo eu, ligula. Duis vel lacus. In tincidunt. Vestibulum elit. Praesent hendrerit. Suspendisse venenatis.</p>
-						<p>Sed id dolor. In hac habitasse platea dictumst. Maecenas diam ligula, vulputate vitae, mollis at, ullamcorper non, velit. Donec in velit. Sed lacus nisl, vestibulum sed, vehicula et, commodo eu, ligula. Duis vel lacus. In tincidunt. Vestibulum elit. Praesent hendrerit. Suspendisse venenatis.</p>
+						</div>
+					</a>
+					<div class="right_text">
+						<h2>【每月課程】2月份課程資訊 </h2>
+						<div class="text">
+						<p>2月份的課程資訊，歡迎下載!...</p>
+						</div>
+					</div>
+					<a href="page/news_news_view">
+						<div class="more">more</div>
+					</a>
+				</div>
+					<div class="news_item">
+					<a href="page/news_news_view">
+						<div class="pic">
+							<img src="app/img/news/pic1.jpg">
+						</div>
+					</a>
+					<div class="right_text">
+						<h2>【每月課程】2月份課程資訊 </h2>
+						<div class="text">
+						<p>2月份的課程資訊，歡迎下載!...</p>
+						</div>
 					</div>
 					<a href="page/news_news_view">
 						<div class="more">more</div>
