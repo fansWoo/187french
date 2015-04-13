@@ -34,7 +34,7 @@ $(document).scroll(function(){
 			<div class="line2"></div>
 			<div class="line3"></div>
 			
-			<a href="page/contact"><div class="li">
+			<a href="page/register"><div class="li">
 				線上報名<br>Register
 				<div class="borderTop"></div>
 			</div></a>
@@ -60,6 +60,7 @@ $(document).scroll(function(){
 					<a href="page/about_class" class="item">現場直擊 <br>About class </a>
 					<a href="page/about_dessert" class="item">甜點介紹&販售 <br>Dessert</a>
 					<a href="page/about_sales" class="item">食材&器材販售 <br>Sales</a>
+					<a href="page/about_contact" class="item">聯絡我們<br>Contact us</a>
 				</div>
 			</div>	
 		</div>

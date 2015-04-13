@@ -1,0 +1,37 @@
+body{}
+/**********************左邊選單*********************************/
+.Area{width:100%;  margin-bottom:50px; padding-bottom:50px; overflow:hidden;position:relative;}
+
+.dessert01{position:absolute;z-index:1;width:350px;left:-80px;bottom:0px;}
+.Area .dessert02{display:none;position:absolute;z-index:1;width:350px; right:0px; bottom:950px;}
+.Area .dessert03{position:absolute;z-index:1;width:280px; left:-120px; top:300px;}
+.Area .pic1{position:absolute;z-index:1; right:-550px; top:60px; -webkit-animation:p201503200508 2.8s;animation:p201503200508 2.8s;}
+@-webkit-keyframes p201503200508{
+	0%{ -webkit-transform: translate(50px, 0px)  ; opacity:0;  }
+	50%{ -webkit-transform: translate(50px, 0px)  ; opacity:0;}
+	100%{ -webkit-transform: translate(0,0px) ; opacity:1;  }
+}
+@keyframes p201503200508{
+	0%{ transform: translate(20px, 0px)  ; opacity:0;  }
+	50%{transform: translate(20px, 0px)  ; opacity:0;}
+	100%{ transform: translate(0,0px) ; opacity:1;  }
+}
+.Area .contantArea{width:100%;margin:0px auto;position:relative; z-index:2;overflow:hidden; margin-top:250px; }
+.contantArea .contactBox{width:800px;height:900px;margin:0px auto; font-size:14px;letter-spacing:3px; line-height:24px;color:#fff; margin-bottom:0px;position:relative; }
+.contantArea .contactBox .title{width:400px;}
+.contantArea .contactBox .slogan{width:700px; margin-top:20px;}
+.contantArea .contactBox .textBox{width:470px; color:#fff; margin-top:10px;}
+.contantArea .contactBox .textBox  .course{width:470px; margin-bottom:30px; }
+.contantArea .contactBox .textBox  .course p{margin-bottom:5px; font-weight:600;}
+.contantArea .contactBox .textBox  .course .big{font-size:18px; margin-right:10px;}
+.contantArea .contactBox .textBox  .box{width:470px;height:50px;  padding-bottom:20px; border-bottom:1px solid rgba(255,255,255,0.5); }
+.contantArea .contactBox .textBox  .box .pic {float:left; width:60px; height:60px; }
+.contantArea .contactBox .textBox  .box .pic img{ width:100%;}
+.contantArea .contactBox .textBox  .box .right{float:left; margin-left:20px; margin-top:20px;font-weight:600; font-size:16px; }
+.contantArea .contactBox .textBox  .box.map{width:500px;height:380px;border-bottom:0px solid rgba(255,255,255,0.5); }
+.contantArea .contactBox .textBox  .box.map #mapBox{width:470px;height:250px;float:left;overflow:hidden; margin-top:30px; border-radius:10px; border:1px solid #fff; margin-bottom:20px;}
+.contantArea .contactBox .bottomtext{clear:both; font-weight:600; }
+
+
+
+

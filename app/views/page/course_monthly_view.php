@@ -96,7 +96,7 @@ $(document).on('click', '.scroll_arrow', function(){
 					
 					</p>
 				</div>
-				<a href=""><div class="box3">
+				<a href="page/register"><div class="box3">
 					<div class="border">
 						<div class="border_a"></div>
 						<div class="border_b"></div>

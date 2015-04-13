@@ -68,7 +68,7 @@ $(document).on('click', '.scroll_arrow', function(){
 						
 								<img src="app/img/course/sign2.png" class="sign">
 							</div></a>
-							<a href="page/contact"><div class="box3">
+							<a href="page/register"><div class="box3">
 								<div class="border">
 									<div class="border_a"></div>
 									<div class="border_b"></div>

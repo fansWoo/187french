@@ -2,31 +2,16 @@ body{}
 /**********************左邊選單*********************************/
 .Area{width:100%;  margin-bottom:50px; padding-bottom:50px; overflow:hidden;position:relative;}
 
-.dessert01{position:absolute;z-index:1;width:350px;left:-80px;top:1150px;}
-.Area .dessert02{position:absolute;z-index:1;width:350px; right:0px; bottom:950px;}
-.Area .dessert03{display:none;position:absolute;z-index:1;width:250px; left:-60px; top:600px;}
+.dessert01{display:none;position:absolute;z-index:1;width:350px;left:-80px;top:1150px;}
+.Area .dessert02{position:absolute;z-index:1;width:300px; right:0px; bottom:1000px;}
+.Area .dessert03{position:absolute;z-index:1;width:250px; left:-60px; top:600px;}
+.Area .dessert02{position:absolute;z-index:1;width:300px; right:0px; bottom:1000px;}
+.Area .dessert06{position:absolute;z-index:1;width:300px; right:70px;top:180px;}
 .Area .pic1{position:absolute;z-index:1; right:-550px; top:120px;}
 .Area .contantArea{width:100%;margin:0px auto;position:relative; z-index:2;overflow:hidden; margin-top:250px; }
-.contantArea .contactBox{width:800px;height:840px;margin:0px auto; font-size:14px;letter-spacing:3px; line-height:24px;color:#fff; margin-bottom:0px;position:relative; }
-.contantArea .contactBox .title{width:400px;}
-.contantArea .contactBox .slogan{width:700px; margin-top:20px;}
-.contantArea .contactBox .textBox{width:470px; color:#fff; margin-top:10px;}
-.contantArea .contactBox .textBox  .course{width:470px; margin-bottom:30px; }
-.contantArea .contactBox .textBox  .course p{margin-bottom:5px; font-weight:600;}
-.contantArea .contactBox .textBox  .course .big{font-size:18px; margin-right:10px;}
-.contantArea .contactBox .textBox  .box{width:470px;height:50px;  padding-bottom:20px; border-bottom:1px solid rgba(255,255,255,0.5); }
-.contantArea .contactBox .textBox  .box .pic {float:left; width:60px; height:60px; }
-.contantArea .contactBox .textBox  .box .pic img{ width:100%;}
-.contantArea .contactBox .textBox  .box .right{float:left; margin-left:20px; margin-top:20px;font-weight:600; font-size:16px; }
-.contantArea .contactBox .textBox  .box.map{width:500px;height:380px; }
-.contantArea .contactBox .textBox  .box.map #mapBox{width:470px;height:250px;float:left;overflow:hidden; margin-top:30px; border-radius:10px; border:1px solid #fff; margin-bottom:20px;}
-.contantArea .contactBox .bottomtext{clear:both; font-weight:600; }
-
-
-
 
 .contantArea .SignUpBox {width:850px;margin:0px auto; margin-bottom:50px;position:relative; color:#fff;letter-spacing:3px;font-weight:600;position:relative;}
-.contantArea .SignUpBox .pic2{position:absolute;left:-450px;top:780px;width:750px;}
+
 .contantArea .SignUpBox  .title{width:400px;}
 .contantArea .SignUpBox .processBox{width:810px; position:relative; padding-left:40px; }
 .contantArea .SignUpBox .processBox .line{width:1px; height:200px; border-left:1px dotted #fff; position:absolute; left:405px; top:80px; }
@@ -35,9 +20,21 @@ body{}
 .contantArea .SignUpBox .processBox .box h2{ width:180px; height:30px; line-height:30px; margin-left:auto; margin-right:auto;border:2px solid #fff;text-align:center; margin-bottom:30px; font-size:18px; background-color:rgba(255,255,255,0.3);}
 .contantArea .SignUpBox .processBox .box p{display:block; padding:10px; margin-bottom:5px;font-size:14px;  position:relative; }
 .contantArea .SignUpBox .processBox .box  span{display:block; width:17px; height:20px; background-color:#fff; border-radius:20px; color:#67bfaa; position:absolute; text-align:center; line-height:20px;font-size:12px; left:-19px; top:13px; padding-left:3px;}
-.contantArea .SignUpBox .precautions{width:810px; margin-bottom:80px;}
+.contantArea .SignUpBox .precautions{position:relative;width:810px; margin-bottom:80px;}
+.contantArea .SignUpBox .precautions .pic2{position:absolute;left:-450px;top:130px;width:750px;opacity:0;}
 .contantArea .SignUpBox .precautions p{font-size:14px;  line-height:22px; position:relative; margin-left:30px;}
 .contantArea .SignUpBox .precautions .circle{width:6px; height:6px; border-radius:3px; background-color:#fff; position:absolute;left:-15px;top:8px;}
+.contantArea .SignUpBox .precautions.hover .pic2{display:block;-webkit-animation:p201503200508 3s;animation:p201503200508 3s;opacity:1;}
+@-webkit-keyframes p201503200508{
+	0%{ -webkit-transform: translate(-50px, 0px)  ; opacity:0;  }
+	50%{ -webkit-transform: translate(-50px, 0px)  ; opacity:0;}
+	100%{ -webkit-transform: translate(0,0px) ; opacity:1;  }
+}
+@keyframes p201503200508{
+	0%{ transform: translate(-50px, 0px)  ; opacity:0;  }
+	50%{transform: translate(-50px, 0px)  ; opacity:0;}
+	100%{ transform: translate(0,0px) ; opacity:1;  }
+}
 
 
 .contantArea .SignUpBox .form1{width:400px; float:right; padding-bottom:30px; clear:both; border-bottom:1px solid #fff;}
