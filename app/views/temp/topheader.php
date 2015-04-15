@@ -40,7 +40,7 @@ $(document).scroll(function(){
 				線上報名<br>Register
 				<div class="borderTop"></div>
 			</div></a>
-			<a href="page/page/course_monthly">
+			<a href="page/news_news">
 				<div class="li">
 					<p>最新消息<br>News</p>
 					<div class="downbox news">
@@ -49,7 +49,7 @@ $(document).scroll(function(){
 					</div>
 				</div>
 			</a>
-			<a href="page/page/course_monthly">
+			<a href="page/course_monthly">
 				<div class="li">
 					<p>課程介紹<br>Course</p>
 						<div class="downbox course">
