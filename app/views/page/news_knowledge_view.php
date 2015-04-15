@@ -43,8 +43,7 @@ $(document).on('click', '.scroll_arrow', function(){
 				
 			<div class="boxArea one">
 			<div class="topBox">
-				<img src="app/img/news/title.png" class="title">
-				<p><a href="page/news_knowledge">烘焙大小事</a> > 2月份課程資訊</p>
+				<img src="app/img/news/knowledge/title.png" class="title">
 			</div>
 				<div class="news_item">
 					<div class="right_text">

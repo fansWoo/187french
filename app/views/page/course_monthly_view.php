@@ -43,7 +43,6 @@ $(document).on('click', '.scroll_arrow', function(){
 		<div class="contantArea">
 			<div class="topBox">
 				<img src="app/img/course/title.png" class="title">
-				<p>費南雪-原味、榛果、抹茶栗子</p>
 			</div>	
 			<div class="boxArea">
 				<div class="itemArea">

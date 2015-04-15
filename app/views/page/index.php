@@ -96,10 +96,10 @@
 						<img src="app/img/index/shadow.png" class="shadow">
 					</div>
 					<div class="TextBox">
-						<p><span>當月單品課</span> <br>Monthly cours </p>
+						<a href=""><p><span>當月課程</span> <br>Monthly cours </p></a>
 						
-						<p><span>甜點系列課</span> <br> Series baking course</p>
-						<p><span>甜點專修班</span> <br> Specialize baking course</p>
+						<a href=""><p><span>專修班</span> <br> Specialize Course</p></a>
+						<a href=""><p><span>系列課</span> <br> Series Course</p></a>
 						<div class="enter"></div>
 					</div>
 				</div>
@@ -115,7 +115,10 @@
 						<img src="app/img/index/shadow.png" class="shadow">
 					</div>
 					<div class="TextBox">
-						<p>【每月課程】2月份課程資訊</p>
+						<a href=""><p>【每月課程】2月份課程資訊</p></a>
+						<a href=""><p>【每月課程】3月份課程資訊</p></a>
+						<a href=""><p>【每月課程】4月份課程資訊</p></a>
+						<a href=""><p>【每月課程】5月份課程資訊</p></a>
  
 						<div class="enter"></div>
 					</div>
@@ -132,7 +135,9 @@
 						<img src="app/img/index/shadow.png" class="shadow">
 					</div>
 					<div class="TextBox">
-						<p>Sed id dolor. In hac habitasse platea dictumst. Maecenas diam ligula, vulputate vitae, mollis at, ullamcorper non, velit. Donec in velit. Sed lacus nisl, vestibulum sed, </p>
+						<a href=""><p>每月課程報名</p></a>
+						<a href=""><p>意見回覆 </p></a>
+						<a href=""><p>匯款資訊回填 </p></a>
 						<div class="enter"></div>
 					</div>
 				</div>

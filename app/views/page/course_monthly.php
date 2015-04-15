@@ -37,7 +37,6 @@ $(document).on('click', '.scroll_arrow', function(){
 	
 <div class="Area">
 		<img src="app/img/index/dessert05.png" class="dessert05">
-		<img src="app/img/index/dessert03.png" class="dessert03">
 		<img src="app/img/index/dessert06.png" class="dessert06">
 		<div class="contantArea">
 				<img src="app/img/course/title.png" class="title">
@@ -51,19 +50,15 @@ $(document).on('click', '.scroll_arrow', function(){
 									<img src="app/img/about/dessert/dot.png" class="dot">
 								</div>
 								<img src="app/img/about/dessert/shadow2.png" class="shadow2">
-								<div class="hoverBox">
+								<!--<div class="hoverBox">
 									<p>這款來自法國的經典小蛋糕Fin<br>ancier，直接音譯便是大家所熟悉的「費南雪」...</p>
-									
-								</div>
+								</div>-->
 							</div>
 						</a>
 					</div>
 					<div class="textBox">
 						
 						<h2>費南雪-原味、榛果、抹茶栗子</h2>
-						<p>上課時間：</p>
-						<p>3/07(六)14:00~17:00</p>
-						<p>3/26(四)09:30~12:30</p>
 						<a href="page/course_monthly_view"><div class="more">
 							more
 						</div></a>
@@ -78,18 +73,15 @@ $(document).on('click', '.scroll_arrow', function(){
 									<img src="app/img/about/dessert/dot.png" class="dot">
 								</div>
 								<img src="app/img/about/dessert/shadow2.png" class="shadow2">
-								<div class="hoverBox">
+								<!--<div class="hoverBox">
 									<p>這款來自法國的經典小蛋糕Fin<br>ancier，直接音譯便是大家所熟悉的「費南雪」...</p>
-								</div>
+								</div>-->
 							</div>
 						</a>
 					</div>
 					<div class="textBox">
 						
 						<h2>費南雪-原味、榛果、抹茶栗子</h2>
-						<p>上課時間：</p>
-						<p>3/07(六)14:00~17:00</p>
-						<p>3/26(四)09:30~12:30</p>
 						<a href="page/course_monthly_view"><div class="more">
 							more
 						</div></a>
@@ -104,18 +96,15 @@ $(document).on('click', '.scroll_arrow', function(){
 									<img src="app/img/about/dessert/dot.png" class="dot">
 								</div>
 								<img src="app/img/about/dessert/shadow2.png" class="shadow2">
-								<div class="hoverBox">
+								<!--<div class="hoverBox">
 									<p>這款來自法國的經典小蛋糕Fin<br>ancier，直接音譯便是大家所熟悉的「費南雪」...</p>
-								</div>
+								</div>-->
 							</div>
 						</a>
 					</div>
 					<div class="textBox">
 						
 						<h2>費南雪-原味、榛果、抹茶栗子</h2>
-						<p>上課時間：</p>
-						<p>3/07(六)14:00~17:00</p>
-						<p>3/26(四)09:30~12:30</p>
 						<a href="page/course_monthly_view"><div class="more">
 							more
 						</div></a>
@@ -130,18 +119,15 @@ $(document).on('click', '.scroll_arrow', function(){
 									<img src="app/img/about/dessert/dot.png" class="dot">
 								</div>
 								<img src="app/img/about/dessert/shadow2.png" class="shadow2">
-								<div class="hoverBox">
+								<!--<div class="hoverBox">
 									<p>這款來自法國的經典小蛋糕Fin<br>ancier，直接音譯便是大家所熟悉的「費南雪」...</p>
-								</div>
+								</div>-->
 							</div>
 						</a>
 					</div>
 					<div class="textBox">
 						
 						<h2>費南雪-原味、榛果、抹茶栗子</h2>
-						<p>上課時間：</p>
-						<p>3/07(六)14:00~17:00</p>
-						<p>3/26(四)09:30~12:30</p>
 						<a href="page/course_monthly_view"><div class="more">
 							more
 						</div></a>
@@ -156,18 +142,15 @@ $(document).on('click', '.scroll_arrow', function(){
 									<img src="app/img/about/dessert/dot.png" class="dot">
 								</div>
 								<img src="app/img/about/dessert/shadow2.png" class="shadow2">
-								<div class="hoverBox">
+								<!--<div class="hoverBox">
 									<p>這款來自法國的經典小蛋糕Fin<br>ancier，直接音譯便是大家所熟悉的「費南雪」...</p>
-								</div>
+								</div>-->
 							</div>
 						</a>
 					</div>
 					<div class="textBox">
 						
 						<h2>費南雪-原味、榛果、抹茶栗子</h2>
-						<p>上課時間：</p>
-						<p>3/07(六)14:00~17:00</p>
-						<p>3/26(四)09:30~12:30</p>
 						<a href="page/course_monthly_view"><div class="more">
 							more
 						</div></a>
@@ -182,18 +165,15 @@ $(document).on('click', '.scroll_arrow', function(){
 									<img src="app/img/about/dessert/dot.png" class="dot">
 								</div>
 								<img src="app/img/about/dessert/shadow2.png" class="shadow2">
-								<div class="hoverBox">
+								<!--<div class="hoverBox">
 									<p>這款來自法國的經典小蛋糕Fin<br>ancier，直接音譯便是大家所熟悉的「費南雪」...</p>
-								</div>
+								</div>-->
 							</div>
 						</a>
 					</div>
 					<div class="textBox">
 						
 						<h2>費南雪-原味、榛果、抹茶栗子</h2>
-						<p>上課時間：</p>
-						<p>3/07(六)14:00~17:00</p>
-						<p>3/26(四)09:30~12:30</p>
 						<a href="page/course_monthly_view"><div class="more">
 							more
 						</div></a>
@@ -208,18 +188,15 @@ $(document).on('click', '.scroll_arrow', function(){
 									<img src="app/img/about/dessert/dot.png" class="dot">
 								</div>
 								<img src="app/img/about/dessert/shadow2.png" class="shadow2">
-								<div class="hoverBox">
+								<!--<div class="hoverBox">
 									<p>這款來自法國的經典小蛋糕Fin<br>ancier，直接音譯便是大家所熟悉的「費南雪」...</p>
-								</div>
+								</div>-->
 							</div>
 						</a>
 					</div>
 					<div class="textBox">
 				
 						<h2>費南雪-原味、榛果、抹茶栗子</h2>
-						<p>上課時間：</p>
-						<p>3/07(六)14:00~17:00</p>
-						<p>3/26(四)09:30~12:30</p>
 						<a href="page/course_monthly_view"><div class="more">
 							more
 						</div></a>
@@ -234,18 +211,15 @@ $(document).on('click', '.scroll_arrow', function(){
 									<img src="app/img/about/dessert/dot.png" class="dot">
 								</div>
 								<img src="app/img/about/dessert/shadow2.png" class="shadow2">
-								<div class="hoverBox">
+								<!--<div class="hoverBox">
 									<p>這款來自法國的經典小蛋糕Fin<br>ancier，直接音譯便是大家所熟悉的「費南雪」...</p>
-								</div>
+								</div>-->
 							</div>
 						</a>
 					</div>
 					<div class="textBox">
 						
 						<h2>費南雪-原味、榛果、抹茶栗子</h2>
-						<p>上課時間：</p>
-						<p>3/07(六)14:00~17:00</p>
-						<p>3/26(四)09:30~12:30</p>
 						<a href="page/course_monthly_view"><div class="more">
 							more
 						</div></a>
@@ -260,25 +234,36 @@ $(document).on('click', '.scroll_arrow', function(){
 									<img src="app/img/about/dessert/dot.png" class="dot">
 								</div>
 								<img src="app/img/about/dessert/shadow2.png" class="shadow2">
-								<div class="hoverBox">
+								<!--<div class="hoverBox">
 									<p>這款來自法國的經典小蛋糕Fin<br>ancier，直接音譯便是大家所熟悉的「費南雪」...</p>
-								</div>
+								</div>-->
 							</div>
 						</a>
 					</div>
 					<div class="textBox">
 					
 						<h2>費南雪-原味、榛果、抹茶栗子</h2>
-						<p>上課時間：</p>
-						<p>3/07(六)14:00~17:00</p>
-						<p>3/26(四)09:30~12:30</p>
 						<a href="page/course_monthly_view"><div class="more">
 							more
 						</div></a>
 					</div>
 				</div>					
 			</div>
-
+			<div class="number_box">
+				<a href="news" class="prev">
+					<img src="app/img/arrow3.png">
+				</a>
+				<div class="number">
+					<a href="page/course_monthly">1</a>
+					<a href="page/course_monthly">2</a>
+					<a href="page/course_monthly">3</a>
+					<a href="page/course_monthly">4</a>
+					<a href="page/course_monthly">5</a>
+				</div>
+				<a href="news" class="next">
+					<img src="app/img/arrow.png">
+				</a>
+			</div>
 		</div>	
 
 		<img src="app/img/index/dessert01.png" class="dessert01">	

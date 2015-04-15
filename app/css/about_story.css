@@ -25,10 +25,11 @@ body{}
 	100%{ transform: translate(0,0px); opacity:1;  }
 }
 .Area .contantArea{width:50%;margin:0px auto;position:relative; z-index:2;}
-.contantArea .story{width:100%;margin:0px auto; font-size:14px;letter-spacing:3px; line-height:24px;color:#6a3c22; margin-bottom:50px;  }
-.contantArea .story p{margin-bottom:15px; text-indent:25px; font-weight:600;}
+.contantArea .story{width:100%;margin:0px auto; font-size:15px;letter-spacing:4px; line-height:25px;color:#6a3c22; margin-bottom:50px;  }
+.contantArea .story p{margin-bottom:15px;font-weight:600;}
 .contantArea .story .title{width:300px;}
 .contantArea .story  .WhiteBox{width:100%;float:left; background-color:rgba(255,255,255,0.5);border-radius:10px; margin:30px auto 80p auto ;padding:px; padding-bottom:20px;padding-top:20px;font-weight:600;}
-.contantArea .story  .WhiteBox .item{width:90%;float:left; border-bottom:1px dotted #fff; padding:10px;margin:0 auto ; font-size:14px; margin-left:30px;}
-.contantArea .story  .WhiteBox .item .day{float:left; width:30%; margin-right:40px;}
-.contantArea .story  .WhiteBox .item .event{float:right;width:60%;}
+.contantArea .story  .WhiteBox .item{width:90%;float:left; border-bottom:1px dotted #fff; padding:10px;margin:0 auto ;font-size:15px;letter-spacing:4px; line-height:25px;margin-left:20px;-webkit-transition: all 0.5s; transition: all 0.5s;}
+.contantArea .story  .WhiteBox .item:hover{background-color:rgba(255,255,255,0.3);}
+.contantArea .story  .WhiteBox .item .day{float:left; width:35%; margin-right:40px;letter-spacing:2px}
+.contantArea .story  .WhiteBox .item .event{float:right;width:55%;}

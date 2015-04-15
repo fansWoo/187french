@@ -111,23 +111,7 @@ $(document).on('click', '.scroll_arrow', function(){
 					</div>
 					<div class="item">
 						<div class="day">
-							102.Jan-Feb 
-						</div>
-						<div class="event">
-							International Baking Academy, in Weinheim, Germany Bread Diploma
-						</div>
-					</div>
-					<div class="item">
-						<div class="day">
-							102.Jan-Feb 
-						</div>
-						<div class="event">
-							International Baking Academy, in Weinheim, Germany Bread Diploma
-						</div>
-					</div>
-					<div class="item">
-						<div class="day">
-							102.Jan-Feb 
+							2013.Jan-Feb 
 						</div>
 						<div class="event">
 							International Baking Academy, in Weinheim, Germany Bread Diploma

@@ -8,7 +8,7 @@
 					<p>台北市士林區中正路187巷2號</p>
 				</div>
 				<div class="rightBox">
-					<p>FB(https://www.facebook.com/187patissiere)</p>
+					<a href="https://www.facebook.com/187patissiere"><img src="app/img/fb2.png"></a>
 					<p>sservice@187patissiere.com.tw</p>
 				</div>
 			</div>

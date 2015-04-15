@@ -7,13 +7,13 @@ body{}
 .Area .dessert03{position:absolute;z-index:1;width:280px; left:-120px; top:300px;}
 .Area .pic1{position:absolute;z-index:1; right:-550px; top:60px; -webkit-animation:p201503200508 2.8s;animation:p201503200508 2.8s;}
 @-webkit-keyframes p201503200508{
-	0%{ -webkit-transform: translate(50px, 0px)  ; opacity:0;  }
-	50%{ -webkit-transform: translate(50px, 0px)  ; opacity:0;}
+	0%{ -webkit-transform: translate(80px, 0px)  ; opacity:0;  }
+	50%{ -webkit-transform: translate(80px, 0px)  ; opacity:0;}
 	100%{ -webkit-transform: translate(0,0px) ; opacity:1;  }
 }
 @keyframes p201503200508{
-	0%{ transform: translate(20px, 0px)  ; opacity:0;  }
-	50%{transform: translate(20px, 0px)  ; opacity:0;}
+	0%{ transform: translate(80px, 0px)  ; opacity:0;  }
+	50%{transform: translate(80px, 0px)  ; opacity:0;}
 	100%{ transform: translate(0,0px) ; opacity:1;  }
 }
 .Area .contantArea{width:100%;margin:0px auto;position:relative; z-index:2;overflow:hidden; margin-top:250px; }

@@ -47,8 +47,8 @@ $(document).on('click', '.scroll_arrow', function(){
 				</div>
 				<div class="textbox">
 					<h2>教學理念</h2>
-					<p>
-						小班教學‧每班3~6人，貼身學習專業甜點師的手藝實際手作‧每位學員獨立實作，並帶回6人份的成品與親友一起分享 我們間堅持最好，每一道工序，都摻入了最誠摯的用心，在這個小教室裡，師生就像是一群法國的老朋友們，聚在其中一人家裡的廚房一起煮煮東西，輕鬆愉快的學會一道道經典料理。
+					<p class="mark">我們間堅持最好，每一道工序，都摻入了最誠摯的用心</p>
+					<p>小班教學，每班3~6人，貼身學習專業甜點師的手藝實際手作‧每位學員獨立實作，並帶回4~6人份的成品與親友一起分享，在這個小教室裡，師生就像是一群法國的老朋友們，聚在其中一人家裡的廚房一起煮煮東西，輕鬆愉快的學會一道道經典料理。
 					</p>
 				</div>
 				<div class="line1"></div>
@@ -57,17 +57,15 @@ $(document).on('click', '.scroll_arrow', function(){
 			
 			<div class="boxArea two">
 				<div class="picbox">
-					<img src="app/img/about/class/pic1.png" class="pic1">
-					<img src="app/img/about/class/pic2.png" class="pic2">
+					<img src="app/img/about/class/pic3.png" class="pic1">
+					<img src="app/img/about/class/pic4.png" class="pic2">
 				</div>
 				<div class="textbox ">
 					<h2>教室設備</h2>
-					<p>
-						豪華設備‧使用工藝精緻的進口廚具，讓您體驗大師級的經典與嚴謹
-						為了完美呈製成一道道的甜點與料理，並縮短製作及學員等待的，購買媲美國外五星級飯店餐廚等級的歐洲進口設備，如德國Rational蒸烤箱、義大利IRINOX急速冷凍冰箱，和台灣最高等級的中部電機烤箱。
-					</p>
-					<p>
-						教室所選用器材都是精挑細選國外進口商品，以安全性與實用性為優先考量，讓學員放心無慮地製作甜點，美國Kitchenaid Mixer攪拌器、法國Mauviel銅鍋、法國與日本進口的各式烘焙器材等。
+					<p class="mark">豪華設備，使用工藝精緻的進口廚具，讓您體驗大師級的經典與嚴謹</p>
+					<p>為了完美呈製成一道道的甜點與料理，並縮短製作及學員等待的時間，購買媲美國外五星級飯店餐廚等級的歐洲進口設備，如德國Rational蒸烤箱、義大利IRINOX急速冷凍冰箱，和台灣最高等級的中部電機烤箱。
+					教室所選用器材都是精挑細選國外進口商品，以安全性與實用性為優先考量，讓學員放心無慮地製作甜點，美國Kitchenaid Mixer攪拌器、法國Mauviel銅鍋、法國與日本進口的各式烘焙器材等。
+
 					</p>
 				</div>
 				
