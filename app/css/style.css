@@ -64,7 +64,7 @@ body { overflow-y:scroll; overflow-x:hidden; margin:0px; padding:0px; background
 	50%{transform: translate(0px, -15px)  ; opacity:0;}
 	100%{ transform: translate(0,0px) ; opacity:1;  }
 }
-.topHeader .contant{width:960px;height:80px;margin:0 auto; }
+.topHeader .contant{width:960px;height:180px;margin:0 auto;overflow:hidden; }
 .topHeader .contant .logoArea{ width:190px;height:80px;float:left; margin-top:10px; margin-left:20px;}
 .topHeader .contant .logoArea img{width:100%; padding-top:4px;}
 .topHeader .contant .rightArea{ width:700px;float:right; height:60px;padding-top:50px; border-bottom:1px solid #fff;position:relative; padding-right:15px;}
@@ -122,7 +122,7 @@ body { overflow-y:scroll; overflow-x:hidden; margin:0px; padding:0px; background
 }
 
 
-.footer{ width:100%;font-size:12px;position:relative; clear:both; color:#fff; letter-spacing:3px;position:relative; z-index:2;padding-bottom:20px; }
+.footer{ width:100%;font-size:12px;position:relative; clear:both; color:#fff; letter-spacing:3px;position:relative; z-index:2;padding-bottom:20px;overflow:hidden; }
 .footer .dessert01{display:none;position:absolute; left:-180px;width:450px; bottom:50px;}
 .footer.hover .dessert01{display:block;-webkit-animation:p201503200520 1.5s;animation:p201503200520 1.5s;}
 @-webkit-keyframes p201503200520{
@@ -138,8 +138,10 @@ body { overflow-y:scroll; overflow-x:hidden; margin:0px; padding:0px; background
 .footer .centerArea { width:990px; overflow: hidden; margin:0 auto;  border-top:1px solid rgba(255,255,255,0.5); padding-top:20px;  }
 .footer .centerArea .leftBox{ float:left; margin-left:50px;}
 .footer .centerArea .rightBox{ float:right;margin-right:50px;}
-.footer .centerArea .rightBox img{width:105px; opacity:0.7;-webkit-transition: all 0.8s; transition: all 0.8s; }
+.footer .centerArea .rightBox img{width:100px; opacity:0.7;-webkit-transition: all 0.8s; transition: all 0.8s;float:right; margin-bottom:5px;}
 .footer .centerArea .rightBox img:hover{opacity:1;}
+.footer .centerArea .rightBox a{display:block;float:right;color:#fff;}
+.footer .centerArea .rightBox a:hover{text-decoration:underline;}
 
 /***************************************************************************************/
 

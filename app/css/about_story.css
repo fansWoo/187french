@@ -1,6 +1,6 @@
 body{}
 /**********************左邊選單*********************************/
-.Area{width:100%;  margin-bottom:80px; overflow:hidden;position:relative;}
+.Area{width:100%;  margin-bottom:80px; overflow:hidden;position:relative;overflow:hidden;}
 
 .dessert01{position:absolute;z-index:1;width:350px;left:-80px; bottom:10px;}
 .Area .dessert02{position:absolute;z-index:1;width:300px; right:0px; top:1250px;}
@@ -24,7 +24,7 @@ body{}
 	0%{ transform: translate(0px,30px); opacity:0;  }
 	100%{ transform: translate(0,0px); opacity:1;  }
 }
-.Area .contantArea{width:50%;margin:0px auto;position:relative; z-index:2;}
+.Area .contantArea{width:650px;margin:0px auto;position:relative; z-index:2;}
 .contantArea .story{width:100%;margin:0px auto; font-size:15px;letter-spacing:4px; line-height:25px;color:#6a3c22; margin-bottom:50px;  }
 .contantArea .story p{margin-bottom:15px;font-weight:600;}
 .contantArea .story .title{width:300px;}

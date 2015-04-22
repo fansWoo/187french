@@ -1,6 +1,5 @@
 		</div>
 		<div class="footer">
-			<img src="app/img/index/dessert01.png" class="dessert01">
 			<div class="centerArea">
 				<div class="leftBox">
 					<p>週二~週六 9:00~18:00</p>
@@ -10,6 +9,7 @@
 				<div class="rightBox">
 					<a href="https://www.facebook.com/187patissiere"><img src="app/img/fb2.png"></a>
 					<p>sservice@187patissiere.com.tw</p>
+					<a href="http://fanswoo.com/">Design by fanswoo</a>
 				</div>
 			</div>
 		</div>

@@ -21,6 +21,7 @@
 		$(this).addClass('clicked');
   
 		});
+	
     $(document).scroll(function(){
         var scroll_top = $(document).scrollTop();
         if(scroll_top == 0){
@@ -35,7 +36,7 @@
             $('.bottomArea').removeClass('hover');
             $('.bottomArea').addClass('hover');
         }
-        else if(scroll_top >= 900 && scroll_top < 4200){
+        else if(scroll_top >= 900 && scroll_top < 4200 ){
 			$('.footer').addClass('hover');
 		}
     });
@@ -56,6 +57,16 @@
 	$(document).on('click', '.scroll_arrow', function(){
         $("body").animate({scrollTop: 0}, 1200, 'swing');
     });
+	$(function(){
+		var window_width = $(window).width();
+		if(window_width < 600)
+		{
+			
+			$('.bottomArea').addClass('block');
+			
+		}
+	});	
+	
 </script>
 <?=$temp['header_down']?>
 <?=$temp['topheader']?>
@@ -85,35 +96,39 @@
 		</div>
 			<div class="bottomArea">
 				<div class="box one">
-					<div class="picBox">
-						<div class="img">
-							<img src="app/img/index/hover_pic2.jpg" class="pic">
+					<a href="page/course_monthly">
+						<div class="picBox">
+							<div class="img">
+								<img src="app/img/index/hover_pic2.jpg" class="pic">
+							</div>
+							<div class="border"></div>
+							<div class="hoverBox">
+								<img src="app/img/index/text1.png">
+							</div>
+							<img src="app/img/index/shadow.png" class="shadow">
 						</div>
-						<div class="border"></div>
-						<div class="hoverBox">
-							<img src="app/img/index/text1.png">
-						</div>
-						<img src="app/img/index/shadow.png" class="shadow">
-					</div>
+					</a>
 					<div class="TextBox">
-						<a href=""><p><span>當月課程</span> <br>Monthly cours </p></a>
+						<a href="page/course_monthly"><p><span>當月課程</span> <br>Monthly cours </p></a>
 						
-						<a href=""><p><span>專修班</span> <br> Specialize Course</p></a>
-						<a href=""><p><span>系列課</span> <br> Series Course</p></a>
+						<a href="page/course_specialize"><p><span>專修班</span> <br> Specialize Course</p></a>
+						<a href="page/course_series"><p><span>系列課</span> <br> Series Course</p></a>
 						<div class="enter"></div>
 					</div>
 				</div>
 				<div class="box two">
-					<div class="picBox ">
-						<div class="img">
-							<img src="app/img/index/hover_pic.jpg" class="pic">
+					<a href="page/news_news">
+						<div class="picBox ">
+							<div class="img">
+								<img src="app/img/index/hover_pic.jpg" class="pic">
+							</div>
+							<div class="border two"></div>
+							<div class="hoverBox">
+								<img src="app/img/index/text_news.png">
+							</div>
+							<img src="app/img/index/shadow.png" class="shadow">
 						</div>
-						<div class="border two"></div>
-						<div class="hoverBox">
-							<img src="app/img/index/text_news.png">
-						</div>
-						<img src="app/img/index/shadow.png" class="shadow">
-					</div>
+					</a>
 					<div class="TextBox">
 						<a href=""><p>【每月課程】2月份課程資訊</p></a>
 						<a href=""><p>【每月課程】3月份課程資訊</p></a>
@@ -124,16 +139,18 @@
 					</div>
 				</div>
 				<div class="box three">
-					<div class="picBox">
-						<div class="img">
-							<img src="app/img/index/hover_pic3.jpg" class="pic"> 
+					<a href="page/register">
+						<div class="picBox">
+							<div class="img">
+								<img src="app/img/index/hover_pic3.jpg" class="pic"> 
+							</div>
+							<div class="border"></div>
+							<div class="hoverBox">
+								<img src="app/img/index/text_about.png">
+							</div>
+							<img src="app/img/index/shadow.png" class="shadow">
 						</div>
-						<div class="border"></div>
-						<div class="hoverBox">
-							<img src="app/img/index/text_about.png">
-						</div>
-						<img src="app/img/index/shadow.png" class="shadow">
-					</div>
+					</a>
 					<div class="TextBox">
 						<a href=""><p>每月課程報名</p></a>
 						<a href=""><p>意見回覆 </p></a>
