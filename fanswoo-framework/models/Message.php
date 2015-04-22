@@ -1,4 +1,5 @@
 <?php
+
 class Message extends CI_Model {
 
     private $data = array();
@@ -40,6 +41,7 @@ class Message extends CI_Model {
         //temp
 		$data['temp']['header_up'] = $this->load->view('temp/header_up', $data, TRUE);
 		$data['temp']['header_down'] = $this->load->view('temp/header_down', $data, TRUE);
+		$data['temp']['topheader'] = $this->load->view('temp/topheader', $data, TRUE);
 		$data['temp']['footer'] = $this->load->view('temp/footer', $data, TRUE);
 		$this->load->view('temp/message', $data);
 	}

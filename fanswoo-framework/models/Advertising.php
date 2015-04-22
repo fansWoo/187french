@@ -1,7 +1,5 @@
 <?php
 
-load_class('ObjDbBase', 'models', '');//引入父類物件
-
 class Advertising extends ObjDbBase
 {
 

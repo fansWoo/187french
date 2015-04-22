@@ -53,6 +53,17 @@ if ( ! function_exists('lang'))
 	}
 }
 
+if ( ! function_exists('line'))
+{
+	function line($line, $arg2 = '')
+	{
+		$CI =& get_instance();
+		$line = $CI->lang->line($line, $arg2);
+
+		return $line;
+	}
+}
+
 // ------------------------------------------------------------------------
 /* End of file language_helper.php */
 /* Location: ./system/helpers/language_helper.php */

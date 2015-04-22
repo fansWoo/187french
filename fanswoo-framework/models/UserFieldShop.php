@@ -1,7 +1,5 @@
 <?php
 
-load_class('User', 'models', '');//引入父類物件
-
 class UserFieldShop extends User {
 
     public $receive_name_Str = '';

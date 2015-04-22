@@ -13,7 +13,7 @@ class pic_controller extends FS_Controller {
 
         if($data['user']['uid'] == '')
         {
-            $url = base_url('user/login');
+            $url = base_url('user/login/?url=admin');
             header('Location: '.$url);
         }
 
@@ -28,15 +28,10 @@ class pic_controller extends FS_Controller {
 	
 	public function edit()
 	{
-        $child_data_Arr = $this->AdminModel->get_child('edit');//管理分類類別名稱
         $data = $this->data;//取得公用數據
-        $data = array_merge($data, $child_data_Arr);
-
-        //沒有這個頁面
-        if ( ! file_exists('app/views/admin/'.$data['admin_child_url_Str']))
-        {
-            show_404();
-        }
+        $data = array_merge($data, $this->AdminModel->get_data(array(
+            'child4_name_Str' => 'edit'//管理分類名稱
+        )));
 
         $picid_Num = $this->input->get('picid');
             
@@ -58,9 +53,6 @@ class pic_controller extends FS_Controller {
             'limitstart_Num' => 0,
             'limitcount_Num' => 100
         ));
-
-        //view sidebox設定
-        $data['admin_sidebox'] = $this->AdminModel->reset_sidebox();
 
         //global
         $data['global']['style'][] = 'admin';
@@ -144,15 +136,10 @@ class pic_controller extends FS_Controller {
 	
 	public function tablelist()
 	{
-        $child_data_Arr = $this->AdminModel->get_child('tablelist');//管理分類類別名稱
         $data = $this->data;//取得公用數據
-        $data = array_merge($data, $child_data_Arr);
-
-        //沒有這個頁面
-        if ( ! file_exists('app/views/admin/'.$data['admin_child_url_Str']))
-        {
-            show_404();
-        }
+        $data = array_merge($data, $this->AdminModel->get_data(array(
+            'child4_name_Str' => 'tablelist'//管理分類名稱
+        )));
 
 		$limitstart_Num = $this->input->get('limitstart');
         $limitcount_Num = $this->input->get('limitcount');
@@ -210,9 +197,6 @@ class pic_controller extends FS_Controller {
             'limitstart_Num' => 0,
             'limitcount_Num' => 100
         ));
-
-        //view sidebox設定
-        $data['admin_sidebox'] = $this->AdminModel->reset_sidebox();
 
         //global
         $data['global']['style'][] = 'admin';

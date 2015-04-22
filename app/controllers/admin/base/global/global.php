@@ -13,7 +13,7 @@ class global_controller extends FS_controller {
 
         if($data['user']['uid'] == '')
         {
-            $url = base_url('user/login');
+            $url = base_url('user/login/?url=admin');
             header('Location: '.$url);
         }
 
@@ -28,18 +28,22 @@ class global_controller extends FS_controller {
 
     public function common()
     {
-        $child_data_Arr = $this->AdminModel->get_child('common');//管理分類類別名稱
         $data = $this->data;//取得公用數據
-        $data = array_merge($data, $child_data_Arr);
-
-        //沒有這個頁面
-        if ( ! file_exists('app/views/admin/'.$data['admin_child_url_Str']))
-        {
-            show_404();
-        }
+        $data = array_merge($data, $this->AdminModel->get_data(array(
+            'child4_name_Str' => 'common'//管理分類名稱
+        )));
 
         //view sidebox設定
         $data['admin_sidebox'] = $this->AdminModel->reset_sidebox();
+
+
+        $SettingList = new SettingList();
+        $SettingList->construct_db([
+            'db_where_Arr' => [
+                'modelname' => 'smtp'
+            ]
+        ]);
+        $data['global'] = array_merge($data['global'], $SettingList->get_array());
 
         //global
         $data['global']['style'][] = 'admin';
@@ -183,18 +187,88 @@ class global_controller extends FS_controller {
             ));
         }
     }
+
+    public function common_smtp_post()
+    {
+
+        $this->form_validation->set_rules('smtp_account', 'SMTP顯示郵件', 'required');
+        $this->form_validation->set_rules('smtp_email', 'SMTP帳號', 'required');
+        $this->form_validation->set_rules('smtp_password', 'SMTP密碼', 'required');
+        $this->form_validation->set_rules('smtp_email', 'SMTP姓名', 'required');
+        $this->form_validation->set_rules('smtp_password', 'SMTP Host', 'required');
+
+        if ($this->form_validation->run() === TRUE)
+        {
+            $smtp_account_Str = $this->input->post('smtp_account', TRUE);
+            $smtp_email_Str = $this->input->post('smtp_email', TRUE);
+            $smtp_password_Str = $this->input->post('smtp_password', TRUE);
+            $smtp_username_Str = $this->input->post('smtp_username', TRUE);
+            $smtp_host_Str = $this->input->post('smtp_host', TRUE);
+            $smtp_ssl_checkbox_Num = $this->input->post('smtp_ssl_checkbox', TRUE);
+            $smtp_ssl_checkbox_Num = !empty($smtp_ssl_checkbox_Num) ? 1 : 0;
+
+            $SettingList = new SettingList();
+            $SettingList->construct(array(
+                'construct_Arr' => array(
+                    array(
+                        'keyword_Str' => 'smtp_account',
+                        'value_Str' => $smtp_account_Str,
+                        'modelname_Str' => 'smtp'
+                    ),
+                    array(
+                        'keyword_Str' => 'smtp_email',
+                        'value_Str' => $smtp_email_Str,
+                        'modelname_Str' => 'smtp'
+                    ),
+                    array(
+                        'keyword_Str' => 'smtp_password',
+                        'value_Str' => $smtp_password_Str,
+                        'modelname_Str' => 'smtp'
+                    ),
+                    array(
+                        'keyword_Str' => 'smtp_host',
+                        'value_Str' => $smtp_host_Str,
+                        'modelname_Str' => 'smtp'
+                    ),
+                    array(
+                        'keyword_Str' => 'smtp_username',
+                        'value_Str' => $smtp_username_Str,
+                        'modelname_Str' => 'smtp'
+                    ),
+                    array(
+                        'keyword_Str' => 'smtp_ssl_checkbox',
+                        'value_Str' => $smtp_ssl_checkbox_Num,
+                        'modelname_Str' => 'smtp'
+                    )
+                )
+            ));
+            $SettingList->update(array());
+
+            //送出成功訊息
+            $this->load->model('Message');
+            $this->Message->show(array(
+                'message' => '設定成功',
+                'url' => 'admin/base/global/global/common'
+            ));
+        }
+        else
+        {
+            $validation_errors_Str = validation_errors();
+            $validation_errors_Str = !empty($validation_errors_Str) ? $validation_errors_Str : '設定錯誤' ;
+            $this->load->model('Message');
+            $this->Message->show(array(
+                'message' => $validation_errors_Str,
+                'url' => 'admin/base/global/global/common'
+            ));
+        }
+    }
     
     public function seo($input = '')
     {
-        $child_data_Arr = $this->AdminModel->get_child('seo');//管理分類類別名稱
         $data = $this->data;//取得公用數據
-        $data = array_merge($data, $child_data_Arr);
-
-        //沒有這個頁面
-        if ( ! file_exists('app/views/admin/'.$data['admin_child_url_Str']))
-        {
-            show_404();
-        }
+        $data = array_merge($data, $this->AdminModel->get_data(array(
+            'child4_name_Str' => 'seo'//管理分類名稱
+        )));
 
         //view sidebox設定
         $data['admin_sidebox'] = $this->AdminModel->reset_sidebox();
@@ -253,15 +327,10 @@ class global_controller extends FS_controller {
     
     public function plugin($input = '')
     {
-        $child_data_Arr = $this->AdminModel->get_child('plugin');//管理分類類別名稱
         $data = $this->data;//取得公用數據
-        $data = array_merge($data, $child_data_Arr);
-
-        //沒有這個頁面
-        if ( ! file_exists('app/views/admin/'.$data['admin_child_url_Str']))
-        {
-            show_404();
-        }
+        $data = array_merge($data, $this->AdminModel->get_data(array(
+            'child4_name_Str' => 'plugin'//管理分類名稱
+        )));
 
         //view sidebox設定
         $data['admin_sidebox'] = $this->AdminModel->reset_sidebox();
@@ -287,7 +356,7 @@ class global_controller extends FS_controller {
 
         if ($this->form_validation->run() === TRUE)
         {
-            $website_script_plugin_ga = $this->input->post('website_script_plugin_ga', TRUE);
+            $website_script_plugin_ga = $this->input->post('website_script_plugin_ga');
 
             $SettingList = new SettingList();
             $SettingList->construct(array(
@@ -326,7 +395,7 @@ class global_controller extends FS_controller {
 
         if ($this->form_validation->run() === TRUE)
         {
-            $website_script_plugin_fb = $this->input->post('website_script_plugin_fb', TRUE);
+            $website_script_plugin_fb = $this->input->post('website_script_plugin_fb');
 
             $SettingList = new SettingList();
             $SettingList->construct(array(
@@ -366,7 +435,7 @@ class global_controller extends FS_controller {
 
         if ($this->form_validation->run() === TRUE)
         {
-            $website_script_plugin_custom = $this->input->post('website_script_plugin_custom', TRUE);
+            $website_script_plugin_custom = $this->input->post('website_script_plugin_custom');
 
             $SettingList = new SettingList();
             $SettingList->construct(array(

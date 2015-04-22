@@ -1,439 +1,245 @@
 <?php
-		
-class Note extends CI_Controller {
 
-    private $data = array();
-	private $father_name = 'note';//管理分類名稱
-    
-	public function __construct()
-	{
-		parent::__construct();
-        $this->data = $this->common_model->common();
-        $data = $this->common_model->data;
-        
-		if($data['user']['uid'] == '')
-		{
-			$url = base_url('user/login');
-			header('Location: '.$url);
-		}
-		
-		$this->load->model('admin_model');
-		$this->load->helper('form');
-		$this->load->library('form_validation');
-	}
-	
-	public function postnote($do = '', $noteid = 0)
-	{
-        $data = $this->common_model->data;
-        $child_name = 'postnote';//管理分類類別名稱
-		
-		if($do == 'post')
-        {
-            $noteid = $this->input->post('noteid', TRUE);
-            $this->form_validation->set_rules('title', '文章標題', 'required');
-            $this->form_validation->set_rules('content', '文章內容', 'required');
-				
-            if ($this->form_validation->run() !== FALSE)
-            {
-                $title = $this->input->post('title', TRUE);
-                $classid_array = $this->input->post('classid_array', TRUE);
-                $content = $this->input->post('content', TRUE);
-                $prioritynum = $this->input->post('prioritynum', TRUE);
-                    
-                $this->load->model('note_model');
-                $this->note_model->construct( array('noteid' => $noteid, 'title' => $title, 'classid_array' => $classid_array, 'content' => $content, 'prioritynum' => $prioritynum, 'modelname' => 'note') );
-                
-                $this->note_model->update(array());
+class note_controller extends FS_controller {
 
-                $this->load->model('message_model');
-                $this->message_model->show(array(
-                    'message' => '設定成功',
-                     'url' => 'admin/note/notelist'
-                ));
-            }
-            else
-            {
-                $this->load->model('message_model');
-                $this->message_model->show(array(
-                    'message' => validation_errors(),
-                    'url' => 'admin/note/notelist'
-                ));
-            }
-		}
-		else
-		{
-			//沒有這個頁面
-			if ( ! file_exists('app/views/admin/'.$this->father_name.'/'.$child_name.'.php'))
-			{
-				show_404();
-			}
-            
-            if(isset($noteid) === FALSE || $noteid !== 0)
-            {
-                $this->load->model('note_model');
-                $this->note_model->db_construct( array('db_where' => array('noteid' => $noteid) ) );
-                $data['note'] = $this->note_model->get_array();
-            }
-            
-            $this->load->model('class_list_model');
-            $this->class_list_model->db_construct(array(
-                'db_where' => array(
-                    'uid' => $data['user']['uid'],
-                    'modelname' => 'note'
-                ) 
-            ));
-            $data['class_list_array'] = $this->class_list_model->get_array();
-				
-			//view data設定
-			$data['admin_sidebox'] = reset_admin_sidebox($this->father_name, $child_name);
-			$data['child_name'] = $child_name;
-            
-            //global
-			$data['global']['style'][] = 'admin';
-			$data['global']['js'][] = 'script_common';
-            
-            //temp
-			$data['temp']['header_up'] = $this->load->view('temp/header_up', $data, TRUE);
-			$data['temp']['admin_header_down'] = $this->load->view('admin/temp/admin_header_down', $data, TRUE);
-			$data['temp']['admin_footer'] = $this->load->view('admin/temp/admin_footer', $data, TRUE);
-				
-			//輸出模板
-			$this->load->view('admin/'.$this->father_name.'/'.$child_name, $data);
-		}
-	}
-	
-	public function notelist($input = '')
-	{
-		global $admin;
-        $data = $this->common_model->data;
-        $child_name = 'notelist';//管理分類類別名稱
-		
-		if($input == 'post')
-        {
-			$this->form_validation->set_rules('classid', 'classid', 'required');
-			$this->form_validation->set_rules('classname', 'classname', 'required');
-			$this->form_validation->set_rules('slug', '標籤代號', 'required');
-				
-			if ($this->form_validation->run() !== FALSE)
-			{
-                $this->load->model('message_model');
-                $this->message_model->show(array(
-                    'message' => '設定成功',
-                     'url' => 'admin/note/notelist'
-                ));
-			}
-			else
-			{
-                $this->load->model('message_model');
-                $this->message_model->show(array(
-                    'message' => validation_errors(),
-                     'url' => 'admin/note/notelist'
-                ));
-			}
-		}
-		else
-		{
-			
-			//沒有這個頁面
-			if ( ! file_exists('app/views/admin/'.$this->father_name.'/'.$child_name.'.php'))
-			{
-				show_404();
-			}
-            
-            $limitstart = $this->input->get('limitstart');
-            $limitcount = $this->input->get('limitcount');
-            $limitcount = empty($limitcount) ? 20 : $limitcount;
-            $limitcount = $limitcount > 100 ? 100 : $limitcount;
-            
-            $this->load->model('note_list_model');
-            $this->note_list_model->set_db(array(
-                'db_where' => array(
-                    'modelname' => 'note'
-                ),
-                'limitstart' => $limitstart,
-                'limitcount' => $limitcount
-            ));
-            $this->note_list_model->db_construct();
-            $data['note_list'] = $this->note_list_model->get_array();
-            $data['note_links'] = $this->note_list_model->create_links( array('base_url' => 'admin/note/notelist') );
-				
-			//view data設定
-			$data['admin_sidebox'] = reset_admin_sidebox($this->father_name, $child_name);
-			$data['child_name'] = $child_name;
-            
-            //global
-			$data['global']['style'][] = 'admin';
-			$data['global']['js'][] = 'script_common';
-            
-            //temp
-			$data['temp']['header_up'] = $this->load->view('temp/header_up', $data, TRUE);
-			$data['temp']['admin_header_down'] = $this->load->view('admin/temp/admin_header_down', $data, TRUE);
-			$data['temp']['admin_footer'] = $this->load->view('admin/temp/admin_footer', $data, TRUE);
-			
-			//輸出模板
-			$this->load->view('admin/'.$this->father_name.'/'.$child_name, $data);
-		}
-	}
-    
-	public function postclass($do = '', $classid = 0)
-	{
-		global $admin;
-        $data = $this->common_model->data;
-        $child_name = 'postclass';//管理分類類別名稱
-        
-		if($do == 'post')
-        {
-            $this->form_validation->set_rules('classname', 'classname', 'required');
+    protected $child1_name_Str = 'base';
+    protected $child2_name_Str = 'note';
+    protected $child3_name_Str = 'note';
 
-            if ($this->form_validation->run() !== FALSE)
-            {
-                $classid = $this->input->post('classid', TRUE);
-                $classname = $this->input->post('classname', TRUE);
-                $slug = $this->input->post('slug', TRUE);
-                
-                $this->load->model('class_model');
-                $this->class_model->construct( array('classid' => $classid, 'classname' => $classname, 'slug' => $slug, 'modelname' => 'note') );
-                $this->class_model->update(array());
-
-                $this->load->model('message_model');
-                $this->message_model->show(array(
-                    'message' => '設定成功',
-                    'url' => 'admin/note/classlist'
-                ));
-            }
-            else
-            {
-                $this->load->model('message_model');
-                $this->message_model->show(array(
-                    'message' => validation_errors(),
-                    'url' => 'admin/note/classlist'
-                ));
-            }
-        }
-		else
-		{
-			//沒有這個頁面
-			if ( ! file_exists('app/views/admin/'.$this->father_name.'/'.$child_name.'.php'))
-			{
-				show_404();
-			}
-            
-            $uid = $this->session->userdata('uid');
-            
-            if($do == 'edit' && $classid !== 0)
-            {
-                $this->load->model('class_model');
-                $this->class_model->db_construct( array('db_where' => array('classid' => $classid, 'modelname' => 'note') ) );
-                $data['class'] = $this->class_model->get_array();
-            }
-				
-			//view data設定
-			$data['admin_sidebox'] = reset_admin_sidebox($this->father_name, $child_name);
-			$data['child_name'] = $child_name;
-            
-            //global
-			$data['global']['style'][] = 'admin';
-			$data['global']['js'][] = 'script_common';
-            
-            //temp
-			$data['temp']['header_up'] = $this->load->view('temp/header_up', $data, TRUE);
-			$data['temp']['admin_header_down'] = $this->load->view('admin/temp/admin_header_down', $data, TRUE);
-			$data['temp']['admin_footer'] = $this->load->view('admin/temp/admin_footer', $data, TRUE);
-				
-			//output
-			$this->load->view('admin/'.$this->father_name.'/'.$child_name, $data);
-		}
-	}
-    
-	public function classlist($input = '')
-	{
-		global $admin;
-        $data = $this->common_model->data;
-        $child_name = 'classlist';//管理分類類別名稱
-		
-		if($input == 'post')
-        {
-			$this->form_validation->set_rules('classid', 'classid', 'required');
-			$this->form_validation->set_rules('classname', 'classname', 'required');
-			$this->form_validation->set_rules('slug', '標籤代號', 'required');
-				
-			if ($this->form_validation->run() !== FALSE)
-			{
-				$this->admin_note_model->addnote_post();
-				
-				$message = '設定成功';
-				$url = 'admin/note/addnote';
-				
-				$this->load->model('message_model');
-				$this->message_model->show(array('message' => $message, 'url' => $url));
-			}
-			else
-			{
-				$message = validation_errors();
-				$url = 'admin/note/addnote';
-					
-				$this->load->model('message_model');
-				$this->message_model->show(array('message' => $message, 'url' => $url));
-			}
-		}
-		else
-		{
-			
-			//沒有這個頁面
-			if ( ! file_exists('app/views/admin/'.$this->father_name.'/'.$child_name.'.php'))
-			{
-				show_404();
-			}
-
-			$limitstart = $this->input->get('limitstart');
-            $limitcount = $this->input->get('limitcount');
-            $limitcount = empty($limitcount) ? 20 : $limitcount;
-            $limitcount = $limitcount > 100 ? 100 : $limitcount;
-			
-            $this->load->model('class_list_model');
-            $this->class_list_model->set_db(array(
-                'db_where' => array(
-                    'uid' => $data['user']['uid'],
-                    'modelname' => 'note'
-                ),
-                'limitstart' => $limitstart,
-                'limitcount' => $limitcount
-            ));
-            $this->class_list_model->db_construct();
-            $data['class_list'] = $this->class_list_model->get_array();
-            $data['class_links'] = $this->class_list_model->create_links( array('base_url' => 'admin/note/classlist') );
-
-			//view data設定
-			$data['admin_sidebox'] = reset_admin_sidebox($this->father_name, $child_name);
-			$data['child_name'] = $child_name;
-            
-            //global
-			$data['global']['style'][] = 'admin';
-			$data['global']['js'][] = 'script_common';
-            
-            //temp
-			$data['temp']['header_up'] = $this->load->view('temp/header_up', $data, TRUE);
-			$data['temp']['admin_header_down'] = $this->load->view('admin/temp/admin_header_down', $data, TRUE);
-			$data['temp']['admin_footer'] = $this->load->view('admin/temp/admin_footer', $data, TRUE);
-				
-			//輸出模板
-			$this->load->view('admin/'.$this->father_name.'/'.$child_name, $data);
-		}
-	}
-	
-    public function delete_note($noteid = 0, $hash = '')
+    public function __construct()
     {
-        //CSRF過濾
-        if($hash == $this->security->get_csrf_hash())
-        {
-            $this->load->model('note_model');
-            $this->note_model->construct( array('noteid' => $noteid) );
-            $this->note_model->hidden();
+        parent::__construct();
+        $data = $this->data;
 
-            $this->load->model('message_model');
-            $this->message_model->show(array(
-                'message' => '刪除成功',
-                'url' => 'admin/note/notelist'
+        if($data['user']['uid'] == '')
+        {
+            $url = base_url('user/login/?url=admin');
+            header('Location: '.$url);
+        }
+
+        $this->load->model('AdminModel');
+        $this->AdminModel->child1_name_Str = $this->child1_name_Str;
+        $this->AdminModel->child2_name_Str = $this->child2_name_Str;
+        $this->AdminModel->child3_name_Str = $this->child3_name_Str;
+
+        $this->load->helper('form');
+        $this->load->library('form_validation');
+    }
+
+    public function edit()
+    {
+        $data = $this->data;//取得公用數據
+        $data = array_merge($data, $this->AdminModel->get_data(array(
+            'child4_name_Str' => 'edit'//管理分類名稱
+        )));
+            
+        $noteid_Num = $this->input->get('noteid');
+
+        $data['NoteField'] = new NoteField();
+        $data['NoteField']->construct_db(array(
+            'db_where_Arr' => array(
+                'note.noteid' => $noteid_Num
+            )
+        ));
+
+        $data['NoteClassMetaList'] = new ObjList();
+        $data['NoteClassMetaList']->construct_db(array(
+            'db_where_Arr' => [
+                'modelname' => 'note'
+            ],
+            'model_name_Str' => 'ClassMeta',
+            'limitstart_Num' => 0,
+            'limitcount_Num' => 100
+        ));
+
+        //global
+        $data['global']['style'][] = 'admin';
+        $data['global']['js'][] = 'script_common';
+        $data['global']['js'][] = 'admin';
+
+        //temp
+        $data['temp']['header_up'] = $this->load->view('temp/header_up', $data, TRUE);
+        $data['temp']['admin_header_down'] = $this->load->view('admin/temp/admin_header_down', $data, TRUE);
+        $data['temp']['admin_footer'] = $this->load->view('admin/temp/admin_footer', $data, TRUE);
+
+        //輸出模板
+        $this->load->view('admin/'.$data['admin_child_url_Str'], $data);
+    }
+
+    public function edit_post()
+    {
+        $data = $this->data;//取得公用數據
+
+        $this->form_validation->set_rules('title_Str', '文章標題', 'required');
+        $this->form_validation->set_rules('content_Str', '文章內容', 'required');
+        
+        $noteid_Num = $this->input->post('noteid_Num', TRUE);
+
+        if ($this->form_validation->run() !== FALSE)
+        {
+            //基本post欄位
+            $title_Str = $this->input->post('title_Str', TRUE);
+            $classids_Arr = $this->input->post('classids_Arr', TRUE);
+            $content_Str = $this->input->post('content_Str');
+            $prioritynum_Num = $this->input->post('prioritynum_Num', TRUE);
+
+            //建構Note物件，並且更新
+            $NoteField = new NoteField();
+            $NoteField->construct(array(
+                'noteid_Num' => $noteid_Num,
+                'title_Str' => $title_Str,
+                'classids_Arr' => $classids_Arr,
+                'content_Str' => $content_Str,
+                'prioritynum_Num' => $prioritynum_Num,
+                'modelname_Str' => 'note'
+            ));
+            $NoteField->update();
+
+            //送出成功訊息
+            $this->load->model('Message');
+            $this->Message->show(array(
+                'message' => '設定成功',
+                'url' => 'admin/base/note/note/tablelist/'
             ));
         }
         else
         {
-            $this->load->model('message_model');
-            $this->message_model->show(array(
-                'message' => '刪除失敗',
-                'url' => 'admin/note/notelist'
+            $validation_errors_Str = validation_errors();
+            $validation_errors_Str = !empty($validation_errors_Str) ? $validation_errors_Str : '設定錯誤' ;
+            $this->load->model('Message');
+            $this->Message->show(array(
+                'message' => $validation_errors_Str,
+                'url' => 'admin/base/note/note/edit/?noteid='.$noteid_Num
             ));
         }
     }
-	
-    public function delete_class($classid = 0, $hash = '')
-    {
-        //CSRF過濾
-        if($hash == $this->security->get_csrf_hash())
-        {
-            $this->load->model('class_model');
-            $this->class_model->construct( array('classid' => $classid) );
-            $this->class_model->hidden();
 
-            $this->load->model('message_model');
-            $this->message_model->show(array(
+    public function tablelist()
+    {
+        $data = $this->data;//取得公用數據
+        $data = array_merge($data, $this->AdminModel->get_data(array(
+            'child4_name_Str' => 'tablelist'//管理分類名稱
+        )));
+
+        $data['search_noteid_Num'] = $this->input->get('noteid');
+        $data['search_title_Str'] = $this->input->get('title');
+        $data['search_class_slug_Str'] = $this->input->get('class_slug');
+
+        $limitstart_Num = $this->input->get('limitstart');
+        $limitcount_Num = $this->input->get('limitcount');
+        $limitcount_Num = !empty($limitcount_Num) ? $limitcount_Num : 20;
+
+        $class_ClassMeta = new ClassMeta();
+        $class_ClassMeta->construct_db(array(
+            'db_where_Arr' => array(
+                'slug' => $data['search_class_slug_Str']
+            )
+        ));
+
+        $data['NoteList'] = new ObjList();
+        $data['NoteList']->construct_db(array(
+            'db_where_Arr' => array(
+                'modelname' => 'note',
+                'noteid' => $data['search_noteid_Num']
+            ),
+            'db_where_like_Arr' => array(
+                'title_Str' => $data['search_title_Str']
+            ),
+            'db_where_or_Arr' => array(
+                'classids' => array($class_ClassMeta->classid_Num)
+            ),
+            'db_orderby_Arr' => array(
+                array('prioritynum', 'DESC'),
+                array('updatetime', 'DESC')
+            ),
+            'db_where_deletenull_Bln' => TRUE,
+            'model_name_Str' => 'Note',
+            'limitstart_Num' => $limitstart_Num,
+            'limitcount_Num' => $limitcount_Num
+        ));
+        $data['page_link'] = $data['NoteList']->create_links(array('base_url_Str' => 'admin/'.$data['child1_name_Str'].'/'.$data['child2_name_Str'].'/'.$data['child3_name_Str'].'/'.$data['child4_name_Str']));
+
+        $data['NoteClassMetaList'] = new ObjList();
+        $data['NoteClassMetaList']->construct_db(array(
+            'db_where_Arr' => [
+                'modelname' => 'note'
+            ],
+            'model_name_Str' => 'ClassMeta',
+            'limitstart_Num' => 0,
+            'limitcount_Num' => 100
+        ));
+
+        //global
+        $data['global']['style'][] = 'admin';
+        $data['global']['js'][] = 'script_common';
+        $data['global']['js'][] = 'admin';
+
+        //temp
+        $data['temp']['header_up'] = $this->load->view('temp/header_up', $data, TRUE);
+        $data['temp']['admin_header_down'] = $this->load->view('admin/temp/admin_header_down', $data, TRUE);
+        $data['temp']['admin_footer'] = $this->load->view('admin/temp/admin_footer', $data, TRUE);
+
+        //輸出模板
+        $this->load->view('admin/'.$data['admin_child_url_Str'], $data);
+
+    }
+
+    public function tablelist_post()
+    {
+        $data = $this->data;//取得公用數據
+
+        $search_noteid_Num = $this->input->post('search_noteid_Num', TRUE);
+        $search_class_slug_Str = $this->input->post('search_class_slug_Str', TRUE);
+        $search_title_Str = $this->input->post('search_title_Str', TRUE);
+
+        $url_Str = base_url('admin/base/note/note/tablelist/?');
+
+        if(!empty($search_noteid_Num))
+        {
+            $url_Str = $url_Str.'&noteid='.$search_noteid_Num;
+        }
+
+        if(!empty($search_class_slug_Str))
+        {
+            $url_Str = $url_Str.'&class_slug='.$search_class_slug_Str;
+        }
+
+        if(!empty($search_title_Str))
+        {
+            $url_Str = $url_Str.'&title='.$search_title_Str;
+        }
+
+        header("Location: $url_Str");
+    }
+
+    public function delete()
+    {
+        $hash_Str = $this->input->get('hash');
+        $noteid_Num = $this->input->get('noteid');
+
+        //CSRF過濾
+        if($hash_Str == $this->security->get_csrf_hash())
+        {
+            $Note = new Note();
+            $Note->construct(array('noteid_Num' => $noteid_Num));
+            $Note->delete();
+
+            $this->load->model('Message');
+            $this->Message->show(array(
                 'message' => '刪除成功',
-                'url' => 'admin/note/classlist'
+                'url' => 'admin/base/note/note/tablelist'
             ));
         }
         else
         {
-            $this->load->model('message_model');
-            $this->message_model->show(array(
-                'message' => '刪除失敗',
-                'url' => 'admin/note/classlist'
+            $this->load->model('Message');
+            $this->Message->show(array(
+                'message' => 'hash驗證失敗，請使用標準瀏覽器進行刪除動作',
+                'url' => 'admin/base/note/note/tablelist'
             ));
         }
     }
-	
-	public function set($input = '')
-	{
-		global $admin;
-        $data = $this->common_model->data;
-        $child_name = 'set';//管理分類類別名稱
-		
-		if($input == 'post')
-        {
-			$this->form_validation->set_rules('note_order', '文章顯示排序', 'required');
-			$this->form_validation->set_rules('note_amount', '文章顯示數量', 'required');
-				
-			if ($this->form_validation->run() !== FALSE)
-			{
-                $note_order = $this->input->post('note_order', TRUE);
-                $this->load->model('setting_model');
-                $this->setting_model->construct( array('keyword' => 'note_order', 'value' => $note_order, 'status' => 2) );
-				$this->setting_model->update(array());
-                
-                $note_amount = $this->input->post('note_amount', TRUE);
-                $this->setting_model->construct( array('keyword' => 'note_amount', 'value' => $note_amount, 'status' => 2) );
-				$this->setting_model->update(array());
-                
-				$message = '設定成功';
-				$url = 'admin/note/set';
-			}
-			else
-			{
-				$message = validation_errors();
-				$url = 'admin/note/set';
-			}
-            $this->load->model('message_model');
-            $this->message_model->show(array('message' => $message, 'url' => $url));
-		}
-		else
-		{
-			
-			//沒有這個頁面
-			if ( ! file_exists('app/views/admin/'.$this->father_name.'/'.$child_name.'.php'))
-			{
-				show_404();
-			}
-            
-            $this->load->model('setting_list_model');
-            $this->setting_list_model->db_construct( array('keyword' => array('note_order', 'note_amount') ) );
-            $data['setting_list_array'] = $this->setting_list_model->get_array();
-				
-			//view data設定
-			$data['admin_sidebox'] = reset_admin_sidebox($this->father_name, $child_name);
-			$data['child_name'] = $child_name;
-            
-            //global
-			$data['global']['style'][] = 'admin';
-			$data['global']['js'][] = 'script_common';
-            
-            //temp
-			$data['temp']['header_up'] = $this->load->view('temp/header_up', $data, TRUE);
-			$data['temp']['admin_header_down'] = $this->load->view('admin/temp/admin_header_down', $data, TRUE);
-			$data['temp']['admin_footer'] = $this->load->view('admin/temp/admin_footer', $data, TRUE);
-				
-			//輸出模板
-			$this->load->view('admin/'.$this->father_name.'/'.$child_name, $data);
-		}
-	}
+
 }
 
 ?>

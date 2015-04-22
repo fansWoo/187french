@@ -1,13 +1,11 @@
 <?php
 
-load_class('ObjDbBase', 'models', '');//引入父類物件
-
 class ProductShop extends ObjDbBase
 {
 
     public $productid_Num = 0;
     public $uid_Num = 0;
-    public $title_Str = '';
+    public $name_Str = '';
     public $pic_PicObjList;//照片類別列表
     public $mainpic_PicObjList;//照片類別列表
     public $content_Html = '';//網頁語言類別
@@ -23,7 +21,7 @@ class ProductShop extends ObjDbBase
     public $db_field_Arr = array(//填寫資料庫欄位與本物件屬性之關係，前者為資料庫欄位，後者為屬性
         'productid' => 'productid_Num',
         'uid' => 'uid_Num',
-        'title' => 'title_Str',
+        'name' => 'name_Str',
         'price' => 'price_Num',
         'synopsis' => 'synopsis_Str',
         'picids' => array('pic_PicObjList', 'uniqueids_Str'),
@@ -42,7 +40,7 @@ class ProductShop extends ObjDbBase
         //取得引數
         $productid_Num = !empty($arg['productid_Num']) ? $arg['productid_Num'] : 0;
         $uid_Num = !empty($arg['uid_Num']) ? $arg['uid_Num'] : 0;
-        $title_Str = !empty($arg['title_Str']) ? $arg['title_Str'] : '';
+        $name_Str = !empty($arg['name_Str']) ? $arg['name_Str'] : '';
         $picids_Str = !empty($arg['picids_Str']) ? $arg['picids_Str'] : '';
         $picids_Arr = !empty($arg['picids_Arr']) ? $arg['picids_Arr'] : array();
         $mainpicids_Str = !empty($arg['mainpicids_Str']) ? $arg['mainpicids_Str'] : '';
@@ -118,7 +116,7 @@ class ProductShop extends ObjDbBase
         
         //將建構方法所計算出的值存入此類別之屬性
         $this->productid_Num = $productid_Num;
-        $this->title_Str = $title_Str;
+        $this->name_Str = $name_Str;
         $this->pic_PicObjList = $pic_PicObjList;
         $this->mainpic_PicObjList = $mainpic_PicObjList;
         $this->uid_Num = $uid_Num;

@@ -1,7 +1,5 @@
 <?php
 
-load_class('ObjList', 'models', '');//引入父類物件
-
 class SettingList extends ObjList
 {
 
@@ -36,7 +34,14 @@ class SettingList extends ObjList
             $setting_Arr[$keyword_Str] = $value_Setting->value_Str;
         }
 
-        return $setting_Arr;
+        if(!empty($setting_Arr))
+        {
+            return $setting_Arr;
+        }
+        else
+        {
+            return array();
+        }
     }
 
 }

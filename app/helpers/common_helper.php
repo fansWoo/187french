@@ -182,25 +182,46 @@ function html_code_replace($arg)
 	return $text;
 }
     
-function check_comma_array(&$id_Str, &$id_Arr)
+function check_comma_array(&$ids_Str, &$ids_Arr)
 {
-    if(isset($id_Str) == TRUE && $id_Str != '' && count($id_Arr) == 0)
+    if(empty($ids_Arr) && !empty($ids_Str))
     {
-        $id_Arr = explode(',', $id_Str);
+        $ids_Arr = explode(',', $ids_Str);
     }
-        
-    $id2_Arr = $id_Arr;
+    else if(empty($ids_Str) && !empty($ids_Arr))
+    {
+        $ids_Str = implode(',', $ids_Arr);
+    }
+    
     $id_set_Arr = array();
-    foreach($id2_Arr as $key => $value)
+    if(is_array($ids_Arr))
     {
-        if($value == 0 || in_array($value, $id_set_Arr))
+        foreach($ids_Arr as $key => $value)
         {
-            unset($id_Arr[$key]);
+            if($value == 0 || in_array($value, $id_set_Arr))
+            {
+                unset($ids_Arr[$key]);
+            }
+            $id_set_Arr[] = $value;
         }
-        $id_set_Arr[] = $value;
     }
-    $id_Str = implode(',', $id_Arr);
-    $id_Arr = explode(',', $id_Str);
+    if(is_array($ids_Arr))
+    {
+        $ids_Str = implode(',', $ids_Arr);
+    }
+    $ids_Arr = explode(',', $ids_Str);
+}
+
+//引入引數並將空值的變數給予空值
+function reset_null_arr(&$arg1, $arg2)
+{
+    foreach($arg2 as $key)
+    {
+        if(empty($arg1[$key]))
+        {
+            $arg1[$key] = NULL;
+        }
+    }
 }
 
 function getfile_from_files($arg)
@@ -302,7 +323,7 @@ function js_console_log($arg)
 }
 
 //輸出排列整齊的陣列
-function print_pre($arg)
+function pre($arg)
 {
     echo '<pre>';
     print_r($arg);
@@ -314,7 +335,7 @@ function echoe($arg)
 {
     if(is_array($arg) || is_object($arg))
     {
-        print_pre($arg);
+        pre($arg);
     }
     else
     {

@@ -13,7 +13,7 @@ class advertising_controller extends FS_controller {
 
         if($data['user']['uid'] == '')
         {
-            $url = base_url('user/login');
+            $url = base_url('user/login/?url=admin');
             header('Location: '.$url);
         }
 

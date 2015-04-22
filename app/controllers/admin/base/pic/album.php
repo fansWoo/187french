@@ -13,7 +13,7 @@ class album_controller extends FS_controller {
 
         if($data['user']['uid'] == '')
         {
-            $url = base_url('user/login');
+            $url = base_url('user/login/?url=admin');
             header('Location: '.$url);
         }
 
@@ -28,15 +28,10 @@ class album_controller extends FS_controller {
 
     public function edit()
     {
-        $child_data_Arr = $this->AdminModel->get_child('edit');//管理分類類別名稱
         $data = $this->data;//取得公用數據
-        $data = array_merge($data, $child_data_Arr);
-
-        //沒有這個頁面
-        if ( ! file_exists('app/views/admin/'.$data['admin_child_url_Str']))
-        {
-            show_404();
-        }
+        $data = array_merge($data, $this->AdminModel->get_data(array(
+            'child4_name_Str' => 'edit'//管理分類名稱
+        )));
 
         $classid_Num = $this->input->get('classid');
         $slug_Str = $this->input->get('slug');
@@ -61,9 +56,6 @@ class album_controller extends FS_controller {
             'limitstart_Num' => 0,
             'limitcount_Num' => 100
         ));
-
-        //view sidebox設定
-        $data['admin_sidebox'] = $this->AdminModel->reset_sidebox();
 
         //global
         $data['global']['style'][] = 'admin';
@@ -123,15 +115,10 @@ class album_controller extends FS_controller {
 
     public function tablelist()
     {
-        $child_data_Arr = $this->AdminModel->get_child('tablelist');//管理分類類別名稱
         $data = $this->data;//取得公用數據
-        $data = array_merge($data, $child_data_Arr);
-
-        //沒有這個頁面
-        if ( ! file_exists('app/views/admin/'.$data['admin_child_url_Str']))
-        {
-            show_404();
-        }
+        $data = array_merge($data, $this->AdminModel->get_data(array(
+            'child4_name_Str' => 'tablelist'//管理分類名稱
+        )));
 
         $data['search_classname_Str'] = $this->input->get('classname');
         $data['search_slug_Str'] = $this->input->get('slug');
@@ -174,9 +161,6 @@ class album_controller extends FS_controller {
             'limitcount_Num' => 100
         ));
         $data['class_links'] = $data['class_list_ClassMetaList']->create_links(array('base_url_Str' => 'admin/'.$data['child1_name_Str'].'/'.$data['child2_name_Str'].'/'.$data['child3_name_Str'].'/'.$data['child4_name_Str']));
-
-        //view sidebox設定
-        $data['admin_sidebox'] = $this->AdminModel->reset_sidebox();
 
         //global
         $data['global']['style'][] = 'admin';

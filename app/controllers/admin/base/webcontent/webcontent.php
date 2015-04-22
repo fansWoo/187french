@@ -13,7 +13,7 @@ class Webcontent extends CI_Controller {
         
 		if($data['user']['uid'] == '')
 		{
-			$url = base_url('user/login');
+            $url = base_url('user/login/?url=admin');
 			header('Location: '.$url);
 		}
 		
@@ -24,8 +24,10 @@ class Webcontent extends CI_Controller {
     
 	public function home($input = '')
 	{
-		global $admin;
-        $data = $this->common_model->data;
+        $data = $this->data;//取得公用數據
+        $data = array_merge($data, $this->AdminModel->get_data(array(
+            'child4_name_Str' => 'home'//管理分類名稱
+        )));
 		
 		if($input == 'showroom')
         {
@@ -169,8 +171,10 @@ class Webcontent extends CI_Controller {
 	
 	public function story($input = '')
 	{
-		global $admin;
-        $data = $this->common_model->data;
+        $data = $this->data;//取得公用數據
+        $data = array_merge($data, $this->AdminModel->get_data(array(
+            'child4_name_Str' => 'story'//管理分類名稱
+        )));
 		
 		if($input == 'story1')
         {

@@ -1,13 +1,11 @@
 <?php
 
-load_class('ObjDbBase', 'models', '');//引入父類物件
-
 class Showpiece extends ObjDbBase
 {
 
     public $showpieceid_Num = 0;
     public $uid_Num = 0;
-    public $title_Str = '';
+    public $name_Str = '';
     public $pic_PicObjList;//照片類別列表
     public $mainpic_PicObjList;//照片類別列表
     public $content_Html = '';//網頁語言類別
@@ -23,7 +21,7 @@ class Showpiece extends ObjDbBase
     public $db_field_Arr = array(//填寫資料庫欄位與本物件屬性之關係，前者為資料庫欄位，後者為屬性
         'showpieceid' => 'showpieceid_Num',
         'uid' => 'uid_Num',
-        'title' => 'title_Str',
+        'name' => 'name_Str',
         'price' => 'price_Num',
         'synopsis' => 'synopsis_Str',
         'picids' => array('pic_PicObjList', 'uniqueids_Str'),
@@ -38,100 +36,55 @@ class Showpiece extends ObjDbBase
 	
 	public function construct($arg)
 	{
+        //引入引數並將空值的變數給予空值
+        reset_null_arr($arg, ['showpieceid_Num', 'uid_Num', 'name_Str', 'picids_Str', 'picids_Arr', 'mainpicids_Str', 'mainpicids_Arr', 'content_Str', 'content_specification_Str', 'synopsis_Str', 'price_Num', 'classids_Str', 'classids_Arr', 'prioritynum_Num', 'updatetime_Str', 'updatetime_inputtime_date_Str', 'updatetime_inputtime_time_Str', 'status_Num']);
+        foreach($arg as $key => $value) ${$key} = $arg[$key];
         
-        //取得引數
-        $showpieceid_Num = !empty($arg['showpieceid_Num']) ? $arg['showpieceid_Num'] : 0;
-        $uid_Num = !empty($arg['uid_Num']) ? $arg['uid_Num'] : 0;
-        $title_Str = !empty($arg['title_Str']) ? $arg['title_Str'] : '';
-        $picids_Str = !empty($arg['picids_Str']) ? $arg['picids_Str'] : '';
-        $picids_Arr = !empty($arg['picids_Arr']) ? $arg['picids_Arr'] : array();
-        $mainpicids_Str = !empty($arg['mainpicids_Str']) ? $arg['mainpicids_Str'] : '';
-        $mainpicids_Arr = !empty($arg['mainpicids_Arr']) ? $arg['mainpicids_Arr'] : array();
-        $content_Str = !empty($arg['content_Str']) ? $arg['content_Str'] : '' ;
-        $content_specification_Str = !empty($arg['content_specification_Str']) ? $arg['content_specification_Str'] : '' ;
-        $synopsis_Str = !empty($arg['synopsis_Str']) ? $arg['synopsis_Str'] : '' ;
-        $price_Num = !empty($arg['price_Num']) ? $arg['price_Num'] : 0 ;
-        $classids_Str = !empty($arg['classids_Str']) ? $arg['classids_Str'] : '';
-        $classids_Arr = !empty($arg['classids_Arr']) ? $arg['classids_Arr'] : array();
-        $prioritynum_Num = !empty($arg['prioritynum_Num']) ? $arg['prioritynum_Num'] : 0;
-        $updatetime_Str = !empty($arg['updatetime_Str']) ? $arg['updatetime_Str'] : '';
-        $updatetime_inputtime_date_Str = !empty($arg['updatetime_inputtime_date_Str']) ? $arg['updatetime_inputtime_date_Str'] : '';
-        $updatetime_inputtime_time_Str = !empty($arg['updatetime_inputtime_time_Str']) ? $arg['updatetime_inputtime_time_Str'] : '';
-        $status_Num = !empty($arg['status_Num']) ? $arg['status_Num'] : 1;
+        //將引數設為物件屬性，或將引數作為物件型屬性的建構值
+        $this->set('showpieceid_Num', $showpieceid_Num);
+        $this->set('name_Str', $name_Str);
+        $this->set('content_Html', $content_Str);
+        $this->set('content_specification_Html', $content_specification_Str);
+        $this->set('synopsis_Str', $synopsis_Str);
+        $this->set('price_Num', $price_Num);
+        $this->set('prioritynum_Num', $prioritynum_Num);
+        $this->set('status_Num', $status_Num);
+        $this->set('class_ClassMetaList', [
+            'classids_Str' => $classids_Str,
+            'classids_Arr' => $classids_Arr
+        ], 'ClassMetaList');
+        $this->set('updatetime_DateTime', [
+            'datetime_Str' => $updatetime_Str,
+            'inputtime_date_Str' => $updatetime_inputtime_date_Str,
+            'inputtime_time_Str' => $updatetime_inputtime_time_Str
+        ], 'DateTimeObj');
+        $this->set('pic_PicObjList', [
+            'picids_Str' => $picids_Str,
+            'picids_Arr' => $picids_Arr
+        ], 'PicObjList');
+        $this->set('mainpic_PicObjList', [
+            'picids_Str' => $mainpicids_Str,
+            'picids_Arr' => $mainpicids_Arr
+        ], 'PicObjList');
+        $this->set__uid_Num(['uid_Num' => $uid_Num]);
         
+        return TRUE;
+    }
+
+    public function set__uid_Num($arg)
+    {
+        //引入引數並將空值的變數給予空值
+        reset_null_arr($arg, ['uid_Num']);
+        foreach($arg as $key => $value) ${$key} = $arg[$key];
+
         //若uid為空則以登入者uid作為本物件之預設uid
         if(empty($uid_Num) || empty($uid_Num))
         {
             $data['user'] = get_user();
             $uid_Num = $data['user']['uid'];
         }
-        
-        //建立PicObjList物件
-        check_comma_array($mainpicids_Str, $mainpicids_Arr);
-        $mainpic_PicObjList = $this->load->model('ObjList', nrnum());
-        $mainpic_PicObjList->construct_db(array(
-            'db_where_or_Arr' => array(
-                'picid_Num' => $mainpicids_Arr
-            ),
-            'db_from_Str' => 'pic',
-            'model_name_Str' => 'PicObj',
-            'limitstart_Num' => 0,
-            'limitcount_Num' => 100
-        ));
-        
-        //建立PicObjList物件
-        check_comma_array($picids_Str, $picids_Arr);
-        $pic_PicObjList = $this->load->model('ObjList', nrnum());
-        $pic_PicObjList->construct_db(array(
-            'db_where_or_Arr' => array(
-                'picid_Num' => $picids_Arr
-            ),
-            'db_from_Str' => 'pic',
-            'model_name_Str' => 'PicObj',
-            'limitstart_Num' => 0,
-            'limitcount_Num' => 100
-        ));
-        
-        //建立ClassMetaList物件
-        check_comma_array($classids_Str, $classids_Arr);
-        $class_ClassMetaList = $this->load->model('ObjList', nrnum());
-        $class_ClassMetaList->construct_db(array(
-            'db_where_or_Arr' => array(
-                'classid_Num' => $classids_Arr
-            ),
-            'model_name_Str' => 'ClassMeta',
-            'limitstart_Num' => 0,
-            'limitcount_Num' => 100
-        ));
 
-        //建立DateTime物件
-        $updatetime_DateTime = new DateTimeObj();
-        $updatetime_DateTime->construct(array(
-            'datetime_Str' => $updatetime_Str,
-            'inputtime_date_Str' => $updatetime_inputtime_date_Str,
-            'inputtime_time_Str' => $updatetime_inputtime_time_Str
-        ));
-        
-        //HTML值運算
-        $content_Html = $content_Str;
-        $content_specification_Html = $content_specification_Str;
-        
-        //將建構方法所計算出的值存入此類別之屬性
-        $this->showpieceid_Num = $showpieceid_Num;
-        $this->title_Str = $title_Str;
-        $this->pic_PicObjList = $pic_PicObjList;
-        $this->mainpic_PicObjList = $mainpic_PicObjList;
         $this->uid_Num = $uid_Num;
-        $this->content_Html = $content_Html;
-        $this->content_specification_Html = $content_specification_Html;
-        $this->synopsis_Str = $synopsis_Str;
-        $this->price_Num = $price_Num;
-        $this->class_ClassMetaList = $class_ClassMetaList;
-        $this->prioritynum_Num = $prioritynum_Num;
-        $this->updatetime_DateTime = $updatetime_DateTime;
-        $this->status_Num = $status_Num;
-        
-        return TRUE;
     }
-	
+    
 }

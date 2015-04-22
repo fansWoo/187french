@@ -1,7 +1,5 @@
 <?php
 
-load_class('ObjDbBase', 'models', '');//引入父類物件
-
 class UserGroup extends ObjDbBase {
 
     public $groupid_Num = 0;

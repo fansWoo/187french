@@ -271,6 +271,10 @@ html.agent-ie8 .header .logo {
 .content .contentBox .spanLine .spanLineRight.width300 {
     width: 300px;
 }
+.content .contentBox .spanLine .spanLineLeft.width400,
+.content .contentBox .spanLine .spanLineRight.width400 {
+    width: 400px;
+}
 .content .contentBox .spanLine .spanLineLeft.width500,
 .content .contentBox .spanLine .spanLineRight.width500 {
     width: 500px;
@@ -290,6 +294,10 @@ html.agent-ie8 .header .logo {
 .content .contentBox .spanLine .spanLineLeft.text.width300,
 .content .contentBox .spanLine .spanLineRight.text.width300 {
     width: 295px;
+}
+.content .contentBox .spanLine .spanLineLeft.text.width400,
+.content .contentBox .spanLine .spanLineRight.text.width400 {
+    width: 395px;
 }
 .content .contentBox .spanLine .spanLineLeft.text.width500,
 .content .contentBox .spanLine .spanLineRight.text.width500 {
@@ -314,6 +322,10 @@ html.agent-ie8 .header .logo {
     height: 200px;
     margin-top: 4px;
 }
+
+.content .contentBox .spanLine .spanLineRight .contentList{  }
+.content .contentBox .spanLine .spanLineRight .contentList .contentLi{  }
+
 .content .contentBox .spanLine.spanSubmit {
     padding-top: 50px;
     border: none;

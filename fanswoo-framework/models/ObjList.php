@@ -70,6 +70,10 @@ class ObjList extends CI_Model {
         
         $limitstart_Num = !empty($limitstart_Num) ? $limitstart_Num : $this->limitstart_Num ;
         $limitcount_Num = !empty($limitcount_Num) ? $limitcount_Num : $this->limitcount_Num ;
+        
+        $model_Obj = $this->load->add($model_name_Str);
+        $db_uniqueid_Str = $model_Obj->db_uniqueid_Str;
+        $this->db_uniqueid_Str = $db_uniqueid_Str;
 
         //取得類別資料庫名稱
         $Model = new $model_name_Str();
@@ -157,39 +161,115 @@ class ObjList extends CI_Model {
         
         if(empty($db_where_Arr['status']))
         {
-            $db_where_Arr['status_Num'] = 1;
+            $db_where_Arr['status'] = 1;
         }
 
         $db_where_Arr = typekey_to_nokey($db_where_Arr);
         $db_where_or_Arr = typekey_to_nokey($db_where_or_Arr);
         $db_where_like_Arr = typekey_to_nokey($db_where_like_Arr);
         
-        if(!empty($db_where_or_Arr) && is_array($db_where_or_Arr))
+        if(!empty($Model->db_name_Arr))
         {
-            $this->db->from($db_name_Str);
-            foreach($db_where_or_Arr as $key => $value_Arr)
+            foreach($Model->db_name_Arr as $key => $value_Str)
             {
-                foreach($value_Arr as $key2 => $value2)
+                if($key == 0)
                 {
-                    // $this->db->or_where(array($key => $value2));
-                    $this->db->or_where("FIND_IN_SET('$value2', $key) !=", 0);
-                    $this->db->where($db_where_Arr);
-                    if(!empty($db_where_like_Arr))
-                    {
-                        $this->db->like($db_where_like_Arr);
-                    }
+                    $this->db->from($value_Str);
+                }
+                else
+                {
+                    $this->db->join($value_Str, $Model->db_name_Arr[0].'.'.$db_uniqueid_Str.' = '.$value_Str.'.'.$db_uniqueid_Str, 'left');
                 }
             }
         }
         else
         {
             $this->db->from($db_name_Str);
-            $this->db->where($db_where_Arr);
-            if(!empty($db_where_like_Arr))
+        }
+
+        if(!empty($db_where_or_Arr))
+        {
+            foreach($db_where_or_Arr as $key => $value_Arr)
             {
-                $this->db->like($db_where_like_Arr);
+                foreach($value_Arr as $key2 => $value2)
+                {
+                    // $this->db->or_where(array($key => $value2));
+                    $this->db->or_where("FIND_IN_SET('$value2', $key) !=", 0);
+                    if(!empty($db_where_Arr))
+                    {
+                        foreach($db_where_Arr as $key3 => $value3)
+                        {
+                            if(is_array($value3))
+                            {
+                                foreach($value3 as $key4 => $value4)
+                                {
+                                    $this->db->where("FIND_IN_SET('$value4', $key4) !=", 0);
+                                }
+                            }
+                            else
+                            {
+                                $this->db->where($key3, $value3);
+                            }
+                        }
+                    }
+                    if(!empty($db_where_like_Arr))
+                    {
+                        foreach($db_where_like_Arr as $key3 => $value3)
+                        {
+                            if(is_array($value3))
+                            {
+                                foreach($value3 as $key4 => $value4)
+                                {
+                                    $this->db->like("FIND_IN_SET('$value4', $key4) !=", 0);
+                                }
+                            }
+                            else
+                            {
+                                $this->db->like($key3, $value3);
+                            }
+                        }
+                    }
+                }
             }
         }
+        else
+        {
+            if(!empty($db_where_Arr) && is_array($db_where_Arr))
+            {
+                foreach($db_where_Arr as $key => $value)
+                {
+                    if(is_array($value))
+                    {
+                        foreach($value as $key2 => $value2)
+                        {
+                            $this->db->where("FIND_IN_SET('$value2', $key2) !=", 0);
+                        }
+                    }
+                    else
+                    {
+                        $this->db->where($key, $value);
+                    }
+                }
+            }
+            if(!empty($db_where_like_Arr) && is_array($db_where_like_Arr))
+            {
+                foreach($db_where_like_Arr as $key => $value)
+                {
+                    if(is_array($value))
+                    {
+                        foreach($value as $key2 => $value2)
+                        {
+                            $this->db->like("FIND_IN_SET('$value2', $key2) !=", 0);
+                        }
+                    }
+                    else
+                    {
+                        $this->db->like($key, $value);
+                    }
+                }
+            }
+        }
+
         if(!empty($db_orderby_Arr))
         {
             if(is_array($db_orderby_Arr[0]))

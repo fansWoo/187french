@@ -1,191 +1,85 @@
 <?php
-class Note_model extends CI_Model {
 
-    private $noteid = 0;
-    private $username = '';
-    private $title = '';
-    private $uid = 0;
-    private $pic = '';
-    private $content = '';
-    private $content_html = '';
-    private $classid = '';
-    private $classid_array = array();
-    private $modelname = '';
-    private $viewnum = 0;
-    private $replynum = 0;
-    private $prioritynum = 0;
-    private $updatetime = 0;
-    private $status = 1;
-    private $data = array();
-    
-	public function __construct()
-	{
-        $this->data = $this->common_model->common();
-	}
+class Note extends ObjDbBase {
+
+    public $noteid_Num = 0;
+    public $uid_Num = 0;
+    public $username_Str = '';
+    public $title_Str = '';
+    public $pic_PicObjList;
+    public $class_ClassMetaList;
+    public $modelname_Str;
+    public $viewnum_Num = 0;
+    public $replynum_Num = 0;
+    public $prioritynum_Num = 0;
+    public $updatetime_DateTime = 0;
+    public $status_Num = 1;
+    public $db_name_Str = 'note';//填寫物件聯繫資料庫之名稱
+    public $db_uniqueid_Str = 'noteid';//填寫物件聯繫資料庫之唯一ID
+    public $db_field_Arr = array(//填寫資料庫欄位與本物件屬性之關係，前者為資料庫欄位，後者為屬性
+        'noteid' => 'noteid_Num',
+        'uid' => 'uid_Num',
+        'username' => 'username_Str',
+        'title' => 'title_Str',
+        'content' => 'content_Html',
+        'picids' => array('pic_PicObjList', 'uniqueids_Str'),
+        'classids' => array('class_ClassMetaList', 'uniqueids_Str'),
+        'modelname' => 'modelname_Str',
+        'viewnum' => 'viewnum_Num',
+        'replynum' => 'replynum_Num',
+        'prioritynum' => 'prioritynum_Num',
+        'updatetime' => array('updatetime_DateTime', 'datetime_Str'),
+        'status' => 'status_Num'
+    );
 	
-	public function construct($arg = array('noteid' => 0, 'uid' => 0, 'username' => '', 'title' => '', 'modelname' => '', 'pic' => '', 'content' => '', 'classid' => '', 'classid_array' => array(), 'viewnum' => 0, 'replynum' => 0, 'prioritynum' => 0, 'updatetime' => 0, 'status' => 0))
+	public function construct($arg)
 	{
-        $data = $this->common_model->data;
+        //引入引數並將空值的變數給予空值
+        reset_null_arr($arg, ['noteid_Num', 'uid_Num', 'username_Str', 'picids_Str', 'picids_Arr', 'title_Str', 'content_Str', 'classids_Str', 'classids_Arr', 'modelname_Str', 'prioritynum_Num', 'replynum_Num', 'viewnum_Num', 'updatetime_Str', 'updatetime_inputtime_date_Str', 'updatetime_inputtime_time_Str', 'status_Num']);
+        foreach($arg as $key => $value) ${$key} = $arg[$key];
         
-        $noteid = isset($arg['noteid']) ? $arg['noteid'] : 0;
-        $uid = isset($arg['uid']) ? $arg['uid'] : 0;
-        $username = isset($arg['username']) ? $arg['username'] : '';
-        $title = isset($arg['title']) ? $arg['title'] : '';
-        $modelname = isset($arg['modelname']) ? $arg['modelname'] : '';
-        $pic = isset($arg['pic']) ? $arg['pic'] : '';
-        $content = empty($arg['content']) ? '' : $arg['content'];
-        $classid = isset($arg['classid']) ? $arg['classid'] : '';
-        $classid_array = isset($arg['classid_array']) ? $arg['classid_array'] : array();
-        $viewnum = isset($arg['viewnum']) && $arg['viewnum'] != 0 ? $arg['viewnum'] : 0;
-        $replynum = isset($arg['replynum']) && $arg['replynum'] != 0 ? $arg['replynum'] : 0;
-        $prioritynum = isset($arg['prioritynum']) && $arg['prioritynum'] != 0 ? $arg['prioritynum'] : 0;
-        $updatetime = isset($arg['updatetime']) ? $arg['updatetime'] : 0;
-        $status = isset($arg['status']) ? $arg['status'] : 1;
-        
-        //uid
-        if(isset($uid) == FALSE || $uid == 0)
-        {
-            $uid = $data['user']['uid'];
-        }
-        
-        //classid運算
-        $this->common_model->check_comma_array($classid, $classid_array);
-        
-        //content_html
-        $content_html = $content;
-        
-        //set
-        $this->noteid = $noteid;
-        $this->username = $username;
-        $this->title = $title;
-        $this->modelname = $modelname;
-        $this->pic = $pic;
-        $this->uid = $uid;
-        $this->content = $content;
-        $this->content_html = $content_html;
-        $this->classid = $classid;
-        $this->classid_array = $classid_array;
-        $this->viewnum = $viewnum;
-        $this->replynum = $replynum;
-        $this->prioritynum = $prioritynum;
-        $this->updatetime = $updatetime;
-        $this->status = $status;
+        //將引數設為物件屬性，或將引數作為物件型屬性的建構值
+        $this->set('noteid_Num', $noteid_Num);
+        $this->set('uid_Num', $uid_Num);
+        $this->set('username_Str', $username_Str);
+        $this->set('title_Str', $title_Str);
+        $this->set('viewnum_Num', $viewnum_Num);
+        $this->set('replynum_Num', $replynum_Num);
+        $this->set('prioritynum_Num', $prioritynum_Num);
+        $this->set('status_Num', $status_Num);
+        $this->set('modelname_Str', $modelname_Str);
+        $this->set('class_ClassMetaList', [
+            'classids_Str' => $classids_Str,
+            'classids_Arr' => $classids_Arr
+        ], 'ClassMetaList');
+        $this->set('updatetime_DateTime', [
+            'datetime_Str' => $updatetime_Str,
+            'inputtime_date_Str' => $updatetime_inputtime_date_Str,
+            'inputtime_time_Str' => $updatetime_inputtime_time_Str
+        ], 'DateTimeObj');
+        $this->set('pic_PicObjList', [
+            'picids_Str' => $picids_Str,
+            'picids_Arr' => $picids_Arr
+        ], 'PicObjList');
+        $this->set__uid_Num(['uid_Num' => $uid_Num]);
         
         return TRUE;
     }
-    
-	public function db_construct($arg = array('db_where' => array() ) )
-    {
-        $db_where2 = isset($arg['db_where']) ? $arg['db_where'] : array();
-        $db_where['note.noteid'] = $db_where2['noteid'];
-        
-		$this->db->from('note');
-		$this->db->join('note_field', 'note.noteid = note_field.noteid', 'left');
-		$this->db->where($db_where);
-		$query = $this->db->get();
-		$note = $query->row_array();
-        
-        $this->construct(array(
-            'noteid' => $note['noteid'],
-            'uid' => $note['uid'],
-            'username' => $note['username'],
-            'title' => $note['title'],
-            'modelname' => $note['modelname'],
-            'pic' => $note['pic'],
-            'content' => $note['content'],
-            'classid' => $note['classid'],
-            'viewnum' => $note['viewnum'],
-            'replynum' => $note['replynum'],
-            'prioritynum' => $note['prioritynum'],
-            'updatetime' => $note['updatetime'],
-            'status' => $note['status']
-        ));
-    }
-    
-	public function get_array()
-	{
-        $note['noteid'] = $this->noteid;
-        $note['username'] = $this->username;
-        $note['title'] = $this->title;
-        $note['modelname'] = $this->modelname;
-        $note['pic'] = $this->pic;
-        $note['uid'] = $this->uid;
-        $note['content'] = $this->content;
-        $note['content_html'] = $this->content_html;
-        $note['classid'] = $this->classid;
-        $note['classid_array'] = $this->classid_array;
-        $note['viewnum'] = $this->viewnum;
-        $note['replynum'] = $this->replynum;
-        $note['prioritynum'] = $this->prioritynum;
-        $note['updatetime'] = $this->updatetime;
-        $note['status'] = $this->status;
-        
-		return $note;
-	}
-    
-	public function update()
-	{
-        $note2 = $this->get_array();
-        
-        if( isset($note2['noteid']) && $note2['noteid'] == 0 )
-        {
-            $note2['noteid'] = $this->common_model->db_search_max( array('table_name' => 'note', 'id_name' => 'noteid') ) + 1;
-            $note = array(
-                'noteid' => $note2['noteid'],
-                'username' => $note2['username'],
-                'title' => $note2['title'],
-                'modelname' => $note2['modelname'],
-                'pic' => $note2['pic'],
-                'uid' => $note2['uid'],
-                'classid' => $note2['classid'],
-                'viewnum' => $note2['viewnum'],
-                'replynum' => $note2['replynum'],
-                'prioritynum' => $note2['prioritynum'],
-                'updatetime' => $note2['updatetime'],
-                'status' => $note2['status']
-            );
-            
-            $this->db->insert('note', $note); 
-            
-            $note_field['noteid'] = $note2['noteid'];
-            $note_field['content'] = $note2['content'];
-            
-            $this->db->insert('note_field', $note_field);
-        }
-        else
-        {
-            $note = array(
-                'noteid' => $note2['noteid'],
-                'username' => $note2['username'],
-                'title' => $note2['title'],
-                'modelname' => $note2['modelname'],
-                'pic' => $note2['pic'],
-                'uid' => $note2['uid'],
-                'classid' => $note2['classid'],
-                'viewnum' => $note2['viewnum'],
-                'replynum' => $note2['replynum'],
-                'prioritynum' => $note2['prioritynum'],
-                'updatetime' => $note2['updatetime'],
-                'status' => $note2['status']
-            );
-            
-            $this->db->where(array('noteid' => $note['noteid']));
-            $this->db->update('note', $note);
-            
-            $note_field['noteid'] = $note2['noteid'];
-            $note_field['content'] = $note2['content'];
-            
-            $this->db->where(array('noteid' => $note_field['noteid']));
-            $this->db->update('note_field', $note_field);
-        }
-    }
-    
-    public function hidden()
-    {
-        $note_array = $this->get_array();
 
-        $this->db->where( array('noteid' => $note_array['noteid'] ) );
-        $this->db->update('note', array('status' => 0) ); 
+    public function set__uid_Num($arg)
+    {
+        //引入引數並將空值的變數給予空值
+        reset_null_arr($arg, ['uid_Num']);
+        foreach($arg as $key => $value) ${$key} = $arg[$key];
+
+        //若uid為空則以登入者uid作為本物件之預設uid
+        if(empty($uid_Num) || empty($uid_Num))
+        {
+            $data['user'] = get_user();
+            $uid_Num = $data['user']['uid'];
+        }
+
+        $this->uid_Num = $uid_Num;
     }
 	
 }

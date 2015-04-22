@@ -1,6 +1,6 @@
 <?php
 
-class ObjDbBase extends CI_Model {
+class ObjDbBase extends ObjBase {
 
     public $db_name_Str = '';//填寫物件聯繫資料庫之名稱，例如'product_shop'
     public $db_name_Arr = array();//填寫物件聯繫資料庫之陣列，例如'array('note', 'note_field')'，若同時擁有db_name_Str和db_name_Arr兩個屬性，以db_name_Arr為優先
@@ -73,11 +73,29 @@ class ObjDbBase extends CI_Model {
             $this->construct(array());
             return FALSE;
         }
+        
+        if(empty($db_where_Arr['status']))
+        {
+            $db_where_Arr['status'] = 1;
+        }
 
         $db_where_Arr = typekey_to_nokey($db_where_Arr);
-        
+
         if(!empty($db_name_Arr))
         {
+            //如果沒有fs_usr_field_shop的話就創建一個資料庫
+            $db_uniqueid_value_Num = $db_where_Arr[$db_name_Arr[0].'.'.$db_uniqueid_Str];
+            foreach($db_name_Arr as $key => $value_Str)
+            {
+                $this->db->from($value_Str);
+                $this->db->where($db_uniqueid_Str, $db_uniqueid_value_Num);
+                $query = $this->db->get();
+                    
+                if($query->num_rows() == 0)
+                {
+                    $this->db->insert($value_Str, array($db_uniqueid_Str => $db_uniqueid_value_Num));
+                }
+            }
             foreach($db_name_Arr as $key => $value_Str)
             {
                 if($key == 0)
@@ -94,6 +112,7 @@ class ObjDbBase extends CI_Model {
         {
             $this->db->from($db_name_Str);
         }
+        
         if(!empty($db_where_Arr))
         {
             if(!empty($db_name_Arr))
@@ -102,7 +121,6 @@ class ObjDbBase extends CI_Model {
                 $db_where_Arr = array();
                 foreach($db_where_Arr2 as $key => $value)
                 {
-                    // $key = $db_name_Arr[0].'.'.$key;
                     $db_where_Arr[$key] = $value;
                 }
                 $this->db->where($db_where_Arr);
@@ -119,9 +137,14 @@ class ObjDbBase extends CI_Model {
     }
     
     //將物件資料更新至資料庫
-	public function update($arg)
+	public function update($arg = [])
 	{
         $db_update_Arr = !empty($arg['db_update_Arr']) ? $arg['db_update_Arr'] : array();
+        
+        if(!empty($db_update_Arr['status']))
+        {
+            unset($db_update_Arr['status']);
+        }
 
         $db_uniqueid_Str = $this->db_uniqueid_Str;
         $db_name_Str = $this->db_name_Str;
@@ -137,6 +160,7 @@ class ObjDbBase extends CI_Model {
                     'table_name' => $db_name_Arr[0],
                     'id_name' => $db_uniqueid_Str
                 )) + 1;
+
                 foreach($db_name_Arr as $key => $value_Str)
                 {
                     $db_field_Arr2 = array();
@@ -150,7 +174,6 @@ class ObjDbBase extends CI_Model {
                         }
                     }
                     $db_field_Arr2[$db_uniqueid_Str] = $db_uniqueid_Num;
-                    $db_uniqueid_Str = $db_uniqueid_Str.'_Num';
                     $this->$db_uniqueid_Str = $db_uniqueid_Num;
                     $this->db->insert($db_name_Arr[$key], $db_field_Arr2);
                 }
