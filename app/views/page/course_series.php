@@ -54,15 +54,13 @@ $(document).on('click', '.scroll_arrow', function(){
 				<?for($i=0;$i<5;$i++):?>
 				<div class="itemArea">
 					<div class="picBox_border">
-						<a href="page/course_monthly_view">
-							<div class="picBox">
-								<div class="pic">
-									<img src="app/img/course/pic.png" class="img">
-									<img src="app/img/about/dessert/dot.png" class="dot">
-								</div>
-								<img src="app/img/about/dessert/shadow2.png" class="shadow2">
+						<div class="picBox">
+							<div class="pic">
+								<img src="app/img/course/pic1.jpg" class="img">
+								<img src="app/img/about/dessert/dot.png" class="dot">
 							</div>
-						</a>
+							<img src="app/img/about/dessert/shadow2.png" class="shadow2">
+						</div>
 					</div>
 					<div class="textBox">
 						<h2>蘋果塔<br>Tarte aux Pommes</h2>
@@ -74,15 +72,13 @@ $(document).on('click', '.scroll_arrow', function(){
 				<?for($i=0;$i<4;$i++):?>
 				<div class="itemArea">
 					<div class="picBox_border">
-						<a href="page/course_monthly_view">
-							<div class="picBox">
-								<div class="pic">
-									<img src="app/img/course/pic.png" class="img">
-									<img src="app/img/about/dessert/dot.png" class="dot">
-								</div>
-								<img src="app/img/about/dessert/shadow2.png" class="shadow2">
+						<div class="picBox">
+							<div class="pic">
+								<img src="app/img/course/pic1.jpg" class="img">
+								<img src="app/img/about/dessert/dot.png" class="dot">
 							</div>
-						</a>
+							<img src="app/img/about/dessert/shadow2.png" class="shadow2">
+						</div>
 					</div>
 					<div class="textBox">
 						<h2>蘋果塔<br>Tarte aux Pommes</h2>
