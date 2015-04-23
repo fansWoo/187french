@@ -40,7 +40,18 @@ $(document).on('click', '.scroll_arrow', function(){
 		<img src="app/img/index/dessert06.png" class="dessert06">
 		<div class="contantArea">
 				<img src="app/img/course/title3.png" class="title">
+				<div class="top_button">
+					<a href="" class="buttonBox">初級系列課</a>
+					<a href="" class="buttonBox">中級系列課</a>
+					<a href="" class="buttonBox">高級系列課</a>
+				</div>
+				<div class="top_introduction">
+					<h1>初級系列課</h1>
+					<p>「187巷的法式」推出的初級系列課的十堂中包含了8個類別、17個初階的法式甜點。沒有任何經驗的新手，可以在這30個小時中，透過理論的學習和實作的經驗，讓您對法式甜點有更進一步的認識。</p>
+					<p class="price">30,000元/10堂 (含個人材料和教學費用)<p>
+				</div>
 			<div class="boxArea">
+				<?for($i=0;$i<5;$i++):?>
 				<div class="itemArea">
 					<div class="picBox_border">
 						<a href="page/course_monthly_view">
@@ -50,19 +61,17 @@ $(document).on('click', '.scroll_arrow', function(){
 									<img src="app/img/about/dessert/dot.png" class="dot">
 								</div>
 								<img src="app/img/about/dessert/shadow2.png" class="shadow2">
-								<!--<div class="hoverBox">
-									<p>這款來自法國的經典小蛋糕Fin<br>ancier，直接音譯便是大家所熟悉的「費南雪」...</p>
-								</div>-->
 							</div>
 						</a>
 					</div>
 					<div class="textBox">
-						
-						<h2>費南雪-原味、榛果、抹茶栗子</h2>
-						<p>這款來自法國的經典小蛋糕Financier，直接音譯便是大家所熟悉的「費南雪」，由字義翻則是「金融家蛋糕」! 關於費南雪的由來，其實有個可愛的小故事。 當時忙著投資、洽談生意的金融家們，每天都連吃飯的空檔沒有，於是在巴黎金融區的蛋糕師便發明了這種不用刀叉、不黏手的小糕點費南雪。 
-						</p>
+						<h2>蘋果塔<br>Tarte aux Pommes</h2>
+						<p class="class"><span>類別 :</span> 塔皮</p>
+						<p><span>學習重點 :</span> 塔皮的認識和操作、焦糖蘋果餡、花形裝飾。</p>
 					</div>
 				</div>
+				<?endfor?>
+				<?for($i=0;$i<4;$i++):?>
 				<div class="itemArea">
 					<div class="picBox_border">
 						<a href="page/course_monthly_view">
@@ -72,63 +81,16 @@ $(document).on('click', '.scroll_arrow', function(){
 									<img src="app/img/about/dessert/dot.png" class="dot">
 								</div>
 								<img src="app/img/about/dessert/shadow2.png" class="shadow2">
-								<!--<div class="hoverBox">
-									<p>這款來自法國的經典小蛋糕Fin<br>ancier，直接音譯便是大家所熟悉的「費南雪」...</p>
-								</div>-->
 							</div>
 						</a>
 					</div>
 					<div class="textBox">
-						
-						<h2>費南雪-原味、榛果、抹茶栗子</h2>
-						<p>這款來自法國的經典小蛋糕Financier，直接音譯便是大家所熟悉的「費南雪」，由字義翻則是「金融家蛋糕」! 關於費南雪的由來，其實有個可愛的小故事。 當時忙著投資、洽談生意的金融家們，每天都連吃飯的空檔沒有，於是在巴黎金融區的蛋糕師便發明了這種不用刀叉、不黏手的小糕點費南雪。 
-						</p>
+						<h2>蘋果塔<br>Tarte aux Pommes</h2>
+						<p class="class"><span>類別 :</span> 塔皮</p>
+						<p><span>學習重點 :</span> 塔皮的認識和操作、焦糖蘋果餡、花形裝飾。</p>
 					</div>
 				</div>
-				<div class="itemArea">
-					<div class="picBox_border">
-						<a href="page/course_monthly_view">
-							<div class="picBox">
-								<div class="pic">
-									<img src="app/img/course/pic.png" class="img">
-									<img src="app/img/about/dessert/dot.png" class="dot">
-								</div>
-								<img src="app/img/about/dessert/shadow2.png" class="shadow2">
-								<!--<div class="hoverBox">
-									<p>這款來自法國的經典小蛋糕Fin<br>ancier，直接音譯便是大家所熟悉的「費南雪」...</p>
-								</div>-->
-							</div>
-						</a>
-					</div>
-					<div class="textBox">
-						
-						<h2>費南雪-原味、榛果、抹茶栗子</h2>
-						<p>這款來自法國的經典小蛋糕Financier，直接音譯便是大家所熟悉的「費南雪」，由字義翻則是「金融家蛋糕」! 關於費南雪的由來，其實有個可愛的小故事。 當時忙著投資、洽談生意的金融家們，每天都連吃飯的空檔沒有，於是在巴黎金融區的蛋糕師便發明了這種不用刀叉、不黏手的小糕點費南雪。 
-						</p>
-					</div>
-				</div>
-				<div class="itemArea">
-					<div class="picBox_border">
-						<a href="page/course_monthly_view">
-							<div class="picBox">
-								<div class="pic">
-									<img src="app/img/course/pic.png" class="img">
-									<img src="app/img/about/dessert/dot.png" class="dot">
-								</div>
-								<img src="app/img/about/dessert/shadow2.png" class="shadow2">
-								<!--<div class="hoverBox">
-									<p>這款來自法國的經典小蛋糕Fin<br>ancier，直接音譯便是大家所熟悉的「費南雪」...</p>
-								</div>-->
-							</div>
-						</a>
-					</div>
-					<div class="textBox">
-						
-						<h2>費南雪-原味、榛果、抹茶栗子</h2>
-						<p>這款來自法國的經典小蛋糕Financier，直接音譯便是大家所熟悉的「費南雪」，由字義翻則是「金融家蛋糕」! 關於費南雪的由來，其實有個可愛的小故事。 當時忙著投資、洽談生意的金融家們，每天都連吃飯的空檔沒有，於是在巴黎金融區的蛋糕師便發明了這種不用刀叉、不黏手的小糕點費南雪。 
-						</p>
-					</div>
-				</div>
+				<?endfor?>
 			</div>
 			<div class="number_box">
 				<a href="news" class="prev">

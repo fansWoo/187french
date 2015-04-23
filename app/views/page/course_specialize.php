@@ -41,215 +41,45 @@ $(document).on('click', '.scroll_arrow', function(){
 		<div class="contantArea">
 				<img src="app/img/course/title2.png" class="title">
 			<div class="boxArea">
-				<div class="itemArea">
-					<div class="picBox_border">
-						<a href="page/course_monthly_view">
-							<div class="picBox">
-								<div class="pic">
-									<img src="app/img/course/pic.png" class="img">
-									<img src="app/img/about/dessert/dot.png" class="dot">
-								</div>
-								<img src="app/img/about/dessert/shadow2.png" class="shadow2">
-								<!--<div class="hoverBox">
-									<p>這款來自法國的經典小蛋糕Fin<br>ancier，直接音譯便是大家所熟悉的「費南雪」...</p>
-								</div>-->
-							</div>
-						</a>
-					</div>
-					<div class="textBox">
-						
-						<h2>費南雪-原味、榛果、抹茶栗子</h2>
-						<a href="page/course_monthly_view"><div class="more">
-							more
-						</div></a>
+				<div class="top_introduction">
+					<h1>馬卡龍專修班</h1>
+					<div class="box">
+						<p>最新開課時間：4/9（四）~4/10(五) 10:00~16:00</p>
+						<p>課程費用：15,000元</p>
 					</div>
 				</div>
 				<div class="itemArea">
 					<div class="picBox_border">
-						<a href="page/course_monthly_view">
-							<div class="picBox">
-								<div class="pic">
-									<img src="app/img/course/pic.png" class="img">
-									<img src="app/img/about/dessert/dot.png" class="dot">
-								</div>
-								<img src="app/img/about/dessert/shadow2.png" class="shadow2">
-								<!--<div class="hoverBox">
-									<p>這款來自法國的經典小蛋糕Fin<br>ancier，直接音譯便是大家所熟悉的「費南雪」...</p>
-								</div>-->
+						<div class="picBox">
+							<div class="pic">
+								<img src="app/img/course/pic2.jpg" class="img">
+								<img src="app/img/about/dessert/dot.png" class="dot">
 							</div>
-						</a>
+							<img src="app/img/about/dessert/shadow2.png" class="shadow2">
+						</div>
 					</div>
 					<div class="textBox">
+						<p class="left">馬卡龍最早其實是出現在義大利的修道院，1533年梅第奇家族的Catherine嫁到法國時，同行的廚師才把這項甜點也帶到法國來。
+							最近在台灣流行的這個小甜點，些人對她有些誤會，覺得她好像又甜、又貴，吃不懂！的確，馬卡龍的材料不多，杏仁粉、糖粉、蛋白，再搭配上不同口味的內餡，乍看之下好像很簡單、很便宜，但實際上每一項食材、每一個程序，都會影響最後烤出來的成敗。因此，貴是貴在師傅的手藝。要能夠做出如少女酥胸般的外殼，必須先經歷過無數考壞的杏仁蛋白餅阿！
+						</p>
+						<p class="left">馬卡龍專修班讓你練習擠出數百顆的外殼，並教會你做十種不同的口味，包括覆盆子、黑醋栗、青蘋果、羅勒檸檬、香草、苦巧克力、蜜香紅茶、咖啡、起司羅勒和鮭魚。
+						</p>
+						<p class="left">再選擇材料上，一開始就決定了成敗。杏仁粉、糖粉和蛋白，要如何挑選？我們更使用法國原裝進口色粉，從天然食材中萃取，保證不含人工添加物!
+						</p>
+						<img src="app/img/course/pic3.jpg" class="img">
+						<p>混合杏仁粉、糖粉、製作義大利蛋白霜這些是烤出美麗裙襬和酥脆外殼的關鍵。</p>
+						<img src="app/img/course/pic4.jpg" class="img">
+						<p>不同的餡料，有不同的配方和處理方式，十種口味一次學齊吧！</p>
+						<img src="app/img/course/pic5.jpg" class="img">
+						<p>最後再做點小裝飾，完成美麗的馬卡龍！</p>
+						<img src="app/img/course/pic6.jpg" class="img">
+						<p>每個人帶回家一百多顆馬卡龍，來和親朋好友一起分享吧～</p>
+						<img src="app/img/course/pic7.jpg" class="img">
 						
-						<h2>費南雪-原味、榛果、抹茶栗子</h2>
-						<a href="page/course_monthly_view"><div class="more">
-							more
-						</div></a>
 					</div>
 				</div>
-				<div class="itemArea">
-					<div class="picBox_border">
-						<a href="page/course_monthly_view">
-							<div class="picBox">
-								<div class="pic">
-									<img src="app/img/course/pic.png" class="img">
-									<img src="app/img/about/dessert/dot.png" class="dot">
-								</div>
-								<img src="app/img/about/dessert/shadow2.png" class="shadow2">
-								<!--<div class="hoverBox">
-									<p>這款來自法國的經典小蛋糕Fin<br>ancier，直接音譯便是大家所熟悉的「費南雪」...</p>
-								</div>-->
-							</div>
-						</a>
-					</div>
-					<div class="textBox">
-						
-						<h2>費南雪-原味、榛果、抹茶栗子</h2>
-						<a href="page/course_monthly_view"><div class="more">
-							more
-						</div></a>
-					</div>
-				</div>
-				<div class="itemArea">
-					<div class="picBox_border">
-						<a href="page/course_monthly_view">
-							<div class="picBox">
-								<div class="pic">
-									<img src="app/img/course/pic.png" class="img">
-									<img src="app/img/about/dessert/dot.png" class="dot">
-								</div>
-								<img src="app/img/about/dessert/shadow2.png" class="shadow2">
-								<!--<div class="hoverBox">
-									<p>這款來自法國的經典小蛋糕Fin<br>ancier，直接音譯便是大家所熟悉的「費南雪」...</p>
-								</div>-->
-							</div>
-						</a>
-					</div>
-					<div class="textBox">
-						
-						<h2>費南雪-原味、榛果、抹茶栗子</h2>
-						<a href="page/course_monthly_view"><div class="more">
-							more
-						</div></a>
-					</div>
-				</div>
-				<div class="itemArea">
-					<div class="picBox_border">
-						<a href="page/course_monthly_view">
-							<div class="picBox">
-								<div class="pic">
-									<img src="app/img/course/pic.png" class="img">
-									<img src="app/img/about/dessert/dot.png" class="dot">
-								</div>
-								<img src="app/img/about/dessert/shadow2.png" class="shadow2">
-								<!--<div class="hoverBox">
-									<p>這款來自法國的經典小蛋糕Fin<br>ancier，直接音譯便是大家所熟悉的「費南雪」...</p>
-								</div>-->
-							</div>
-						</a>
-					</div>
-					<div class="textBox">
-						
-						<h2>費南雪-原味、榛果、抹茶栗子</h2>
-						<a href="page/course_monthly_view"><div class="more">
-							more
-						</div></a>
-					</div>
-				</div>	
-				<div class="itemArea">
-					<div class="picBox_border">
-						<a href="page/course_monthly_view">
-							<div class="picBox">
-								<div class="pic">
-									<img src="app/img/course/pic.png" class="img">
-									<img src="app/img/about/dessert/dot.png" class="dot">
-								</div>
-								<img src="app/img/about/dessert/shadow2.png" class="shadow2">
-								<!--<div class="hoverBox">
-									<p>這款來自法國的經典小蛋糕Fin<br>ancier，直接音譯便是大家所熟悉的「費南雪」...</p>
-								</div>-->
-							</div>
-						</a>
-					</div>
-					<div class="textBox">
-						
-						<h2>費南雪-原味、榛果、抹茶栗子</h2>
-						<a href="page/course_monthly_view"><div class="more">
-							more
-						</div></a>
-					</div>
-				</div>
-				<div class="itemArea">
-					<div class="picBox_border">
-						<a href="page/course_monthly_view">
-							<div class="picBox">
-								<div class="pic">
-									<img src="app/img/course/pic.png" class="img">
-									<img src="app/img/about/dessert/dot.png" class="dot">
-								</div>
-								<img src="app/img/about/dessert/shadow2.png" class="shadow2">
-								<!--<div class="hoverBox">
-									<p>這款來自法國的經典小蛋糕Fin<br>ancier，直接音譯便是大家所熟悉的「費南雪」...</p>
-								</div>-->
-							</div>
-						</a>
-					</div>
-					<div class="textBox">
-				
-						<h2>費南雪-原味、榛果、抹茶栗子</h2>
-						<a href="page/course_monthly_view"><div class="more">
-							more
-						</div></a>
-					</div>
-				</div>
-				<div class="itemArea">
-					<div class="picBox_border">
-						<a href="page/course_monthly_view">
-							<div class="picBox">
-								<div class="pic">
-									<img src="app/img/course/pic.png" class="img">
-									<img src="app/img/about/dessert/dot.png" class="dot">
-								</div>
-								<img src="app/img/about/dessert/shadow2.png" class="shadow2">
-								<!--<div class="hoverBox">
-									<p>這款來自法國的經典小蛋糕Fin<br>ancier，直接音譯便是大家所熟悉的「費南雪」...</p>
-								</div>-->
-							</div>
-						</a>
-					</div>
-					<div class="textBox">
-						
-						<h2>費南雪-原味、榛果、抹茶栗子</h2>
-						<a href="page/course_monthly_view"><div class="more">
-							more
-						</div></a>
-					</div>
-				</div>
-				<div class="itemArea">
-					<div class="picBox_border">
-						<a href="page/course_monthly_view">
-							<div class="picBox">
-								<div class="pic">
-									<img src="app/img/course/pic.png" class="img">
-									<img src="app/img/about/dessert/dot.png" class="dot">
-								</div>
-								<img src="app/img/about/dessert/shadow2.png" class="shadow2">
-								<!--<div class="hoverBox">
-									<p>這款來自法國的經典小蛋糕Fin<br>ancier，直接音譯便是大家所熟悉的「費南雪」...</p>
-								</div>-->
-							</div>
-						</a>
-					</div>
-					<div class="textBox">
-					
-						<h2>費南雪-原味、榛果、抹茶栗子</h2>
-						<a href="page/course_monthly_view"><div class="more">
-							more
-						</div></a>
-					</div>
-				</div>					
 			</div>
-			<div class="number_box">
+			<!--<div class="number_box">
 				<a href="news" class="prev">
 					<img src="app/img/arrow3.png">
 				</a>
@@ -263,7 +93,7 @@ $(document).on('click', '.scroll_arrow', function(){
 				<a href="news" class="next">
 					<img src="app/img/arrow.png">
 				</a>
-			</div>
+			</div>-->
 		</div>	
 
 		<img src="app/img/index/dessert01.png" class="dessert01">	
