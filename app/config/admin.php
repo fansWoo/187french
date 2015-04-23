@@ -11,8 +11,11 @@ $config['group_purview_Arr'] = array(
 		array('base', 'note', 'note'),
 		array('base', 'note', 'classmeta'),
 		array('base', 'dessert', 'dessert'),
+		array('base', 'dessert', 'classmeta'),
 		array('base', 'month_course', 'month_course'),
+		array('base', 'month_course', 'classmeta'),
 		array('base', 'courses', 'courses'),
+		array('base', 'courses', 'classmeta'),
 		array('base', 'order', 'order'),
 		array('base', 'order', 'set'),
 		array('user', 'global', 'global')
