@@ -1,10 +1,10 @@
 <?php
 
-class order_controller extends FS_controller {
+class learn_order_controller extends FS_controller {
 
     protected $child1_name_Str = 'base';
     protected $child2_name_Str = 'order';
-    protected $child3_name_Str = 'order';
+    protected $child3_name_Str = 'learn_order';
 
     public function __construct()
     {

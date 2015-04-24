@@ -3,7 +3,7 @@
 class classmeta_controller extends FS_controller {
 
     protected $child1_name_Str = 'base';
-    protected $child2_name_Str = 'dessert';
+    protected $child2_name_Str = 'courses';
     protected $child3_name_Str = 'classmeta';
 
     public function __construct()

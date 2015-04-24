@@ -16,15 +16,14 @@ $config['group_purview_Arr'] = array(
 		array('base', 'month_course', 'classmeta'),
 		array('base', 'courses', 'courses'),
 		array('base', 'courses', 'classmeta'),
-		array('base', 'order', 'order'),
-		array('base', 'order', 'set'),
+		array('base', 'order', 'contact'),
+		array('base', 'order', 'pay_order'),
+		array('base', 'order', 'learn_order'),
 		array('user', 'global', 'global')
 	),
 	'2' => array(//管理員
 	),
 	'100' => array(//一般會員
-		array('user', 'global', 'global'),
-		array('user', 'order', 'order')
 	),
 	'101' => array(//進階會員
 	)
@@ -163,26 +162,27 @@ $config['admin_sidebox'] = array(
 					)
 				),
 				'order' => array(
-					'title' => '聯繫單管理',
+					'title' => '聯繫管理',
 					'child3' => array(
-						'order' => array(
-							'title' => '專修班',
+						'contact' => array(
+							'title' => '問題聯繫',
 							'child4' => array(
 								'edit' => array('title' => '編輯'),
 								'tablelist' => array('title' => '列表')
 							)
 						),
-						'classmeta' => array(
-							'title' => '分類標籤',
+						'learn_order' => array(
+							'title' => '線上報名',
 							'child4' => array(
 								'edit' => array('title' => '編輯'),
 								'tablelist' => array('title' => '列表')
 							)
 						),
-						'set' => array(
-							'title' => '設置',
+						'pay_order' => array(
+							'title' => '匯款單',
 							'child4' => array(
-								'set' => array('title' => '設置')
+								'edit' => array('title' => '編輯'),
+								'tablelist' => array('title' => '列表')
 							)
 						)
 					)
