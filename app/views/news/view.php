@@ -6,39 +6,63 @@ $(function(){
 		$('.buttonArea .box').removeClass('clicked');
 		$(this).addClass('clicked');
         //新增的
-        $('.about').removeClass('hover');
-        $('.about[data-bgname=' + bgname + ']').addClass('hover');
+        $('.story').removeClass('hover');
+        $('.story[data-bgname=' + bgname + ']').addClass('hover');
     });
 });
+$(document).on('click', '.scroll_arrow', function(){
+        $("body").animate({scrollTop: 0}, 1200, 'swing');
+    });
+	
+	$(document).scroll(function(){
+        var scroll_top = $(document).scrollTop();
+        if(scroll_top == 0){
+            $('.boxArea.two , .box3 ' ).removeClass('hover');
+            $('.boxArea.one').addClass('hover');
+        }
+        else if(scroll_top >= 400 && scroll_top < 850){
+            $('.boxArea.two').removeClass('hover');
+            $('.boxArea.two').addClass('hover');
+        }
+		 else if(scroll_top >= 850 && scroll_top <1500){
+            $('.box3').removeClass('hover');
+            $('.box3').addClass('hover');
+        }
+        
+    });
 </script>
-
 <?=$temp['header_down']?>
 <?=$temp['topheader']?>	
+<img src="app/img/index/dessert04.png" class="dessert04">
 <div class="Area">
-<?=$temp['leftmenu']?>	
-		<div class="centerArea">
-			
-			<div class="contantArea">
-			<h1>
-				News Title
-			</h1>
-				<div class="banner">
-					<img src="app/img/news/project/pic1.jpg">
-				</div>
-				<div class="boxArea">
-					<div class="news_item">
-						<div class="right_text">
-						
-							<p>Sed id dolor. In hac habitasse platea dictumst. Maecenas diam ligula, vulputate vitae, mollis at, ullamcorper non, velit. Donec in velit. Sed lacus nisl, vestibulum sed, vehicula et, commodo eu, ligula. Duis vel lacus. In tincidunt. Vestibulum elit. Praesent hendrerit. Suspendisse venenatis.</p>
-							<p>Sed id dolor. In hac habitasse platea dictumst. Maecenas diam ligula, vulputate vitae, mollis at, ullamcorper non, velit. Donec in velit. Sed lacus nisl, vestibulum sed, vehicula et, commodo eu, ligula. Duis vel lacus. In tincidunt. Vestibulum elit. Praesent hendrerit. Suspendisse venenatis.ed, vehicula et, commodo eu, ligula. Duis vel lacus. In tincidunt. Vestibulum elit. Praesent hendrerit. Suspendisse venenatis.</p>
-							<p>Sed id dolor. In hac habitasse platea dictumst. Maecenas diam ligula, vulputate vitae, mollis at, ullamcorper non, velit. Donec in velit. Sed lacus nisl, vestibulum sed, vehicula et, commodo eu, ligula. Duis vel lacus. In tincidunt. Vestibulum elit. Praesent hendrerit. Suspendisse venenatis.</p>
-							<p>Sed id dolor. In hac habitasse platea dictumst. Maecenas diam ligula, vulputate vitae, mollis at, ullamcorper non, velit. Donec in velit. Sed lacus nisl, vestibulum sed, vehicula et, commodo eu, ligula. Duis vel lacus. In tincidunt. Vestibulum elit. Praesent hendrerit. Suspendisse venenatis.</p>
-							<p>Sed id dolor. In hac habitasse platea dictumst. Maecenas diam ligula, vulputate vitae, mollis at, ullamcorper non, velit. Donec in velit. Sed lacus nisl, vestibulum sed, vehicula et, commodo eu, ligula. Duis vel lacus. In tincidunt. Vestibulum elit. Praesent hendrerit. Suspendisse venenatis.</p>
-						</div>
-					</div>
+		
+		<img src="app/img/index/dessert02.png" class="dessert02">
+		<img src="app/img/index/dessert03.png" class="dessert03">
+		
+		<div class="contantArea">
 				
-				</div>
+			<div class="boxArea one">
+			<div class="topBox">
+				<img src="app/img/news/title.png" class="title">
 			</div>
-		</div>
-</div>	
+				<div class="news_item">
+					<div class="right_text">
+						<h2><?=$NoteField->title_Str?></h2>
+						<div><?=$NoteField->content_Html?></div>
+					</div>
+					
+				</div>
+				
+			
+				
+				
+			</div>
+
+		
+		</div>	
+
+		
+		<img src="app/img/index/dessert01.png" class="dessert01">
+	</div>
+		
 <?=$temp['footer']?>

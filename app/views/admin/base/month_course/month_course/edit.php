@@ -2,7 +2,7 @@
 <?=$temp['admin_header_down']?>
 <h2><?=$child2_title_Str?> - <?=$child3_title_Str?></h2>
 <div class="contentBox allWidth">
-    <h3><?=$child3_title_Str?> > <?if(!empty($showpiece_ShowPiece->showpieceid_Num)):?>編輯<?else:?>新增<?endif?></h3>
+    <h3><?=$child3_title_Str?> > <?if(!empty($month_course_CourseMonth->month_courseid_Num)):?>編輯<?else:?>新增<?endif?></h3>
 	<h4>請填寫<?=$child3_title_Str?>之詳細資訊</h4>
 	<?php echo form_open_multipart("admin/$child1_name_Str/$child2_name_Str/$child3_name_Str/{$child4_name_Str}_post/") ?>
 	<div class="spanLine">
@@ -11,7 +11,7 @@
                 產品名稱
             </div>
             <div class="spanLineLeft width500">
-                <input type="text" class="text" name="name_Str" placeholder="請輸入產品名稱" value="<?=$showpiece_ShowPiece->name_Str?>">
+                <input type="text" class="text" name="name_Str" placeholder="請輸入產品名稱" value="<?=$month_course_CourseMonth->name_Str?>">
 		    </div>
 		</div>
 	</div>
@@ -21,7 +21,7 @@
                 產品售價
             </div>
             <div class="spanLineLeft">
-                <input type="number" min="0" class="text" name="price_Num" placeholder="請輸入產品售價" value="<?=$showpiece_ShowPiece->price_Num?>">
+                <input type="number" min="0" class="text" name="price_Num" placeholder="請輸入產品售價" value="<?=$month_course_CourseMonth->price_Num?>">
 		    </div>
 		</div>
 	</div>
@@ -32,12 +32,12 @@
             </div>
             <div class="spanLineLeft width500">
                 <div class="fileMultiple1"><input type="file" name="mainpicids_FileArr" accept="image/*"></div>
-                <?if(!empty($showpiece_ShowPiece->mainpic_PicObjList->obj_Arr[0]->picid_Num)):?>
+                <?if(!empty($month_course_CourseMonth->mainpic_PicObjList->obj_Arr[0]->picid_Num)):?>
                 <div class="picidUploadList">
-                    <div fanswoo-picid="<?=$showpiece_ShowPiece->mainpic_PicObjList->obj_Arr[0]->picid_Num?>" class="picidUploadLi">
+                    <div fanswoo-picid="<?=$month_course_CourseMonth->mainpic_PicObjList->obj_Arr[0]->picid_Num?>" class="picidUploadLi">
                         <div fanswoo-picDelete class="picDelete"></div>
-                        <img src="<?=$showpiece_ShowPiece->mainpic_PicObjList->obj_Arr[0]->path_Arr['w50h50']?>">
-                        <input type="hidden" name="mainpicids_Arr[]" value="<?=$showpiece_ShowPiece->mainpic_PicObjList->obj_Arr[0]->picid_Num?>">
+                        <img src="<?=$month_course_CourseMonth->mainpic_PicObjList->obj_Arr[0]->path_Arr['w50h50']?>">
+                        <input type="hidden" name="mainpicids_Arr[]" value="<?=$month_course_CourseMonth->mainpic_PicObjList->obj_Arr[0]->picid_Num?>">
                     </div>
                 </div>
                 <?endif?>
@@ -58,9 +58,9 @@
             </div>
             <div class="spanLineLeft width500">
                 <div fanswoo-fileMultiple><input type="file" name="picids_FilesArr[]" accept="image/*" multiple></div>
-                <?if(!empty($showpiece_ShowPiece->pic_PicObjList->obj_Arr)):?>
+                <?if(!empty($month_course_CourseMonth->pic_PicObjList->obj_Arr)):?>
                 <div class="picidUploadList">
-                    <?foreach($showpiece_ShowPiece->pic_PicObjList->obj_Arr as $key => $value_PicObj):?>
+                    <?foreach($month_course_CourseMonth->pic_PicObjList->obj_Arr as $key => $value_PicObj):?>
                     <div fanswoo-picid="<?=$value_PicObj->picid_Num?>" class="picidUploadLi">
                         <div fanswoo-picDelete class="picDelete"></div>
                         <img src="<?=$value_PicObj->path_Arr['w50h50']?>">
@@ -85,8 +85,8 @@
                 產品分類
             </div>
             <div class="spanLineLeft width500" fanswoo-selectEachDiv="class">
-                <?if(!empty($showpiece_ShowPiece->class_ClassMetaList->obj_Arr)):?>
-                <?foreach($showpiece_ShowPiece->class_ClassMetaList->obj_Arr as $key => $value_ClassMeta):?>
+                <?if(!empty($month_course_CourseMonth->class_ClassMetaList->obj_Arr)):?>
+                <?foreach($month_course_CourseMonth->class_ClassMetaList->obj_Arr as $key => $value_ClassMeta):?>
                     <div class="selectLine" fanswoo-selectEachLine>
                         <span class="floatleft">分類 <span fanswoo-selectEachLineCount></span> ：</span>
                         <select fanswoo-selectEachLineMaster="class">
@@ -103,7 +103,7 @@
                                     $test_ClassMetaList = new ObjList();
                                     $test_ClassMetaList->construct_db(array(
                                         'db_where_Arr' => array(
-                                            'modelname_Str' => 'showpiece'
+                                            'modelname_Str' => 'month_course'
                                         ),
                                         'db_where_or_Arr' => array(
                                             'classids' => array($value2_ClassMeta->classid_Num)
@@ -138,7 +138,7 @@
                                 $test_ClassMetaList = new ObjList();
                                 $test_ClassMetaList->construct_db(array(
                                     'db_where_Arr' => array(
-                                        'modelname_Str' => 'showpiece'
+                                        'modelname_Str' => 'month_course'
                                     ),
                                     'db_where_or_Arr' => array(
                                         'classids' => array($value2_ClassMeta->classid_Num)
@@ -178,7 +178,7 @@
                 產品簡介
             </div>
             <div class="spanLineLeft width500">
-                <textarea cols="80" id="synopsis_Str" name="synopsis_Str" rows="10"><?=$showpiece_ShowPiece->synopsis_Str?></textarea>
+                <textarea cols="80" id="synopsis_Str" name="synopsis_Str" rows="10"><?=$month_course_CourseMonth->synopsis_Str?></textarea>
 		    </div>
 		</div>
 	</div>
@@ -188,7 +188,7 @@
                 產品規格
             </div>
             <div class="spanLineRight">
-                <textarea cols="80" id="content_specification" name="content_specification_Str" rows="10"><?=$showpiece_ShowPiece->content_specification_Html?></textarea>
+                <textarea cols="80" id="content_specification" name="content_specification_Str" rows="10"><?=$month_course_CourseMonth->content_specification_Html?></textarea>
                 <script src="app/js/ckeditor/ckeditor.js"></script>
                 <script>
                     CKEDITOR.replace( 'content_specification', {
@@ -206,7 +206,7 @@
                 產品詳述
             </div>
             <div class="spanLineRight">
-                <textarea cols="80" id="content" name="content_Str" rows="10"><?=$showpiece_ShowPiece->content_Html?></textarea>
+                <textarea cols="80" id="content" name="content_Str" rows="10"><?=$month_course_CourseMonth->content_Html?></textarea>
 		    </div>
             <div class="spanLineLeft">
             </div>
@@ -218,7 +218,7 @@
                 優先排序指數
             </div>
             <div class="spanLineLeft">
-                <input type="number" class="text width100" name="prioritynum_Num" value="<?=$showpiece_ShowPiece->prioritynum_Num?>">
+                <input type="number" class="text width100" name="prioritynum_Num" value="<?=$month_course_CourseMonth->prioritynum_Num?>">
             </div>
 		</div>
 	    <div class="spanStage">
@@ -228,14 +228,14 @@
             </div>
 		</div>
 	</div>
-    <?if(!empty($showpiece_ShowPiece->showpieceid_Num)):?>
+    <?if(!empty($month_course_CourseMonth->month_courseid_Num)):?>
     <div class="spanLine">
         <div class="spanStage">
             <div class="spanLineLeft">
                 更新日期
             </div>
             <div class="spanLineLeft">
-                <?=$showpiece_ShowPiece->updatetime_DateTime->datetime_Str?>
+                <?=$month_course_CourseMonth->updatetime_DateTime->datetime_Str?>
             </div>
         </div>
     </div>
@@ -245,9 +245,9 @@
             <div class="spanLineLeft">
             </div>
             <div class="spanLineRight">
-                <?if(!empty($showpiece_ShowPiece->showpieceid_Num)):?><input type="hidden" name="showpieceid_Num" value="<?=$showpiece_ShowPiece->showpieceid_Num?>"><?endif?>
-                <input type="submit" class="submit" value="<?if(!empty($showpiece_ShowPiece->showpieceid_Num)):?>儲存變更<?else:?>新增產品<?endif?>">
-                <?if(!empty($showpiece_ShowPiece->showpieceid_Num)):?><span class="submit gray" onClick="fanswoo.check_href_action('確定要刪除嗎？', 'admin/<?=$child1_name_Str?>/<?=$child2_name_Str?>/<?=$child3_name_Str?>/delete/?showpieceid=<?=$showpiece_ShowPiece->showpieceid_Num?>&hash=<?=$this->security->get_csrf_hash()?>');">刪除<?=$child3_title_Str?></span><?endif?>
+                <?if(!empty($month_course_CourseMonth->month_courseid_Num)):?><input type="hidden" name="month_courseid_Num" value="<?=$month_course_CourseMonth->month_courseid_Num?>"><?endif?>
+                <input type="submit" class="submit" value="<?if(!empty($month_course_CourseMonth->month_courseid_Num)):?>儲存變更<?else:?>新增產品<?endif?>">
+                <?if(!empty($month_course_CourseMonth->month_courseid_Num)):?><span class="submit gray" onClick="fanswoo.check_href_action('確定要刪除嗎？', 'admin/<?=$child1_name_Str?>/<?=$child2_name_Str?>/<?=$child3_name_Str?>/delete/?month_courseid=<?=$month_course_CourseMonth->month_courseid_Num?>&hash=<?=$this->security->get_csrf_hash()?>');">刪除<?=$child3_title_Str?></span><?endif?>
             </div>
         </div>
 	</div>

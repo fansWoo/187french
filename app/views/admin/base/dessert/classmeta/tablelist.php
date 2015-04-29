@@ -16,9 +16,6 @@
         <div class="spanLineLeft text width150">
 			分類代號
         </div>
-        <div class="spanLineLeft text width150">
-            二級分類標籤
-        </div>
 	</div>
     <?php echo form_open("admin/$child1_name_Str/$child2_name_Str/$child3_name_Str/{$child4_name_Str}_post/") ?>
         <div class="spanLine">
@@ -27,14 +24,6 @@
             </div>
             <div class="spanLineLeft text width150">
                 <input type="text" class="text" style="margin-left:-6px;" value="<?=!empty($search_slug_Str)?$search_slug_Str:''?>" name="search_slug_Str" placeholder="請填寫標籤代號">
-            </div>
-            <div class="spanLineLeft text width150">
-                <select name="search_class2_slug_Str" style="margin-left:-6px;">
-                    <option value="">不透過分類標籤篩選</option>
-                    <?foreach($class2_ClassMetaList->obj_Arr as $key => $value_ClassMeta):?>
-                    <option value="<?=$value_ClassMeta->slug_Str?>"<?if(!empty($search_class2_slug_Str) && $search_class2_slug_Str == $value_ClassMeta->slug_Str) echo ' selected'?>><?=$value_ClassMeta->classname_Str?></option>
-                    <?endforeach?>
-                </select>
             </div>
             <div class="spanLineLeft text width150">
                 <input type="submit" class="button" style="height: 30px; margin-left:-6px;" value="篩選">
@@ -60,7 +49,7 @@
             <?endif?>
         </div>
         <div class="spanLineLeft width150 hoverHidden">
-            <a href="admin/<?=$child1_name_Str?>/<?=$child2_name_Str?>/showpiece/tablelist/?class_slug=<?=$value_ClassMeta->slug_Str?>">查看產品</a>
+            <a href="admin/<?=$child1_name_Str?>/<?=$child2_name_Str?>/dessert/tablelist/?class_slug=<?=$value_ClassMeta->slug_Str?>">查看產品</a>
             <a href="admin/<?=$child1_name_Str?>/<?=$child2_name_Str?>/<?=$child3_name_Str?>/edit/?slug=<?=$value_ClassMeta->slug_Str?>">編輯</a>
             <span class="ahref" onClick="fanswoo.check_href_action('確定要刪除這個標籤？', 'admin/<?=$child1_name_Str?>/<?=$child2_name_Str?>/<?=$child3_name_Str?>/delete/?classid=<?=$value_ClassMeta->classid_Num?>&hash=<?=$this->security->get_csrf_hash()?>');">刪除</span>
         </div>

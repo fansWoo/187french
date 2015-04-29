@@ -10,10 +10,42 @@ class news_controller extends FS_controller {
 		if ( ! file_exists('app/views/news/list.php')){
 			show_404();
 		}
-        
+
+        $limitstart_Num = $this->input->get('limitstart');
+        $limitcount_Num = $this->input->get('limitcount');
+        $limitcount_Num = !empty($limitcount_Num) ? $limitcount_Num : 20;
+
+        $class_ClassMeta = new ClassMeta();
+        $class_ClassMeta->construct_db(array(
+            'db_where_Arr' => array(
+                'slug' => 'news'
+            )
+        ));
+
+        $data['NoteFieldList'] = new ObjList();
+        $data['NoteFieldList']->construct_db(array(
+            'db_where_Arr' => array(
+                'modelname' => 'note',
+                'noteid' => $data['search_noteid_Num'],
+                'classids' => 528518
+            ),
+            'db_where_like_Arr' => array(
+                'title_Str' => $data['search_title_Str']
+            ),
+            'db_orderby_Arr' => array(
+                array('prioritynum', 'DESC'),
+                array('updatetime', 'DESC')
+            ),
+            'db_where_deletenull_Bln' => TRUE,
+            'model_name_Str' => 'NoteField',
+            'limitstart_Num' => $limitstart_Num,
+            'limitcount_Num' => $limitcount_Num
+        ));
+        $data['page_link'] = $data['NoteFieldList']->create_links(array('base_url_Str' => 'admin/'.$data['child1_name_Str'].'/'.$data['child2_name_Str'].'/'.$data['child3_name_Str'].'/'.$data['child4_name_Str']));
+
         //global
 		$data['global']['style'][] = 'style';
-        $data['global']['style'][] = 'news/news';
+        $data['global']['style'][] = 'news/list';
         
         //temp
 		$data['temp']['header_up'] = $this->load->view('temp/header_up', $data, TRUE);
@@ -34,10 +66,18 @@ class news_controller extends FS_controller {
 		if ( ! file_exists('app/views/news/view.php')){
 			show_404();
 		}
+
+		$noteid = $this->input->get('noteid');
+		$data['NoteField'] = new NoteField();
+        $data['NoteField']->construct_db(array(
+            'db_where_Arr' => array(
+                'note.noteid' => $noteid
+            )
+        ));
         
         //global
 		$data['global']['style'][] = 'style';
-        $data['global']['style'][] = 'news/news_view';
+        $data['global']['style'][] = 'news/view';
         
         //temp
 		$data['temp']['header_up'] = $this->load->view('temp/header_up', $data, TRUE);

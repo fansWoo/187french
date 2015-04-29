@@ -35,99 +35,31 @@ $(document).on('click', '.scroll_arrow', function(){
 <?=$temp['topheader']?>	
 <img src="app/img/index/dessert04.png" class="dessert04">
 <img src="app/img/index/dessert02.png" class="dessert02">
-		<img src="app/img/index/dessert03.png" class="dessert03">
+<img src="app/img/index/dessert03.png" class="dessert03">
 <div class="Area">
-		<div class="contantArea">
-				<img src="app/img/news/title.png" class="title">
-			<div class="boxArea one">
-				<div class="news_item">
-					<a href="page/news_news_view">
-						<div class="pic">
-							<img src="app/img/news/pic1.jpg">
-						</div>
-					</a>
-					<div class="right_text">
-						<h2>【每月課程】2月份課程資訊 </h2>
-						<div class="text">
-						<p>2月份的課程資訊，歡迎下載!...</p>
-						</div>
+	<div class="contantArea">
+		<img src="app/img/news/title.png" class="title">
+		<div class="boxArea one">
+			<?for($i=0;$i<5;$i++):?>
+			<div class="news_item">
+				<a href="page/news_news_view">
+					<div class="pic">
+						<img src="app/img/news/pic1.jpg">
 					</div>
-					<a href="page/news_news_view">
-						<div class="more">more</div>
-					</a>
-				</div>
-					<div class="news_item">
-					<a href="page/news_news_view">
-						<div class="pic">
-							<img src="app/img/news/pic1.jpg">
-						</div>
-					</a>
-					<div class="right_text">
-						<h2>【每月課程】2月份課程資訊 </h2>
-						<div class="text">
+				</a>
+				<div class="right_text">
+					<h2>【每月課程】2月份課程資訊 </h2>
+					<div class="text">
 						<p>2月份的課程資訊，歡迎下載!...</p>
-						</div>
 					</div>
-					<a href="page/news_news_view">
-						<div class="more">more</div>
-					</a>
 				</div>
-					<div class="news_item">
-					<a href="page/news_news_view">
-						<div class="pic">
-							<img src="app/img/news/pic1.jpg">
-						</div>
-					</a>
-					<div class="right_text">
-						<h2>【每月課程】2月份課程資訊 </h2>
-						<div class="text">
-						<p>2月份的課程資訊，歡迎下載!...</p>
-						</div>
-					</div>
-					<a href="page/news_news_view">
-						<div class="more">more</div>
-					</a>
-				</div>
-					<div class="news_item">
-					<a href="page/news_news_view">
-						<div class="pic">
-							<img src="app/img/news/pic1.jpg">
-						</div>
-					</a>
-					<div class="right_text">
-						<h2>【每月課程】2月份課程資訊 </h2>
-						<div class="text">
-						<p>2月份的課程資訊，歡迎下載!...</p>
-						</div>
-					</div>
-					<a href="page/news_news_view">
-						<div class="more">more</div>
-					</a>
-				</div>
-					<div class="news_item">
-					<a href="page/news_news_view">
-						<div class="pic">
-							<img src="app/img/news/pic1.jpg">
-						</div>
-					</a>
-					<div class="right_text">
-						<h2>【每月課程】2月份課程資訊 </h2>
-						<div class="text">
-						<p>2月份的課程資訊，歡迎下載!...</p>
-						</div>
-					</div>
-					<a href="page/news_news_view">
-						<div class="more">more</div>
-					</a>
-				</div>
-				
+				<a href="page/news_news_view">
+					<div class="more">more</div>
+				</a>
 			</div>
-
-		
-		</div>	
-
-		
-		<img src="app/img/index/dessert01.png" class="dessert01">
+			<?endfor?>
+		</div>
 	</div>
-		
+	<img src="app/img/index/dessert01.png" class="dessert01">
+</div>
 <?=$temp['footer']?>

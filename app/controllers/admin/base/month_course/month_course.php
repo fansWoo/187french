@@ -33,29 +33,19 @@ class month_course_controller extends FS_controller {
             'child4_name_Str' => 'edit'//管理分類名稱
         )));
             
-        $showpieceid_Num = $this->input->get('showpieceid');
+        $month_courseid_Num = $this->input->get('month_courseid');
 
-        $data['showpiece_ShowPiece'] = new ShowPiece();
-        $data['showpiece_ShowPiece']->construct_db(array(
+        $data['month_course_CourseMonth'] = new CourseMonth();
+        $data['month_course_CourseMonth']->construct_db(array(
             'db_where_Arr' => array(
-                'showpieceid_Num' => $showpieceid_Num
+                'month_courseid_Num' => $month_courseid_Num
             )
         ));
         
         $data['class_ClassMetaList'] = new ObjList();
         $data['class_ClassMetaList']->construct_db(array(
             'db_where_Arr' => array(
-                'modelname_Str' => 'showpiece'
-            ),
-            'model_name_Str' => 'ClassMeta',
-            'limitstart_Num' => 0,
-            'limitcount_Num' => 100
-        ));
-        
-        $data['class2_ClassMetaList'] = new ObjList();
-        $data['class2_ClassMetaList']->construct_db(array(
-            'db_where_Arr' => array(
-                'modelname_Str' => 'showpiece_class2'
+                'modelname_Str' => 'month_course'
             ),
             'model_name_Str' => 'ClassMeta',
             'limitstart_Num' => 0,
@@ -85,7 +75,7 @@ class month_course_controller extends FS_controller {
         if ($this->form_validation->run() !== FALSE)
         {
             //基本post欄位
-            $showpieceid_Num = $this->input->post('showpieceid_Num', TRUE);
+            $month_courseid_Num = $this->input->post('month_courseid_Num', TRUE);
             $name_Str = $this->input->post('name_Str', TRUE);
             $price_Num = $this->input->post('price_Num', TRUE);
             $synopsis_Str = $this->input->post('synopsis_Str', TRUE);
@@ -128,10 +118,10 @@ class month_course_controller extends FS_controller {
                 }
             }
 
-            //建構ShowPiece物件，並且更新
-            $showpiece_ShowPiece = new ShowPiece();
-            $showpiece_ShowPiece->construct(array(
-                'showpieceid_Num' => $showpieceid_Num,
+            //建構CourseMonth物件，並且更新
+            $month_course_CourseMonth = new CourseMonth();
+            $month_course_CourseMonth->construct(array(
+                'month_courseid_Num' => $month_courseid_Num,
                 'name_Str' => $name_Str,
                 'price_Num' => $price_Num,
                 'synopsis_Str' => $synopsis_Str,
@@ -142,13 +132,13 @@ class month_course_controller extends FS_controller {
                 'content_specification_Str' => $content_specification_Str,
                 'prioritynum_Num' => $prioritynum_Num
             ));
-            $showpiece_ShowPiece->update(array());
+            $month_course_CourseMonth->update(array());
 
             //送出成功訊息
             $this->load->model('Message');
             $this->Message->show(array(
                 'message' => '設定成功',
-                'url' => 'admin/shop/showpiece/showpiece/tablelist'
+                'url' => 'admin/shop/month_course/month_course/tablelist'
             ));
         }
         else
@@ -158,7 +148,7 @@ class month_course_controller extends FS_controller {
             $this->load->model('Message');
             $this->Message->show(array(
                 'message' => $validation_errors_Str,
-                'url' => 'admin/shop/showpiece/showpiece/tablelist'
+                'url' => 'admin/shop/month_course/month_course/tablelist'
             ));
         }
     }
@@ -170,7 +160,7 @@ class month_course_controller extends FS_controller {
             'child4_name_Str' => 'tablelist'//管理分類名稱
         )));
 
-        $data['search_showpieceid_Num'] = $this->input->get('showpieceid');
+        $data['search_month_courseid_Num'] = $this->input->get('month_courseid');
         $data['search_name_Str'] = $this->input->get('name');
         $data['search_class_slug_Str'] = $this->input->get('class_slug');
 
@@ -185,10 +175,10 @@ class month_course_controller extends FS_controller {
             )
         ));
 
-        $data['showpiece_ShowPieceList'] = new ObjList();
-        $data['showpiece_ShowPieceList']->construct_db(array(
+        $data['month_course_CourseMonthList'] = new ObjList();
+        $data['month_course_CourseMonthList']->construct_db(array(
             'db_where_Arr' => array(
-                'showpieceid_Num' => $data['search_showpieceid_Num']
+                'month_courseid_Num' => $data['search_month_courseid_Num']
             ),
             'db_where_like_Arr' => array(
                 'name_Str' => $data['search_name_Str']
@@ -198,19 +188,19 @@ class month_course_controller extends FS_controller {
             ),
             'db_orderby_Arr' => array(
                 array('prioritynum', 'DESC'),
-                array('showpieceid', 'DESC')
+                array('month_courseid', 'DESC')
             ),
             'db_where_deletenull_Bln' => TRUE,
-            'model_name_Str' => 'ShowPiece',
+            'model_name_Str' => 'CourseMonth',
             'limitstart_Num' => $limitstart_Num,
             'limitcount_Num' => $limitcount_Num
         ));
-        $data['showpiece_links'] = $data['showpiece_ShowPieceList']->create_links(array('base_url_Str' => 'admin/'.$data['child1_name_Str'].'/'.$data['child2_name_Str'].'/'.$data['child3_name_Str'].'/'.$data['child4_name_Str']));
+        $data['month_course_links'] = $data['month_course_CourseMonthList']->create_links(array('base_url_Str' => 'admin/'.$data['child1_name_Str'].'/'.$data['child2_name_Str'].'/'.$data['child3_name_Str'].'/'.$data['child4_name_Str']));
 
         $data['class_ClassMetaList'] = new ObjList();
         $data['class_ClassMetaList']->construct_db(array(
             'db_where_Arr' => array(
-                'modelname_Str' => 'showpiece'
+                'modelname_Str' => 'month_course'
             ),
             'model_name_Str' => 'ClassMeta',
             'limitstart_Num' => 0,
@@ -236,15 +226,15 @@ class month_course_controller extends FS_controller {
     {
         $data = $this->data;//取得公用數據
 
-        $search_showpieceid_Num = $this->input->post('search_showpieceid_Num', TRUE);
+        $search_month_courseid_Num = $this->input->post('search_month_courseid_Num', TRUE);
         $search_class_slug_Str = $this->input->post('search_class_slug_Str', TRUE);
         $search_name_Str = $this->input->post('search_name_Str', TRUE);
 
-        $url_Str = base_url('admin/shop/showpiece/showpiece/tablelist/?');
+        $url_Str = base_url('admin/shop/month_course/month_course/tablelist/?');
 
-        if(!empty($search_showpieceid_Num))
+        if(!empty($search_month_courseid_Num))
         {
-            $url_Str = $url_Str.'&showpieceid='.$search_showpieceid_Num;
+            $url_Str = $url_Str.'&month_courseid='.$search_month_courseid_Num;
         }
 
         if(!empty($search_class_slug_Str))
@@ -263,19 +253,19 @@ class month_course_controller extends FS_controller {
     public function delete()
     {
         $hash_Str = $this->input->get('hash');
-        $showpieceid_Num = $this->input->get('showpieceid');
+        $month_courseid_Num = $this->input->get('month_courseid');
 
         //CSRF過濾
         if($hash_Str == $this->security->get_csrf_hash())
         {
-            $showpiece_ShowPiece = new ShowPiece();
-            $showpiece_ShowPiece->construct(array('showpieceid_Num' => $showpieceid_Num));
-            $showpiece_ShowPiece->delete();
+            $month_course_CourseMonth = new CourseMonth();
+            $month_course_CourseMonth->construct(array('month_courseid_Num' => $month_courseid_Num));
+            $month_course_CourseMonth->delete();
 
             $this->load->model('Message');
             $this->Message->show(array(
                 'message' => '刪除成功',
-                'url' => 'admin/shop/showpiece/showpiece/tablelist'
+                'url' => 'admin/shop/month_course/month_course/tablelist'
             ));
         }
         else
@@ -283,7 +273,7 @@ class month_course_controller extends FS_controller {
             $this->load->model('Message');
             $this->Message->show(array(
                 'message' => 'hash驗證失敗，請使用標準瀏覽器進行刪除動作',
-                'url' => 'admin/shop/showpiece/showpiece/tablelist'
+                'url' => 'admin/shop/month_course/month_course/tablelist'
             ));
         }
     }

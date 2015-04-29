@@ -6,108 +6,68 @@ $(function(){
 		$('.buttonArea .box').removeClass('clicked');
 		$(this).addClass('clicked');
         //新增的
-        $('.about').removeClass('hover');
-        $('.about[data-bgname=' + bgname + ']').addClass('hover');
+        $('.story').removeClass('hover');
+        $('.story[data-bgname=' + bgname + ']').addClass('hover');
     });
 });
+$(document).on('click', '.scroll_arrow', function(){
+        $("body").animate({scrollTop: 0}, 1200, 'swing');
+    });
+	
+	$(document).scroll(function(){
+        var scroll_top = $(document).scrollTop();
+        if(scroll_top == 0){
+            $('.boxArea.two , .box3 ' ).removeClass('hover');
+            $('.boxArea.one').addClass('hover');
+        }
+        else if(scroll_top >= 400 && scroll_top < 850){
+            $('.boxArea.two').removeClass('hover');
+            $('.boxArea.two').addClass('hover');
+        }
+		 else if(scroll_top >= 850 && scroll_top <1500){
+            $('.box3').removeClass('hover');
+            $('.box3').addClass('hover');
+        }
+        
+    });
 </script>
-
 <?=$temp['header_down']?>
 <?=$temp['topheader']?>	
+<img src="app/img/index/dessert04.png" class="dessert04">
+<img src="app/img/index/dessert02.png" class="dessert02">
+<img src="app/img/index/dessert03.png" class="dessert03">
 <div class="Area">
-<?=$temp['leftmenu']?>	
-		<div class="centerArea">
-			<div class="contantArea">
-				<h1>
-					 News
-				</h1>
-				<div class="pic">
-					<img src="app/img/news/pic1.jpg">
-					<div class="hoverBox">
-						<div class="title">
-							<img src="app/img/news/title.png">
-						</div>
-						<div class="text">
-							<p>Sed id dolor. In hac habitasse habitasse</p>
-							<p>Sed id dolor. In hac habitasse</p>
-						</div>
+	<div class="contantArea">
+		<img src="app/img/news/title.png" class="title">
+		<div class="boxArea one">
+			<?foreach($NoteFieldList->obj_Arr as $key => $value_Note):?>
+			<div class="news_item">
+				<?
+				$this->load->library('simple_html_dom');
+				$html = new simple_html_dom();
+				$html->load($value_Note->content_Html);
+				$img = $html->find('img', 0);
+				?>
+				<?if(!empty($img->src)):?>
+				<a href="news/view/?noteid=<?=$value_Note->noteid_Num?>">
+					<div class="pic">
+						<img src="<?=$img->src?>">
+					</div>
+				</a>
+				<?endif?>
+				<div class="right_text">
+					<h2><a href="news/view/?noteid=<?=$value_Note->noteid_Num?>"><?=$value_Note->title_Str?></a></h2>
+					<div class="text">
+						<?=mb_substr(strip_tags($value_Note->content_Html), 0, 150, 'utf-8')?>
 					</div>
 				</div>
-				<div class="boxArea">
-					<div class="news_item">
-						<div class="right_text">
-							<div class="left_pic">
-								<img src="app/img/news/news_item/pic2.JPG">
-							</div>
-							<h2>TITLE</h2>	
-							<p>Sed id dolor. In hac habitasse platea dictumst. Maecenas diam ligula, vulputate vitae, mollis at, ullamcorper non, velit. Donec in velit. Sed lacus nisl, vestibulum sed, vehicula et, commodo eu, ligula. Duis vel lacus. In tincidunt. Vestibulum elit. Praesent hendrerit. Suspendisse venenatis.</p>
-						</div>
-						<a href="news/view">
-							<div class="more">
-							more
-							<img src="app/img/arrow3.png">
-							</div>
-						</a>
-					</div>
-					<div class="news_item">
-						
-						<div class="right_text">
-							<div class="left_pic">
-								<img src="app/img/news/news_item/pic2.JPG">
-							</div>
-							<h2>TITLE</h2>	
-							<p>Sed id dolor. In hac habitasse platea dictumst. Maecenas diam ligula, vulputate vitae, mollis at, ullamcorper non, velit. Donec in velit. Sed lacus nisl, vestibulum sed, vehicula et, commodo eu, ligula. Duis vel lacus. In tincidunt. Vestibulum elit. Praesent hendrerit. Suspendisse venenatis.</p>
-						</div>
-						<a href="news/view">
-							<div class="more">
-							more
-							<img src="app/img/arrow3.png">
-							</div>
-						</a>
-					</div>
-					<div class="news_item">
-						<div class="right_text">
-							<div class="left_pic">
-								<img src="app/img/news/news_item/pic2.JPG">
-							</div>
-							<h2>TITLE</h2>
-							<p>Sed id dolor. In hac habitasse platea dictumst. Maecenas diam ligula, vulputate vitae, mollis at, ullamcorper non, velit. Donec in velit. Sed lacus nisl, vestibulum sed, vehicula et, commodo eu, ligula. Duis vel lacus. In tincidunt. Vestibulum elit. Praesent hendrerit. Suspendisse venenatis.</p>
-						</div>
-						<a href="news/view">
-							<div class="more">
-							more
-							<img src="app/img/arrow3.png">
-							</div>
-						</a>
-					</div>
-					<div class="news_item">
-						<div class="right_text">
-							<div class="left_pic">
-								<img src="app/img/news/news_item/pic2.JPG">
-							</div>
-							<h2>TITLE</h2>
-							<p>Sed id dolor. In hac habitasse platea dictumst. Maecenas diam ligula, vulputate vitae, mollis at, ullamcorper non, velit. Donec in velit. Sed lacus nisl, vestibulum sed, vehicula et, commodo eu, ligula. Duis vel lacus. In tincidunt. Vestibulum elit. </p>
-						</div>
-						<a href="news/view">
-							<div class="more">
-							more
-							<img src="app/img/arrow3.png">
-							</div>
-						</a>
-					</div>
-				</div>
+				<a href="news/view/?noteid=<?=$value_Note->noteid_Num?>">
+					<div class="more">more</div>
+				</a>
 			</div>
-			<div class="number_box">
-				<a href="" class="prev"></a>
-				<div class="number">
-					<a href="">1</a>
-					<a href="">2</a>
-					<a href="">3</a>
-					<a href="">4</a>
-					<a href="">5</a>
-				</div>
-				<a href="" class="next"></a>
-			</div>
+			<?endforeach?>
 		</div>
-</div>	
+	</div>
+	<img src="app/img/index/dessert01.png" class="dessert01">
+</div>
 <?=$temp['footer']?>

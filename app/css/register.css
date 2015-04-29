@@ -10,14 +10,14 @@ body{}
 .Area .pic1{position:absolute;z-index:1; right:-550px; top:120px;}
 .Area .contantArea{width:100%;margin:0px auto;position:relative; z-index:2;overflow:hidden; margin-top:250px; }
 
-.contantArea .SignUpBox {width:850px;margin:0px auto; margin-bottom:50px;position:relative; color:#fff;letter-spacing:3px;font-weight:600;position:relative;}
+.contantArea .SignUpBox {width:850px;margin:0px auto; margin-bottom:50px;position:relative; color:#6a3c22;letter-spacing:3px;font-weight:600;position:relative;}
 
 .contantArea .SignUpBox  .title{width:400px;margin-left:40px;}
 .contantArea .SignUpBox .processBox{width:810px; position:relative; padding-left:40px;font-size:15px;}
 .contantArea .SignUpBox  h1{font-size:22px; margin-top:50px; clear:both; margin-bottom:20px; margin-left:40px;}
 .contantArea .SignUpBox .processBox .box{width:810px;margin-bottom:30px; } 
 .contantArea .SignUpBox .processBox .box p{display:block; padding:10px;letter-spacing:3px; line-height:24px;margin-left:30px;   position:relative; }
-.contantArea .SignUpBox .processBox .box  .dot{display:block; width:21px; height:24px; background-color:#fff; border-radius:12px; color:#67bfaa; position:absolute; text-align:center; line-height:24px;font-size:15px; left:-30px; top:10px; padding-left:3px; }
+.contantArea .SignUpBox .processBox .box  .dot{display:block; width:21px; height:24px; background-color:#fff; border-radius:12px; color:#6a3c22; position:absolute; text-align:center; line-height:24px;font-size:15px; left:-30px; top:10px; padding-left:3px; }
 .contantArea .SignUpBox .processBox .box2{margin-bottom:30px; width:680px; padding-top:20px; padding-bottom:20px; border-bottom:1px dotted #fff; border-top:1px dotted #fff;position:relative;  } 
 .contantArea .SignUpBox .processBox .box2 p{letter-spacing:3px; line-height:24px;margin-left:150px;position:relative; margin-bottom:5px; }
 

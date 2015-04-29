@@ -7,8 +7,8 @@
 				fx      :       "fade", 
 				//fadeout
 				//scrollHorz
-				timeout: 2000 ,
-				speed: 600,
+				timeout: 3000 ,
+				speed: 1000,
 				manualSpeed: 300,
 				slides: ' > .slidePicHref',
 				next: '.slidePicBox .next',
@@ -109,7 +109,7 @@
 						</div>
 					</a>
 					<div class="TextBox">
-						<a href="page/course_monthly"><p><span>當月課程</span> <br>Monthly cours </p></a>
+						<a href="page/course_monthly"><p><span>當月課程</span> <br>Monthly course </p></a>
 						
 						<a href="page/course_specialize"><p><span>專修班</span> <br> Specialize Course</p></a>
 						<a href="page/course_series"><p><span>系列課</span> <br> Series Course</p></a>

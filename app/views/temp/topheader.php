@@ -40,12 +40,12 @@ $(document).scroll(function(){
 				線上報名<br>Register
 				<div class="borderTop"></div>
 			</div></a>
-			<a href="page/news_news">
+			<a href="news">
 				<div class="li">
 					<p>最新消息<br>News</p>
 					<div class="downbox news">
-						<a href="page/news_news" class="item">最新消息 <br>News</a>
-						<a href="page/news_knowledge" class="item">烘焙大小事 <br>Knowledge</a>
+						<a href="news" class="item">最新消息 <br>News</a>
+						<a href="knowledge" class="item">烘焙大小事 <br>Knowledge</a>
 					</div>
 				</div>
 			</a>
@@ -54,7 +54,7 @@ $(document).scroll(function(){
 					<p>課程介紹<br>Course</p>
 						<div class="downbox course">
 							<a href="page/course_monthly" class="item">當月課程<br>Monthly course</a>
-							<a href="page/course_specialize" class="item">專修班<br> Specialize Course</a>
+							<a href="course" class="item">專修班<br> Specialize Course</a>
 							<a href="page/course_series" class="item">系列課<br> Series Course</a>
 						</div>
 				</div>
@@ -65,7 +65,7 @@ $(document).scroll(function(){
 					<div class="downbox about">
 						<a href="page/about_story" class="item">品牌故事 <br>Story</a>
 						<a href="page/about_class" class="item">現場直擊 <br>About class </a>
-						<a href="page/about_dessert" class="item">甜點介紹&販售 <br>Dessert</a>
+						<a href="dessert" class="item">甜點介紹&販售 <br>Dessert</a>
 						<a href="page/about_sales" class="item">器材&食材販售<br>Sales</a>
 						<a href="page/about_contact" class="item">聯絡我們<br>Contact us</a>
 					</div>

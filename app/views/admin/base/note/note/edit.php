@@ -88,7 +88,7 @@
                 <script src="app/js/ckeditor/ckeditor.js"></script>
                 <script>
                     CKEDITOR.replace( 'content_Str', {
-                        toolbar: 'bbcode'
+                        toolbar: 'html'
                     });
                 </script>
 		    </div>
