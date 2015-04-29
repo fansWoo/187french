@@ -43,48 +43,6 @@
     <div class="spanLine">
         <div class="spanStage">
             <div class="spanLineLeft">
-                二級分類
-            </div>
-            <div class="spanLineLeft width300">
-                <?if(!empty($class_ClassMeta->class_ClassMetaList->obj_Arr)):?>
-                <div>
-                    <select name="classids_Arr[]">
-                        <option value="">沒有分類標籤</option>
-                        <?foreach($class2_ClassMetaList->obj_Arr as $key2 => $value2_ClassMeta):?>
-                        <option value="<?=$value2_ClassMeta->classid_Num?>"<?if($class_ClassMeta->class_ClassMetaList->obj_Arr[0]->classid_Num == $value2_ClassMeta->classid_Num):?> selected<?endif?>><?=$value2_ClassMeta->classname_Str?></option>
-                        <?endforeach?>
-                    </select>
-                </div>
-                <?else:?>
-                <div>
-                    <select name="classids_Arr[]">
-                        <option value="">沒有分類標籤</option>
-                        <?foreach($class2_ClassMetaList->obj_Arr as $key => $value_ClassMeta):?>
-                        <option value="<?=$value_ClassMeta->classid_Num?>"><?=$value_ClassMeta->classname_Str?></option>
-                        <?endforeach?>
-                    </select>
-                </div>
-                <?endif?>
-            </div>
-        </div>
-        <div class="spanStage">
-            <div class="spanLineLeft">
-            </div>
-            <div class="spanLineLeft width500">
-                <span class="gray">請選擇二級分類</span>
-            </div>
-        </div>
-        <div class="spanStage">
-            <div class="spanLineLeft">
-            </div>
-            <div class="spanLineLeft width500">
-                <a href="admin/<?=$child1_name_Str?>/<?=$child2_name_Str?>/classmeta2/tablelist">管理二級分類</a>
-            </div>
-        </div>
-    </div>
-    <div class="spanLine">
-        <div class="spanStage">
-            <div class="spanLineLeft">
                 優先排序指數
             </div>
             <div class="spanLineLeft">
@@ -116,7 +74,7 @@
 		<div class="spanLineRight">
             <?if(!empty($class_ClassMeta->classid_Num)):?><input type="hidden" name="classid_Num" value="<?=$class_ClassMeta->classid_Num?>"><?endif?>
 		    <input type="submit" class="submit" value="<?if(!empty($class_ClassMeta->classid_Num)):?>儲存變更<?else:?>新增標籤<?endif?>">
-            <?if(!empty($class_ClassMeta->classid_Num)):?><span class="submit gray" onClick="fanswoo.check_href_action('確定要刪除嗎？', 'admin/<?=$child1_name_Str?>/<?=$child2_name_Str?>/<?=$child3_name_Str?>/delete/?classid=<?=$class_ClassMeta->classid_Num?>&hash=<?=$this->security->get_csrf_hash()?>');">刪除<?=$child3_title_Str?></span><?endif?>
+            <?if(!empty($class_ClassMeta->classid_Num)):?><span class="submit gray" onClick="fanswoo.check_href_action('確定要刪除嗎？', 'admin/<?=$child1_name_Str?>/<?=$child2_name_Str?>/<?=$child3_name_Str?>/delete/?classid=<?=$class_ClassMeta->classid_Num?>&haCourse=<?=$this->security->get_csrf_haCourse()?>');">刪除<?=$child3_title_Str?></span><?endif?>
 		</div>
 	</div>
 	</form>

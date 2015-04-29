@@ -48,17 +48,6 @@ class classmeta_controller extends FS_controller {
             ),
             'db_where_deletenull_Bln' => TRUE
         ));
-        
-        //建立class2_ClassMetaList
-        $data['class2_ClassMetaList'] = new ObjList();
-        $data['class2_ClassMetaList']->construct_db(array(
-            'db_where_Arr' => array(
-                'modelname_Str' => 'dessert'
-            ),
-            'model_name_Str' => 'ClassMeta',
-            'limitstart_Num' => 0,
-            'limitcount_Num' => 100
-        ));
 
         //global
         $data['global']['style'][] = 'admin';
@@ -95,14 +84,14 @@ class classmeta_controller extends FS_controller {
                 'slug_Str' => $slug_Str,
                 'classids_Arr' => $classids_Arr,
                 'prioritynum_Num' => $prioritynum_Num,
-                'modelname_Str' => 'dessert'
+                'modelname_Str' => 'course'
             ));
             $class_ClassMeta->update(array());
 
             $this->load->model('Message');
             $this->Message->show(array(
                 'message' => '設定成功',
-                'url' => 'admin/base/dessert/classmeta/tablelist'
+                'url' => 'admin/base/course/classmeta/tablelist'
             ));
         }
         else
@@ -110,7 +99,7 @@ class classmeta_controller extends FS_controller {
             $this->load->model('Message');
             $this->Message->show(array(
                 'message' => validation_errors(),
-                'url' => 'admin/base/dessert/classmeta/tablelist'
+                'url' => 'admin/base/course/classmeta/tablelist'
             ));
         }
     }
@@ -143,7 +132,7 @@ class classmeta_controller extends FS_controller {
         $data['class_list_ClassMetaList'] = new ObjList();
         $data['class_list_ClassMetaList']->construct_db(array(
             'db_where_Arr' => array(
-                'modelname_Str' => 'dessert'
+                'modelname_Str' => 'course'
             ),
             'db_where_like_Arr' => array(
                 'classname_Str' => $data['search_classname_Str'],
@@ -167,7 +156,7 @@ class classmeta_controller extends FS_controller {
         $data['class2_ClassMetaList'] = new ObjList();
         $data['class2_ClassMetaList']->construct_db(array(
             'db_where_Arr' => array(
-                'modelname_Str' => 'dessert'
+                'modelname_Str' => 'course'
             ),
             'model_name_Str' => 'ClassMeta',
             'limitstart_Num' => 0,
@@ -196,7 +185,7 @@ class classmeta_controller extends FS_controller {
         $search_slug_Str = $this->input->post('search_slug_Str', TRUE);
         $search_class2_slug_Str = $this->input->post('search_class2_slug_Str', TRUE);
 
-        $url_Str = base_url('admin/base/dessert/classmeta/tablelist/?');
+        $url_Str = base_url('admin/base/course/classmeta/tablelist/?');
 
         if(!empty($search_classname_Str))
         {
@@ -231,7 +220,7 @@ class classmeta_controller extends FS_controller {
             $this->load->model('Message');
             $this->Message->show(array(
                 'message' => '刪除成功',
-                'url' => 'admin/dessert/class_list'
+                'url' => 'admin/course/class_list'
             ));
         }
         else
@@ -239,7 +228,7 @@ class classmeta_controller extends FS_controller {
             $this->load->model('Message');
             $this->Message->show(array(
                 'message' => 'hash驗證失敗，請使用標準瀏覽器進行刪除動作',
-                'url' => 'admin/dessert/class_list'
+                'url' => 'admin/course/class_list'
             ));
         }
     }

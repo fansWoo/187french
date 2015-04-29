@@ -43,7 +43,7 @@ $(document).on('click', '.scroll_arrow', function(){
 			<div class="boxArea">
 				<div class="itemArea">
 					<div class="picBox_border">
-						<a href="page/course_monthly_view">
+						<a href="course/view">
 							<div class="picBox">
 								<div class="pic">
 									<img src="app/img/course/pic.png" class="img">
@@ -65,7 +65,7 @@ $(document).on('click', '.scroll_arrow', function(){
 				</div>
 				<div class="itemArea">
 					<div class="picBox_border">
-						<a href="page/course_monthly_view">
+						<a href="course/view">
 							<div class="picBox">
 								<div class="pic">
 									<img src="app/img/course/pic.png" class="img">
@@ -87,7 +87,7 @@ $(document).on('click', '.scroll_arrow', function(){
 				</div>
 				<div class="itemArea">
 					<div class="picBox_border">
-						<a href="page/course_monthly_view">
+						<a href="course/view">
 							<div class="picBox">
 								<div class="pic">
 									<img src="app/img/course/pic.png" class="img">
@@ -109,7 +109,7 @@ $(document).on('click', '.scroll_arrow', function(){
 				</div>
 				<div class="itemArea">
 					<div class="picBox_border">
-						<a href="page/course_monthly_view">
+						<a href="course/view">
 							<div class="picBox">
 								<div class="pic">
 									<img src="app/img/course/pic.png" class="img">

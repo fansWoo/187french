@@ -40,7 +40,7 @@
             <?=$value_ClassMeta->slug_Str?>
         </div>
         <div class="spanLineLeft width150 hoverHidden">
-            <a href="admin/<?=$child1_name_Str?>/<?=$child2_name_Str?>/showpiece/tablelist/?class_slug=<?=$value_ClassMeta->slug_Str?>">查看產品</a>
+            <a href="admin/<?=$child1_name_Str?>/<?=$child2_name_Str?>/course/tablelist/?class_slug=<?=$value_ClassMeta->slug_Str?>">查看產品</a>
             <a href="admin/<?=$child1_name_Str?>/<?=$child2_name_Str?>/<?=$child3_name_Str?>/edit/?slug=<?=$value_ClassMeta->slug_Str?>">編輯</a>
             <span class="ahref" onClick="fanswoo.check_href_action('確定要刪除這個標籤？', 'admin/<?=$child1_name_Str?>/<?=$child2_name_Str?>/<?=$child3_name_Str?>/delete/?classid=<?=$value_ClassMeta->classid_Num?>&hash=<?=$this->security->get_csrf_hash()?>');">刪除</span>
         </div>

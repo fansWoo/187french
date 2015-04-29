@@ -13,30 +13,41 @@ class dessert_controller extends FS_controller {
         $class_ClassMeta = new ClassMeta();
         $class_ClassMeta->construct_db(array(
             'db_where_Arr' => array(
-                'slug' => 'news'
+                'slug' => 'dessert'
             )
         ));
 
-        $data['NoteFieldList'] = new ObjList();
-        $data['NoteFieldList']->construct_db(array(
+        $data['class_ClassMetaList'] = new ObjList();
+        $data['class_ClassMetaList']->construct_db(array(
             'db_where_Arr' => array(
-                'modelname' => 'note',
-                'noteid' => $data['search_noteid_Num'],
-                'classids' => 528518
+                'modelname_Str' => 'dessert'
+            ),
+            'model_name_Str' => 'ClassMeta',
+            'limitstart_Num' => 0,
+            'limitcount_Num' => 100
+        ));
+
+        $data['dessert_DessertList'] = new ObjList();
+        $data['dessert_DessertList']->construct_db(array(
+            'db_where_Arr' => array(
+                'dessertid_Num' => $data['search_dessertid_Num']
             ),
             'db_where_like_Arr' => array(
-                'title_Str' => $data['search_title_Str']
+                'name_Str' => $data['search_name_Str']
+            ),
+            'db_where_or_Arr' => array(
+                'classids' => array($class_ClassMeta->classid_Num)
             ),
             'db_orderby_Arr' => array(
                 array('prioritynum', 'DESC'),
-                array('updatetime', 'DESC')
+                array('dessertid', 'DESC')
             ),
             'db_where_deletenull_Bln' => TRUE,
-            'model_name_Str' => 'NoteField',
+            'model_name_Str' => 'Dessert',
             'limitstart_Num' => $limitstart_Num,
             'limitcount_Num' => $limitcount_Num
         ));
-        $data['page_link'] = $data['NoteFieldList']->create_links(array('base_url_Str' => 'admin/'.$data['child1_name_Str'].'/'.$data['child2_name_Str'].'/'.$data['child3_name_Str'].'/'.$data['child4_name_Str']));
+        $data['dessert_links'] = $data['dessert_DessertList']->create_links(array('base_url_Str' => 'admin/'.$data['child1_name_Str'].'/'.$data['child2_name_Str'].'/'.$data['child3_name_Str'].'/'.$data['child4_name_Str']));
 
         //global
 		$data['global']['style'][] = 'style';

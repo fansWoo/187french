@@ -25,39 +25,33 @@
 		    </div>
 		</div>
 	</div>
+    <div class="spanLine">
+        <div class="spanStage">
+            <div class="spanLineLeft">
+                課程時間1
+            </div>
+            <div class="spanLineLeft width500">
+                <input type="text" class="text" name="coursetime1_Str" placeholder="請輸入課程時間" value="<?=$month_course_CourseMonth->coursetime1_Str?>">
+            </div>
+        </div>
+    </div>
+    <div class="spanLine">
+        <div class="spanStage">
+            <div class="spanLineLeft">
+                課程時間2
+            </div>
+            <div class="spanLineLeft width500">
+                <input type="text" class="text" name="coursetime2_Str" placeholder="請輸入課程時間" value="<?=$month_course_CourseMonth->coursetime2_Str?>">
+            </div>
+        </div>
+    </div>
 	<div class="spanLine">
 	    <div class="spanStage">
             <div class="spanLineLeft">
-                產品首圖
+                產品照片
             </div>
             <div class="spanLineLeft width500">
-                <div class="fileMultiple1"><input type="file" name="mainpicids_FileArr" accept="image/*"></div>
-                <?if(!empty($month_course_CourseMonth->mainpic_PicObjList->obj_Arr[0]->picid_Num)):?>
-                <div class="picidUploadList">
-                    <div fanswoo-picid="<?=$month_course_CourseMonth->mainpic_PicObjList->obj_Arr[0]->picid_Num?>" class="picidUploadLi">
-                        <div fanswoo-picDelete class="picDelete"></div>
-                        <img src="<?=$month_course_CourseMonth->mainpic_PicObjList->obj_Arr[0]->path_Arr['w50h50']?>">
-                        <input type="hidden" name="mainpicids_Arr[]" value="<?=$month_course_CourseMonth->mainpic_PicObjList->obj_Arr[0]->picid_Num?>">
-                    </div>
-                </div>
-                <?endif?>
-		    </div>
-		</div>
-	    <div class="spanStage">
-            <div class="spanLineLeft">
-            </div>
-            <div class="spanLineLeft width500">
-                <span class="gray">請上傳300x300之圖檔</span>
-		    </div>
-		</div>
-	</div>
-	<div class="spanLine">
-	    <div class="spanStage">
-            <div class="spanLineLeft">
-                產品其它照片
-            </div>
-            <div class="spanLineLeft width500">
-                <div fanswoo-fileMultiple><input type="file" name="picids_FilesArr[]" accept="image/*" multiple></div>
+                <div><input type="file" name="picids_FilesArr[]" accept="image/*"></div>
                 <?if(!empty($month_course_CourseMonth->pic_PicObjList->obj_Arr)):?>
                 <div class="picidUploadList">
                     <?foreach($month_course_CourseMonth->pic_PicObjList->obj_Arr as $key => $value_PicObj):?>
@@ -82,131 +76,61 @@
     <div class="spanLine">
         <div class="spanStage">
             <div class="spanLineLeft">
-                產品分類
+                分類標籤
             </div>
-            <div class="spanLineLeft width500" fanswoo-selectEachDiv="class">
+            <div class="spanLineLeft width300">
                 <?if(!empty($month_course_CourseMonth->class_ClassMetaList->obj_Arr)):?>
-                <?foreach($month_course_CourseMonth->class_ClassMetaList->obj_Arr as $key => $value_ClassMeta):?>
-                    <div class="selectLine" fanswoo-selectEachLine>
-                        <span class="floatleft">分類 <span fanswoo-selectEachLineCount></span> ：</span>
-                        <select fanswoo-selectEachLineMaster="class">
-                            <option value="">沒有分類標籤</option>
-                            <?foreach($class2_ClassMetaList->obj_Arr as $key2 => $value2_ClassMeta):?>
-                            <option value="<?=$value2_ClassMeta->classid_Num?>"<?if($value_ClassMeta->class_ClassMetaList->obj_Arr[0]->classid_Num == $value2_ClassMeta->classid_Num):?> selected<?endif?>><?=$value2_ClassMeta->classname_Str?></option>
-                            <?endforeach?>
-                        </select>
-                        <span fanswoo-selectEachLineSlave="class">
-                        <?foreach($class2_ClassMetaList->obj_Arr as $key2 => $value2_ClassMeta):?>
-                            <select fanswoo-selectValue="<?=$value2_ClassMeta->classid_Num?>" fanswoo-selectName="classids_Arr[]"<?if($value_ClassMeta->class_ClassMetaList->obj_Arr[0]->classid_Num == $value2_ClassMeta->classid_Num):?> name="classids_Arr[]"<?else:?> style="display:none;"<?endif?>>
-                                <option value="">沒有分類標籤</option>
-                                <?
-                                    $test_ClassMetaList = new ObjList();
-                                    $test_ClassMetaList->construct_db(array(
-                                        'db_where_Arr' => array(
-                                            'modelname_Str' => 'month_course'
-                                        ),
-                                        'db_where_or_Arr' => array(
-                                            'classids' => array($value2_ClassMeta->classid_Num)
-                                        ),
-                                        'model_name_Str' => 'ClassMeta',
-                                        'limitstart_Num' => 0,
-                                        'limitcount_Num' => 100
-                                    ));
-                                ?>
-                                <?foreach($test_ClassMetaList->obj_Arr as $key3 => $value3_ClassMeta):?>
-                                <option value="<?=$value3_ClassMeta->classid_Num?>"<?if($value_ClassMeta->classid_Num == $value3_ClassMeta->classid_Num):?> selected<?endif?>><?=$value3_ClassMeta->classname_Str?></option>
-                                <?endforeach?>
-                            </select>
-                        <?endforeach?>
-                        </span>
-                    </div>
-                <?endforeach?>
-                <?endif?>
-                <div class="selectLine" fanswoo-selectEachLine>
-                    <span class="floatleft">分類 <span fanswoo-selectEachLineCount></span> ：</span>
-                    <select fanswoo-selectEachLineMaster="class">
+                <div>
+                    <select name="classids_Arr[]">
                         <option value="">沒有分類標籤</option>
-                        <?foreach($class2_ClassMetaList->obj_Arr as $key2 => $value2_ClassMeta):?>
-                        <option value="<?=$value2_ClassMeta->classid_Num?>"><?=$value2_ClassMeta->classname_Str?></option>
+                        <?foreach($class_ClassMetaList->obj_Arr as $key2 => $value2_ClassMeta):?>
+                        <option value="<?=$value2_ClassMeta->classid_Num?>"<?if($month_course_CourseMonth->class_ClassMetaList->obj_Arr[0]->classid_Num == $value2_ClassMeta->classid_Num):?> selected<?endif?>><?=$value2_ClassMeta->classname_Str?></option>
                         <?endforeach?>
                     </select>
-                    <span fanswoo-selectEachLineSlave="class">
-                    <?foreach($class2_ClassMetaList->obj_Arr as $key2 => $value2_ClassMeta):?>
-                        <select name="classids_Arr[]" fanswoo-selectValue="<?=$value2_ClassMeta->classid_Num?>" fanswoo-selectName="classids_Arr[]" style="display:none;">
-                            <option value="">沒有分類標籤</option>
-                            <?
-                                $test_ClassMetaList = new ObjList();
-                                $test_ClassMetaList->construct_db(array(
-                                    'db_where_Arr' => array(
-                                        'modelname_Str' => 'month_course'
-                                    ),
-                                    'db_where_or_Arr' => array(
-                                        'classids' => array($value2_ClassMeta->classid_Num)
-                                    ),
-                                    'model_name_Str' => 'ClassMeta',
-                                    'limitstart_Num' => 0,
-                                    'limitcount_Num' => 100
-                                ));
-                            ?>
-                            <?foreach($test_ClassMetaList->obj_Arr as $key3 => $value3_ClassMeta):?>
-                            <option value="<?=$value3_ClassMeta->classid_Num?>"><?=$value3_ClassMeta->classname_Str?></option>
-                            <?endforeach?>
-                        </select>
-                    <?endforeach?>
-                    </span>
                 </div>
+                <?else:?>
+                <div>
+                    <select name="classids_Arr[]">
+                        <option value="">沒有分類標籤</option>
+                        <?foreach($class_ClassMetaList->obj_Arr as $key => $value_ClassMeta):?>
+                        <option value="<?=$value_ClassMeta->classid_Num?>"><?=$value_ClassMeta->classname_Str?></option>
+                        <?endforeach?>
+                    </select>
+                </div>
+                <?endif?>
             </div>
         </div>
         <div class="spanStage">
             <div class="spanLineLeft">
             </div>
             <div class="spanLineLeft width500">
-                <span class="gray">請選擇二級分類及分類標籤，多種分類可以重複選取</span>
-            </div>
-        </div>
-        <div class="spanStage">
-            <div class="spanLineLeft">
-            </div>
-            <div class="spanLineLeft width500">
-                <a href="admin/<?=$child1_name_Str?>/<?=$child2_name_Str?>/classmeta2/tablelist">管理二級分類</a>
+                <a href="admin/<?=$child1_name_Str?>/<?=$child2_name_Str?>/classmeta/tablelist">管理分類標籤</a>
             </div>
         </div>
     </div>
 	<div class="spanLine">
 	    <div class="spanStage">
             <div class="spanLineLeft">
-                產品簡介
+                注意事項
             </div>
             <div class="spanLineLeft width500">
-                <textarea cols="80" id="synopsis_Str" name="synopsis_Str" rows="10"><?=$month_course_CourseMonth->synopsis_Str?></textarea>
+                <textarea cols="80" id="precautions_Str" name="precautions_Str" rows="10"><?=$month_course_CourseMonth->precautions_Str?></textarea>
 		    </div>
 		</div>
 	</div>
 	<div class="spanLine">
 	    <div class="spanStage">
             <div class="spanLineLeft">
-                產品規格
+                產品介紹
             </div>
             <div class="spanLineRight">
-                <textarea cols="80" id="content_specification" name="content_specification_Str" rows="10"><?=$month_course_CourseMonth->content_specification_Html?></textarea>
+                <textarea cols="80" id="content_Str" name="content_Str" rows="10"><?=$month_course_CourseMonth->content_Html?></textarea>
                 <script src="app/js/ckeditor/ckeditor.js"></script>
                 <script>
-                    CKEDITOR.replace( 'content_specification', {
+                    CKEDITOR.replace( 'content_Str', {
                         toolbar: 'bbcode'
                     });
                 </script>
-		    </div>
-            <div class="spanLineLeft">
-            </div>
-		</div>
-	</div>
-	<div class="spanLine">
-	    <div class="spanStage">
-            <div class="spanLineLeft">
-                產品詳述
-            </div>
-            <div class="spanLineRight">
-                <textarea cols="80" id="content" name="content_Str" rows="10"><?=$month_course_CourseMonth->content_Html?></textarea>
 		    </div>
             <div class="spanLineLeft">
             </div>

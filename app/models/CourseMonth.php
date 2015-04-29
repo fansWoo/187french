@@ -8,7 +8,7 @@ class CourseMonth extends ObjDbBase
     public $name_Str = '';
     public $pic_PicObjList;//照片類別列表
     public $content_Html = '';//網頁語言類別
-    public $precautions_Str = '';//網頁語言類別
+    public $precautions_Str = '';
     public $price_Num = 0;
     public $class_ClassMetaList;//分類標籤類別列表
     public $prioritynum_Num = 0;
@@ -37,7 +37,7 @@ class CourseMonth extends ObjDbBase
 	public function construct($arg)
 	{
         //引入引數並將空值的變數給予空值
-        reset_null_arr($arg, ['month_courseid_Num', 'uid_Num', 'name_Str', 'picids_Str', 'picids_Arr', 'content_Str', 'price_Num', 'coursetime1_Str', 'coursetime2_Str', 'classids_Str', 'classids_Arr', 'prioritynum_Num', 'updatetime_Str', 'updatetime_inputtime_date_Str', 'updatetime_inputtime_time_Str', 'status_Num']);
+        reset_null_arr($arg, ['month_courseid_Num', 'uid_Num', 'name_Str', 'picids_Str', 'picids_Arr', 'content_Str', 'price_Num', 'precautions_Str', 'coursetime1_Str', 'coursetime2_Str', 'classids_Str', 'classids_Arr', 'prioritynum_Num', 'updatetime_Str', 'updatetime_inputtime_date_Str', 'updatetime_inputtime_time_Str', 'status_Num']);
         foreach($arg as $key => $value) ${$key} = $arg[$key];
         
         //將引數設為物件屬性，或將引數作為物件型屬性的建構值
@@ -45,6 +45,7 @@ class CourseMonth extends ObjDbBase
         $this->set('uid_Num', $uid_Num);
         $this->set('name_Str', $name_Str);
         $this->set('content_Html', $content_Str);
+        $this->set('precautions_Str', $precautions_Str);
         $this->set('coursetime1_Str', $coursetime1_Str);
         $this->set('coursetime2_Str', $coursetime2_Str);
         $this->set('price_Num', $price_Num);

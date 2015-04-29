@@ -78,25 +78,12 @@ class month_course_controller extends FS_controller {
             $month_courseid_Num = $this->input->post('month_courseid_Num', TRUE);
             $name_Str = $this->input->post('name_Str', TRUE);
             $price_Num = $this->input->post('price_Num', TRUE);
-            $synopsis_Str = $this->input->post('synopsis_Str', TRUE);
+            $precautions_Str = $this->input->post('precautions_Str', TRUE);
             $classids_Arr = $this->input->post('classids_Arr', TRUE);
             $content_Str = $this->input->post('content_Str');
-            $content_specification_Str = $this->input->post('content_specification_Str');
+            $coursetime1_Str = $this->input->post('coursetime1_Str');
+            $coursetime2_Str = $this->input->post('coursetime2_Str');
             $prioritynum_Num = $this->input->post('prioritynum_Num', TRUE);
-
-            //主要圖片上傳（單張上傳）
-            $mainpicids_Arr = $this->input->post('mainpicids_Arr', TRUE);
-            $mainpicids_FileArr = $this->input->file('mainpicids_FileArr');
-            if(!empty($mainpicids_FileArr['name']))
-            {
-                $mainpic_PicObj = new PicObj();
-                $mainpic_PicObj->construct(array(
-                    'picfile_FileArr' => $mainpicids_FileArr,
-                    'thumb_Str' => 'w50h50,w300h300,w600h600'
-                ));
-                $mainpic_PicObj->upload();
-                $mainpicids_Arr[] = $mainpic_PicObj->picid_Num;
-            }
 
             //其它圖片上傳（多張上傳）
             $picids_Arr = $this->input->post('picids_Arr', TRUE);
@@ -124,12 +111,12 @@ class month_course_controller extends FS_controller {
                 'month_courseid_Num' => $month_courseid_Num,
                 'name_Str' => $name_Str,
                 'price_Num' => $price_Num,
-                'synopsis_Str' => $synopsis_Str,
-                'mainpicids_Arr' => $mainpicids_Arr,
                 'picids_Arr' => $picids_Arr,
                 'classids_Arr' => $classids_Arr,
                 'content_Str' => $content_Str,
-                'content_specification_Str' => $content_specification_Str,
+                'precautions_Str' => $precautions_Str,
+                'coursetime1_Str' => $coursetime1_Str,
+                'coursetime2_Str' => $coursetime2_Str,
                 'prioritynum_Num' => $prioritynum_Num
             ));
             $month_course_CourseMonth->update(array());
@@ -138,7 +125,7 @@ class month_course_controller extends FS_controller {
             $this->load->model('Message');
             $this->Message->show(array(
                 'message' => '設定成功',
-                'url' => 'admin/shop/month_course/month_course/tablelist'
+                'url' => 'admin/base/month_course/month_course/tablelist'
             ));
         }
         else
@@ -148,7 +135,7 @@ class month_course_controller extends FS_controller {
             $this->load->model('Message');
             $this->Message->show(array(
                 'message' => $validation_errors_Str,
-                'url' => 'admin/shop/month_course/month_course/tablelist'
+                'url' => 'admin/base/month_course/month_course/tablelist'
             ));
         }
     }
@@ -230,7 +217,7 @@ class month_course_controller extends FS_controller {
         $search_class_slug_Str = $this->input->post('search_class_slug_Str', TRUE);
         $search_name_Str = $this->input->post('search_name_Str', TRUE);
 
-        $url_Str = base_url('admin/shop/month_course/month_course/tablelist/?');
+        $url_Str = base_url('admin/base/month_course/month_course/tablelist/?');
 
         if(!empty($search_month_courseid_Num))
         {
@@ -265,7 +252,7 @@ class month_course_controller extends FS_controller {
             $this->load->model('Message');
             $this->Message->show(array(
                 'message' => '刪除成功',
-                'url' => 'admin/shop/month_course/month_course/tablelist'
+                'url' => 'admin/base/month_course/month_course/tablelist'
             ));
         }
         else
@@ -273,7 +260,7 @@ class month_course_controller extends FS_controller {
             $this->load->model('Message');
             $this->Message->show(array(
                 'message' => 'hash驗證失敗，請使用標準瀏覽器進行刪除動作',
-                'url' => 'admin/shop/month_course/month_course/tablelist'
+                'url' => 'admin/base/month_course/month_course/tablelist'
             ));
         }
     }

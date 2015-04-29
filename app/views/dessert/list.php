@@ -41,11 +41,14 @@ $(document).on('click', '.scroll_arrow', function(){
 			<div class="floatright" style="margin-top:20px;">
 				<select>
 					<option>請選擇甜點類型</option>
+    				<?foreach($class_ClassMetaList->obj_Arr as $key => $value_ClassMeta):?>
+					<option><?=$value_ClassMeta->classname_Str?></option>
+    				<?endforeach?>
 				</select>
 			</div>
 				<img src="app/img/about/dessert/title.png" class="title">
 			<div class="boxArea one">
-				<?for($i=0;$i<5;$i++):?>
+    			<?foreach($dessert_DessertList->obj_Arr as $key => $value_Dessert):?>
 				<div class="itemArea">
 					<div class="picBox">
 						<div class="pic">
@@ -55,29 +58,18 @@ $(document).on('click', '.scroll_arrow', function(){
 						<img src="app/img/about/dessert/shadow2.png" class="shadow2">
 						<div class="border"></div>
 					</div>
-					<div class="typeBox">
-						<h2>諾曼第蘋果塔</h2>
-						<h3>Madeleine</h3>
-						<table>
-							<tr>
-								<td class="small">售價</td>
-								<td></td>
-							</tr>
-						</table>
+					<div class="typeBox" style="width:200px;overflow:hidden;">
+						<h2><?=$value_Dessert->name_Str?></h2>
+						<h3><?=$value_Dessert->name_french_Str?></h3>
+						<h3>售價： <?=$value_Dessert->price_Num?></h3>
 					</div>
 					<div class="detailedBox">
-						<p>Sed id dolor. In hac habitasse platea dictumst. Maecenas diam ligula, vulputate vitae, mollis at, ullamcorper non, velit. Donec in velit. Sed lacus nisl, vestibulum sed, vehicula et, commodo eu, ligula.</p>
+						<p><?=$value_Dessert->content_Str?></p>
 					</div>	
 				</div>
-				<?endfor?>
-			</div>	
-			
-			
-
-		
-		</div>	
-
-		
+				<?endforeach?>
+			</div>
+		</div>
 		<img src="app/img/index/dessert01.png" class="dessert01">
 	</div>
 		

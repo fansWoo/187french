@@ -33,19 +33,19 @@ class course_controller extends FS_controller {
             'child4_name_Str' => 'edit'//管理分類名稱
         )));
             
-        $showpieceid_Num = $this->input->get('showpieceid');
+        $courseid_Num = $this->input->get('courseid');
 
-        $data['showpiece_ShowPiece'] = new ShowPiece();
-        $data['showpiece_ShowPiece']->construct_db(array(
+        $data['course_Course'] = new Course();
+        $data['course_Course']->construct_db(array(
             'db_where_Arr' => array(
-                'showpieceid_Num' => $showpieceid_Num
+                'courseid_Num' => $courseid_Num
             )
         ));
         
         $data['class_ClassMetaList'] = new ObjList();
         $data['class_ClassMetaList']->construct_db(array(
             'db_where_Arr' => array(
-                'modelname_Str' => 'showpiece'
+                'modelname_Str' => 'course'
             ),
             'model_name_Str' => 'ClassMeta',
             'limitstart_Num' => 0,
@@ -55,7 +55,7 @@ class course_controller extends FS_controller {
         $data['class2_ClassMetaList'] = new ObjList();
         $data['class2_ClassMetaList']->construct_db(array(
             'db_where_Arr' => array(
-                'modelname_Str' => 'showpiece_class2'
+                'modelname_Str' => 'course_class2'
             ),
             'model_name_Str' => 'ClassMeta',
             'limitstart_Num' => 0,
@@ -85,7 +85,7 @@ class course_controller extends FS_controller {
         if ($this->form_validation->run() !== FALSE)
         {
             //基本post欄位
-            $showpieceid_Num = $this->input->post('showpieceid_Num', TRUE);
+            $courseid_Num = $this->input->post('courseid_Num', TRUE);
             $name_Str = $this->input->post('name_Str', TRUE);
             $price_Num = $this->input->post('price_Num', TRUE);
             $synopsis_Str = $this->input->post('synopsis_Str', TRUE);
@@ -128,10 +128,10 @@ class course_controller extends FS_controller {
                 }
             }
 
-            //建構ShowPiece物件，並且更新
-            $showpiece_ShowPiece = new ShowPiece();
-            $showpiece_ShowPiece->construct(array(
-                'showpieceid_Num' => $showpieceid_Num,
+            //建構Course物件，並且更新
+            $course_Course = new Course();
+            $course_Course->construct(array(
+                'courseid_Num' => $courseid_Num,
                 'name_Str' => $name_Str,
                 'price_Num' => $price_Num,
                 'synopsis_Str' => $synopsis_Str,
@@ -142,13 +142,13 @@ class course_controller extends FS_controller {
                 'content_specification_Str' => $content_specification_Str,
                 'prioritynum_Num' => $prioritynum_Num
             ));
-            $showpiece_ShowPiece->update(array());
+            $course_Course->update(array());
 
             //送出成功訊息
             $this->load->model('Message');
             $this->Message->show(array(
                 'message' => '設定成功',
-                'url' => 'admin/shop/showpiece/showpiece/tablelist'
+                'url' => 'admin/base/course/course/tablelist'
             ));
         }
         else
@@ -158,7 +158,7 @@ class course_controller extends FS_controller {
             $this->load->model('Message');
             $this->Message->show(array(
                 'message' => $validation_errors_Str,
-                'url' => 'admin/shop/showpiece/showpiece/tablelist'
+                'url' => 'admin/base/course/course/tablelist'
             ));
         }
     }
@@ -170,7 +170,7 @@ class course_controller extends FS_controller {
             'child4_name_Str' => 'tablelist'//管理分類名稱
         )));
 
-        $data['search_showpieceid_Num'] = $this->input->get('showpieceid');
+        $data['search_courseid_Num'] = $this->input->get('courseid');
         $data['search_name_Str'] = $this->input->get('name');
         $data['search_class_slug_Str'] = $this->input->get('class_slug');
 
@@ -185,10 +185,10 @@ class course_controller extends FS_controller {
             )
         ));
 
-        $data['showpiece_ShowPieceList'] = new ObjList();
-        $data['showpiece_ShowPieceList']->construct_db(array(
+        $data['course_CourseList'] = new ObjList();
+        $data['course_CourseList']->construct_db(array(
             'db_where_Arr' => array(
-                'showpieceid_Num' => $data['search_showpieceid_Num']
+                'courseid_Num' => $data['search_courseid_Num']
             ),
             'db_where_like_Arr' => array(
                 'name_Str' => $data['search_name_Str']
@@ -198,19 +198,19 @@ class course_controller extends FS_controller {
             ),
             'db_orderby_Arr' => array(
                 array('prioritynum', 'DESC'),
-                array('showpieceid', 'DESC')
+                array('courseid', 'DESC')
             ),
             'db_where_deletenull_Bln' => TRUE,
-            'model_name_Str' => 'ShowPiece',
+            'model_name_Str' => 'Course',
             'limitstart_Num' => $limitstart_Num,
             'limitcount_Num' => $limitcount_Num
         ));
-        $data['showpiece_links'] = $data['showpiece_ShowPieceList']->create_links(array('base_url_Str' => 'admin/'.$data['child1_name_Str'].'/'.$data['child2_name_Str'].'/'.$data['child3_name_Str'].'/'.$data['child4_name_Str']));
+        $data['course_links'] = $data['course_CourseList']->create_links(array('base_url_Str' => 'admin/'.$data['child1_name_Str'].'/'.$data['child2_name_Str'].'/'.$data['child3_name_Str'].'/'.$data['child4_name_Str']));
 
         $data['class_ClassMetaList'] = new ObjList();
         $data['class_ClassMetaList']->construct_db(array(
             'db_where_Arr' => array(
-                'modelname_Str' => 'showpiece'
+                'modelname_Str' => 'course'
             ),
             'model_name_Str' => 'ClassMeta',
             'limitstart_Num' => 0,
@@ -236,15 +236,15 @@ class course_controller extends FS_controller {
     {
         $data = $this->data;//取得公用數據
 
-        $search_showpieceid_Num = $this->input->post('search_showpieceid_Num', TRUE);
+        $search_courseid_Num = $this->input->post('search_courseid_Num', TRUE);
         $search_class_slug_Str = $this->input->post('search_class_slug_Str', TRUE);
         $search_name_Str = $this->input->post('search_name_Str', TRUE);
 
-        $url_Str = base_url('admin/shop/showpiece/showpiece/tablelist/?');
+        $url_Str = base_url('admin/base/course/course/tablelist/?');
 
-        if(!empty($search_showpieceid_Num))
+        if(!empty($search_courseid_Num))
         {
-            $url_Str = $url_Str.'&showpieceid='.$search_showpieceid_Num;
+            $url_Str = $url_Str.'&courseid='.$search_courseid_Num;
         }
 
         if(!empty($search_class_slug_Str))
@@ -263,19 +263,19 @@ class course_controller extends FS_controller {
     public function delete()
     {
         $hash_Str = $this->input->get('hash');
-        $showpieceid_Num = $this->input->get('showpieceid');
+        $courseid_Num = $this->input->get('courseid');
 
         //CSRF過濾
         if($hash_Str == $this->security->get_csrf_hash())
         {
-            $showpiece_ShowPiece = new ShowPiece();
-            $showpiece_ShowPiece->construct(array('showpieceid_Num' => $showpieceid_Num));
-            $showpiece_ShowPiece->delete();
+            $course_Course = new Course();
+            $course_Course->construct(array('courseid_Num' => $courseid_Num));
+            $course_Course->delete();
 
             $this->load->model('Message');
             $this->Message->show(array(
                 'message' => '刪除成功',
-                'url' => 'admin/shop/showpiece/showpiece/tablelist'
+                'url' => 'admin/base/course/course/tablelist'
             ));
         }
         else
@@ -283,7 +283,7 @@ class course_controller extends FS_controller {
             $this->load->model('Message');
             $this->Message->show(array(
                 'message' => 'hash驗證失敗，請使用標準瀏覽器進行刪除動作',
-                'url' => 'admin/shop/showpiece/showpiece/tablelist'
+                'url' => 'admin/base/course/course/tablelist'
             ));
         }
     }
