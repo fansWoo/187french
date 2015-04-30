@@ -52,7 +52,7 @@ $(document).on('click', '.scroll_arrow', function(){
 				<div class="itemArea">
 					<div class="picBox">
 						<div class="pic">
-							<img src="app/img/about/dessert/pic17.png" class="img">
+							<img src="<?=$value_Dessert->pic_PicObjList->obj_Arr[0]->path_Arr['w300h300']?>" class="img">
 							<img src="app/img/about/dessert/dot.png" class="dot">
 						</div>
 						<img src="app/img/about/dessert/shadow2.png" class="shadow2">
@@ -64,7 +64,7 @@ $(document).on('click', '.scroll_arrow', function(){
 						<h3>售價： <?=$value_Dessert->price_Num?></h3>
 					</div>
 					<div class="detailedBox">
-						<p><?=$value_Dessert->content_Str?></p>
+						<?=$value_Dessert->content_Str?>
 					</div>	
 				</div>
 				<?endforeach?>

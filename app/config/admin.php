@@ -13,9 +13,7 @@ $config['group_purview_Arr'] = array(
 		array('base', 'dessert', 'dessert'),
 		array('base', 'dessert', 'classmeta'),
 		array('base', 'month_course', 'month_course'),
-		array('base', 'month_course', 'classmeta'),
 		array('base', 'course', 'course'),
-		array('base', 'course', 'classmeta'),
 		array('base', 'contact', 'contact_ask'),
 		array('base', 'contact', 'contact_pay'),
 		array('base', 'contact', 'contact_learn'),
@@ -132,13 +130,6 @@ $config['admin_sidebox'] = array(
 								'edit' => array('title' => '編輯'),
 								'tablelist' => array('title' => '列表')
 							)
-						),
-						'classmeta' => array(
-							'title' => '分類標籤',
-							'child4' => array(
-								'edit' => array('title' => '編輯'),
-								'tablelist' => array('title' => '列表')
-							)
 						)
 					)
 				),
@@ -147,13 +138,6 @@ $config['admin_sidebox'] = array(
 					'child3' => array(
 						'course' => array(
 							'title' => '專修班',
-							'child4' => array(
-								'edit' => array('title' => '編輯'),
-								'tablelist' => array('title' => '列表')
-							)
-						),
-						'classmeta' => array(
-							'title' => '分類標籤',
 							'child4' => array(
 								'edit' => array('title' => '編輯'),
 								'tablelist' => array('title' => '列表')

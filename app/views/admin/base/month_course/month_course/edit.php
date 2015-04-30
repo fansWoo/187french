@@ -73,41 +73,6 @@
 		    </div>
 		</div>
 	</div>
-    <div class="spanLine">
-        <div class="spanStage">
-            <div class="spanLineLeft">
-                分類標籤
-            </div>
-            <div class="spanLineLeft width300">
-                <?if(!empty($month_course_CourseMonth->class_ClassMetaList->obj_Arr)):?>
-                <div>
-                    <select name="classids_Arr[]">
-                        <option value="">沒有分類標籤</option>
-                        <?foreach($class_ClassMetaList->obj_Arr as $key2 => $value2_ClassMeta):?>
-                        <option value="<?=$value2_ClassMeta->classid_Num?>"<?if($month_course_CourseMonth->class_ClassMetaList->obj_Arr[0]->classid_Num == $value2_ClassMeta->classid_Num):?> selected<?endif?>><?=$value2_ClassMeta->classname_Str?></option>
-                        <?endforeach?>
-                    </select>
-                </div>
-                <?else:?>
-                <div>
-                    <select name="classids_Arr[]">
-                        <option value="">沒有分類標籤</option>
-                        <?foreach($class_ClassMetaList->obj_Arr as $key => $value_ClassMeta):?>
-                        <option value="<?=$value_ClassMeta->classid_Num?>"><?=$value_ClassMeta->classname_Str?></option>
-                        <?endforeach?>
-                    </select>
-                </div>
-                <?endif?>
-            </div>
-        </div>
-        <div class="spanStage">
-            <div class="spanLineLeft">
-            </div>
-            <div class="spanLineLeft width500">
-                <a href="admin/<?=$child1_name_Str?>/<?=$child2_name_Str?>/classmeta/tablelist">管理分類標籤</a>
-            </div>
-        </div>
-    </div>
 	<div class="spanLine">
 	    <div class="spanStage">
             <div class="spanLineLeft">

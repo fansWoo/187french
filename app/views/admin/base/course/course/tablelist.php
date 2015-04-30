@@ -16,9 +16,6 @@
         <div class="spanLineLeft text width500">
 			產品名稱
         </div>
-        <div class="spanLineLeft text width150">
-            產品分類標籤
-        </div>
 	</div>
     <?php echo form_open("admin/$child1_name_Str/$child2_name_Str/$child3_name_Str/{$child4_name_Str}_post/") ?>
         <div class="spanLine">
@@ -27,14 +24,6 @@
             </div>
             <div class="spanLineLeft text width500">
                 <input type="text" class="text" style="margin-left:-6px;" value="<?=!empty($search_name_Str)?$search_name_Str:''?>" name="search_name_Str" placeholder="請填寫產品名稱">
-            </div>
-            <div class="spanLineLeft text width150">
-                <select name="search_class_slug_Str" style="margin-left:-6px;">
-                    <option value="">不透過分類標籤篩選</option>
-                    <?foreach($class_ClassMetaList->obj_Arr as $key => $value_ClassMeta):?>
-                    <option value="<?=$value_ClassMeta->slug_Str?>"<?if(!empty($search_class_slug_Str) && $search_class_slug_Str == $value_ClassMeta->slug_Str) echo ' selected'?>><?=$value_ClassMeta->classname_Str?></option>
-                    <?endforeach?>
-                </select>
             </div>
             <div class="spanLineLeft text width150">
                 <input type="submit" class="button" style="height: 30px; margin-left:-6px;" value="篩選">
@@ -49,15 +38,6 @@
         </div>
         <div class="spanLineLeft text width500">
             <a href="admin/<?=$child1_name_Str?>/<?=$child2_name_Str?>/<?=$child3_name_Str?>/edit/?courseid=<?=$value_Course->courseid_Num?>"><?=$value_Course->name_Str?></a>
-        </div>
-        <div class="spanLineLeft text width150">
-            <?if(!empty($value_Course->class_ClassMetaList->obj_Arr)):?>
-            <?foreach($value_Course->class_ClassMetaList->obj_Arr as $key => $value_ClassMeta):?>
-                <?if($key !== 0):?>,<?endif?><?=$value_ClassMeta->classname_Str?>
-            <?endforeach?>
-            <?else:?>
-            <span class="gray">沒有分類標籤</span>
-            <?endif?>
         </div>
         <div class="spanLineLeft width300 hoverHidden">
             <a href="admin/<?=$child1_name_Str?>/<?=$child2_name_Str?>/<?=$child3_name_Str?>/edit/?courseid=<?=$value_Course->courseid_Num?>">編輯</a>

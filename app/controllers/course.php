@@ -17,26 +17,18 @@ class course_controller extends FS_controller {
             )
         ));
 
-        $data['NoteFieldList'] = new ObjList();
-        $data['NoteFieldList']->construct_db(array(
-            'db_where_Arr' => array(
-                'modelname' => 'note',
-                'noteid' => $data['search_noteid_Num'],
-                'classids' => 528518
-            ),
-            'db_where_like_Arr' => array(
-                'title_Str' => $data['search_title_Str']
-            ),
+        $data['CourseList'] = new ObjList();
+        $data['CourseList']->construct_db(array(
             'db_orderby_Arr' => array(
                 array('prioritynum', 'DESC'),
                 array('updatetime', 'DESC')
             ),
             'db_where_deletenull_Bln' => TRUE,
-            'model_name_Str' => 'NoteField',
+            'model_name_Str' => 'Course',
             'limitstart_Num' => $limitstart_Num,
             'limitcount_Num' => $limitcount_Num
         ));
-        $data['page_link'] = $data['NoteFieldList']->create_links(array('base_url_Str' => 'admin/'.$data['child1_name_Str'].'/'.$data['child2_name_Str'].'/'.$data['child3_name_Str'].'/'.$data['child4_name_Str']));
+        $data['page_link'] = $data['CourseList']->create_links(array('base_url_Str' => 'admin/'.$data['child1_name_Str'].'/'.$data['child2_name_Str'].'/'.$data['child3_name_Str'].'/'.$data['child4_name_Str']));
 
         //global
 		$data['global']['style'][] = 'style';
