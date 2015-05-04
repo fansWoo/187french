@@ -28,26 +28,6 @@
     <div class="spanLine">
         <div class="spanStage">
             <div class="spanLineLeft">
-                課程時間1
-            </div>
-            <div class="spanLineLeft width500">
-                <input type="text" class="text" name="coursetime1_Str" placeholder="請輸入課程時間" value="<?=$course_Course->coursetime1_Str?>">
-            </div>
-        </div>
-    </div>
-    <div class="spanLine">
-        <div class="spanStage">
-            <div class="spanLineLeft">
-                課程時間2
-            </div>
-            <div class="spanLineLeft width500">
-                <input type="text" class="text" name="coursetime2_Str" placeholder="請輸入課程時間" value="<?=$course_Course->coursetime2_Str?>">
-            </div>
-        </div>
-    </div>
-    <div class="spanLine">
-        <div class="spanStage">
-            <div class="spanLineLeft">
                 產品照片
             </div>
             <div class="spanLineLeft width500">

@@ -1,0 +1,61 @@
+body{}
+/**********************左邊選單*********************************/
+.Area{width:100%;  margin-bottom:50px; padding-bottom:50px; overflow:hidden;position:relative;overflow:hidden;}
+
+.dessert01{display:none;position:absolute;z-index:1;width:350px;left:-80px;top:1150px;}
+.Area .dessert02{position:absolute;z-index:1;width:300px; right:0px; bottom:1000px;}
+.Area .dessert03{position:absolute;z-index:1;width:250px; left:-60px; top:600px;}
+.Area .dessert02{position:absolute;z-index:1;width:300px; right:0px; bottom:1000px;}
+.Area .dessert06{position:absolute;z-index:1;width:300px; right:70px;top:180px;}
+.Area .pic1{position:absolute;z-index:1; right:-550px; top:120px;}
+.Area .contantArea{width:100%;margin:0px auto;position:relative; z-index:2;overflow:hidden; margin-top:250px; }
+
+.contantArea .SignUpBox {width:850px;margin:0px auto; margin-bottom:50px;position:relative; color:#6a3c22;letter-spacing:3px;font-weight:600;position:relative;}
+
+.contantArea .SignUpBox  .title{width:400px;margin-left:40px;}
+.contantArea .SignUpBox .processBox{width:810px; position:relative; padding-left:40px;font-size:15px;}
+.contantArea .SignUpBox  h1{font-size:22px; margin-top:50px; clear:both; margin-bottom:20px; margin-left:40px;}
+.contantArea .SignUpBox .processBox .box{width:810px;margin-bottom:30px; } 
+.contantArea .SignUpBox .processBox .box p{display:block; padding:10px;letter-spacing:3px; line-height:24px;margin-left:30px;   position:relative; }
+.contantArea .SignUpBox .processBox .box  .dot{display:block; width:21px; height:24px; background-color:#fff; border-radius:12px; color:#6a3c22; position:absolute; text-align:center; line-height:24px;font-size:15px; left:-30px; top:10px; padding-left:3px; }
+.contantArea .SignUpBox .processBox .box2{margin-bottom:30px; width:680px; padding-top:20px; padding-bottom:20px; border-bottom:1px dotted #fff; border-top:1px dotted #fff;position:relative;  } 
+.contantArea .SignUpBox .processBox .box2 p{letter-spacing:3px; line-height:24px;margin-left:150px;position:relative; margin-bottom:5px; }
+
+.contantArea .SignUpBox .precautions{position:relative;width:760px; margin-bottom:80px; margin-top:30px; }
+.contantArea .SignUpBox .precautions p{ letter-spacing:3px;line-height:24px; position:relative; margin-left:55px; margin-bottom:5px;}
+.contantArea .SignUpBox  .circle{width:6px; height:6px; border-radius:3px; background-color:#fff; position:absolute;left:-15px;top:8px;}
+.contantArea .SignUpBox .processBox .pic2{position:absolute;left:-450px;top:400px;width:750px;opacity:0;}
+.contantArea .SignUpBox .processBox.hover .pic2{display:block;-webkit-animation:p201503200508 2.3s;animation:p201503200508 2.3s;opacity:1;}
+@-webkit-keyframes p201503200508{
+	0%{ -webkit-transform: translate(-200px, 0px)  ; opacity:1;  }
+	50%{ -webkit-transform: translate(-200px, 0px)  ; opacity:1;}
+	100%{ -webkit-transform: translate(0,0px) ; opacity:1;  }
+}
+@keyframes p201503200508{
+	0%{ transform: translate(-200px, 0px)  ; opacity:1;  }
+	50%{transform: translate(-200px, 0px)  ; opacity:1;}
+	100%{ transform: translate(0,0px) ; opacity:1;  }
+}
+
+
+.contantArea .SignUpBox .form1{width:400px; float:right; padding-bottom:30px; clear:both; border-bottom:1px dotted #fff;overflow:hidden; margin-bottom:60px;}
+.contantArea .SignUpBox .form1 h1{width:170px; height:30px; line-height:30px; border:2px solid #fff;text-align:center; margin-bottom:30px; font-size:18px; background-color:rgba(255,255,255,0.3); margin-left:0px;}
+.contantArea .SignUpBox .form1.one{margin-right:110px;}
+.contantArea .SignUpBox .form1.one textarea{width:360px; height:100px;background-color:rgba(255,255,255,0.7);border-radius:10px; margin-top:10px; padding:10px; color:#888; font-size:12px;margin-bottom:20px; }
+.contantArea .SignUpBox .form1 .box{width:360px;margin-bottom:15px; float:left;}
+.contantArea .SignUpBox .form1 .box .checkbox{width:440px; clear:both;}
+.contantArea .SignUpBox .form1 .box .checkbox p{float:left; margin-right:10px;}
+.contantArea .SignUpBox .form1 .box .checkbox h3{font-weight:600; }
+.contantArea .SignUpBox .form1 .box p{float:left; letter-spacing:2px; padding-top:3px;}
+.contantArea .SignUpBox .form1 .box .input1{float:right;background-color:rgba(255,255,255,0.7); border:1 solid #bababa;border-radius:8px; color:#888;  font-size:12px;padding:2px; padding-left:6px;width:200px;}
+.contantArea .SignUpBox .form1 .box select{background-color:rgba(255,255,255,0.7);border-radius:8px; font-size:12px;padding:2px; float:right; margin-right:3px;}
+.contantArea .SignUpBox .form1 .submitLine { width: 120px; margin: 20px auto ; }
+.contantArea .SignUpBox .form1 .submitLine input[type=submit]{width:110px;height:40px; background-color:#eee;color:#999; padding: 0 5px; line-height:40px; text-align:center; border:1px solid #DDD; border-radius:5px;letter-spacing:2px cursor: pointer; -webkit-transition: all 0.5s; transition: all 0.5s;cursor:pointer; }
+.contantArea .SignUpBox .form1 .submitLine input[type=submit]:hover{color:#43a7d8;}
+.contantArea .SignUpBox .form1 .submitLine input[type=submit]:active{background-color:#e0e0e0;}
+
+
+.contantArea .SignUpBox .form1.three  textarea{width:300px;background-color:rgba(255,255,255,0.7); height:100px;border-radius:10px; margin-top:20px; padding:10px; color:#888; font-size:12px; float:right; margin-top:-85px;  margin-bottom:40px;}
+
+
+

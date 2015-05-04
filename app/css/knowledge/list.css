@@ -20,6 +20,16 @@ body{}
 .Area .contantArea  .boxArea .news_item .more{ float:right; margin-bottom: 20px; width:55px; height:6px; padding:13px; line-height:6px; text-align:center;  border-radius:5px;border:2px solid #fff; color:#fff;-webkit-transition:all 0.5s; transition:all  0.5s;right:0px; bottom:30px; }
 .Area .contantArea  .boxArea .news_item .more:hover{background-color:rgba(255,255,255,0.5);color:#fff;}
 .Area .contantArea  .boxArea .news_item .more:active{background-color:rgba(0,0,0,0.3);color:#fff;}
- 
- 
 
+.pageLinks { display:block; width:350px; color: #FFF; margin:50px auto 30px; padding-left:50px;}
+.pageLinks strong { display: inline-block; width: 15px; background-color:rgba(255,255,255,0.3); height:15px; padding:7px; font-size:14px; border-radius:200px;overflow:hidden; text-align:center;line-height:15px; margin-right:10px; }
+.pageLinks .first,
+.pageLinks .prev{ display: inline-block; width:25px; height:15px; margin-right:10px;margin-top:5px;opacity:0.7;-webkit-transition: all 0.8s; transition: all 0.8s;}
+.pageLinks .first:hover,
+.pageLinks .prev:hover{ opacity:1;}
+.pageLinks .last,
+.pageLinks .next{ display: inline-block; width:25px; height:15px; margin-right:10px; margin-top:5px;opacity:0.7;-webkit-transition: all 0.8s; transition: all 0.8s;}
+.pageLinks .last:hover,
+.pageLinks .next:hover{opacity:1;}
+.pageLinks a{ display: inline-block; width:15px; height:15px; padding:7px;color:#fff;  font-size:14px; border-radius:200px;overflow:hidden; text-align:center;line-height:15px; margin-right:10px;-webkit-transition: all 0.8s; transition: all 0.8s;}
+.pageLinks a:hover{color:#fff; background-color:rgba(255,255,255,0.3);}

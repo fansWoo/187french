@@ -330,6 +330,14 @@ class ObjList extends CI_Model {
         
         $this->load->library('pagination');
         $config = array();
+        $config['prev_tag_open'] = '<span class="prev">';
+        $config['prev_tag_close'] = '</span>';
+        $config['next_tag_open'] = '<span class="next">';
+        $config['next_tag_close'] = '</span>';
+        $config['first_tag_open'] = '<span class="first">';
+        $config['first_tag_close'] = '</span>';
+        $config['last_tag_open'] = '<span class="last">';
+        $config['last_tag_close'] = '</span>';
         $config['base_url'] = $base_url_Str.'limitcount='.$limitcount_Num;
         $config['per_page'] = $limitcount_Num;
         $config['total_rows'] = $this->get_maxcount();

@@ -154,8 +154,10 @@ class dessert_controller extends FS_controller {
         $class_ClassMeta = new ClassMeta();
         $class_ClassMeta->construct_db(array(
             'db_where_Arr' => array(
-                'slug_Str' => $data['search_class_slug_Str']
-            )
+                'modelname' => 'dessert',
+                'slug' => $data['search_class_slug_Str']
+            ),
+            'db_where_deletenull_Bln' => FALSE
         ));
 
         $data['dessert_DessertList'] = new ObjList();
@@ -178,7 +180,7 @@ class dessert_controller extends FS_controller {
             'limitstart_Num' => $limitstart_Num,
             'limitcount_Num' => $limitcount_Num
         ));
-        $data['dessert_links'] = $data['dessert_DessertList']->create_links(array('base_url_Str' => 'admin/'.$data['child1_name_Str'].'/'.$data['child2_name_Str'].'/'.$data['child3_name_Str'].'/'.$data['child4_name_Str']));
+        $data['page_links'] = $data['dessert_DessertList']->create_links(array('base_url_Str' => 'admin/'.$data['child1_name_Str'].'/'.$data['child2_name_Str'].'/'.$data['child3_name_Str'].'/'.$data['child4_name_Str']));
 
         $data['class_ClassMetaList'] = new ObjList();
         $data['class_ClassMetaList']->construct_db(array(

@@ -17,7 +17,7 @@ $(document).on('click', '.scroll_arrow', function(){
 	$(document).scroll(function(){
         var scroll_top = $(document).scrollTop();
         if(scroll_top == 0){
-            $('.boxArea.two , .box3').removeClass('hover');
+            $('.boxArea.two , .box3 ' ).removeClass('hover');
             $('.boxArea.one').addClass('hover');
         }
         else if(scroll_top >= 400 && scroll_top < 850){
@@ -28,23 +28,27 @@ $(document).on('click', '.scroll_arrow', function(){
             $('.box3').removeClass('hover');
             $('.box3').addClass('hover');
         }
+        
     });
 </script>
 <?=$temp['header_down']?>
 <?=$temp['topheader']?>	
-<img src="app/img/index/dessert02.png" class="dessert02">
+	<img src="app/img/index/dessert02.png" class="dessert02">
+	
 <div class="Area">
 		<img src="app/img/index/dessert05.png" class="dessert05">
 		<div class="contantArea">
-				<img src="app/img/course/title2.png" class="title">
+				<img src="app/img/course/title.png" class="title">
 			<div class="boxArea">
-				<?foreach($CourseList->obj_Arr as $key => $value_Course):?>
+				<?foreach($CourseMonthList->obj_Arr as $key => $value_CourseMonth):?>
 				<div class="itemArea">
 					<div class="picBox_border">
-						<a href="course/view/?courseid=<?=$value_Course->courseid_Num?>">
+						<a href="month_course/view/?month_courseid=<?=$value_CourseMonth->month_courseid_Num?>">
 							<div class="picBox">
 								<div class="pic">
-									<img src="<?=$value_Course->pic_PicObjList->obj_Arr[0]->path_Arr['w300h300']?>" class="img">
+									<?if(!empty($value_CourseMonth->pic_PicObjList->obj_Arr[0]->path_Arr['w300h300'])):?>
+									<img src="<?=$value_CourseMonth->pic_PicObjList->obj_Arr[0]->path_Arr['w300h300']?>" class="img">
+									<?endif?>
 									<img src="app/img/about/dessert/dot.png" class="dot">
 								</div>
 								<img src="app/img/about/dessert/shadow2.png" class="shadow2">
@@ -52,14 +56,17 @@ $(document).on('click', '.scroll_arrow', function(){
 						</a>
 					</div>
 					<div class="textBox">
-						<h2><a href="course/view/?courseid=<?=$value_Course->courseid_Num?>"><?=$value_Course->name_Str?></a></h2>
-						<?=mb_substr(strip_tags($value_Course->content_Html), 0, 150, 'utf-8')?>
+						<h2><?=$value_CourseMonth->name_Str?></h2>
+						<a href="month_course/view/?month_courseid=<?=$value_CourseMonth->month_courseid_Num?>"><div class="more">
+							more
+						</div></a>
 					</div>
 				</div>
 				<?endforeach?>
 			</div>
-    		<div class="pageLinks"><?=$page_links?></div>
-		</div>
+			<div class="pageLinks"><?=$page_links?></div>
+		</div>	
+
 		
 	</div>
 	

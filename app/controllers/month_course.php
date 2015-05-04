@@ -1,6 +1,6 @@
 <?php
 
-class course_controller extends FS_controller {
+class month_course_controller extends FS_controller {
 
 	public function index()
 	{
@@ -8,7 +8,7 @@ class course_controller extends FS_controller {
 
         $limitstart_Num = $this->input->get('limitstart');
         $limitcount_Num = $this->input->get('limitcount');
-        $limitcount_Num = !empty($limitcount_Num) ? $limitcount_Num : 10;
+        $limitcount_Num = !empty($limitcount_Num) ? $limitcount_Num : 20;
 
         $class_ClassMeta = new ClassMeta();
         $class_ClassMeta->construct_db(array(
@@ -17,22 +17,22 @@ class course_controller extends FS_controller {
             )
         ));
 
-        $data['CourseList'] = new ObjList();
-        $data['CourseList']->construct_db(array(
+        $data['CourseMonthList'] = new ObjList();
+        $data['CourseMonthList']->construct_db(array(
             'db_orderby_Arr' => array(
                 array('prioritynum', 'DESC'),
                 array('updatetime', 'DESC')
             ),
             'db_where_deletenull_Bln' => TRUE,
-            'model_name_Str' => 'Course',
+            'model_name_Str' => 'CourseMonth',
             'limitstart_Num' => $limitstart_Num,
             'limitcount_Num' => $limitcount_Num
         ));
-        $data['page_links'] = $data['CourseList']->create_links(array('base_url_Str' => 'course/'));
+        $data['page_links'] = $data['CourseMonthList']->create_links(array('base_url_Str' => 'month_course/'));
 
         //global
 		$data['global']['style'][] = 'style';
-        $data['global']['style'][] = 'course/list';
+        $data['global']['style'][] = 'month_course/list';
         
         //temp
 		$data['temp']['header_up'] = $this->load->view('temp/header_up', $data, TRUE);
@@ -42,27 +42,25 @@ class course_controller extends FS_controller {
 		$data['temp']['leftmenu'] = $this->load->view('temp/leftmenu', $data, TRUE);
 		
 		//輸出模板
-		$this->load->view('course/list', $data);
+		$this->load->view('month_course/list', $data);
 	}
 
     public function view()
     {
         $data = $this->data;
             
-        $courseid_Num = $this->input->get('courseid');
+        $month_courseid_Num = $this->input->get('month_courseid');
 
-        $data['course_Course'] = new Course();
-        $data['course_Course']->construct_db(array(
+        $data['CourseMonth'] = new CourseMonth();
+        $data['CourseMonth']->construct_db(array(
             'db_where_Arr' => array(
-                'courseid_Num' => $courseid_Num
+                'month_courseid' => $month_courseid_Num
             )
         ));
 
-        // echoe($data['course_Course']);
-
         //global
         $data['global']['style'][] = 'style';
-        $data['global']['style'][] = 'course/view';
+        $data['global']['style'][] = 'month_course/view';
         
         //temp
         $data['temp']['header_up'] = $this->load->view('temp/header_up', $data, TRUE);
@@ -72,7 +70,7 @@ class course_controller extends FS_controller {
         $data['temp']['leftmenu'] = $this->load->view('temp/leftmenu', $data, TRUE);
         
         //輸出模板
-        $this->load->view('course/view', $data);
+        $this->load->view('month_course/view', $data);
     }
 
 }

@@ -66,8 +66,8 @@ $(document).on('click', '.scroll_arrow', function(){
 				</a>
 			</div>
 			<?endforeach?>
+    		<div class="pageLinks"><?=$page_links?></div>
 		</div>
 	</div>
-	<img src="app/img/index/dessert01.png" class="dessert01">
 </div>
 <?=$temp['footer']?>

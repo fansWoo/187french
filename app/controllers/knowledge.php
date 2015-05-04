@@ -13,7 +13,7 @@ class knowledge_controller extends FS_controller {
 
         $limitstart_Num = $this->input->get('limitstart');
         $limitcount_Num = $this->input->get('limitcount');
-        $limitcount_Num = !empty($limitcount_Num) ? $limitcount_Num : 20;
+        $limitcount_Num = !empty($limitcount_Num) ? $limitcount_Num : 10;
 
         $class_ClassMeta = new ClassMeta();
         $class_ClassMeta->construct_db(array(
@@ -41,7 +41,7 @@ class knowledge_controller extends FS_controller {
             'limitstart_Num' => $limitstart_Num,
             'limitcount_Num' => $limitcount_Num
         ));
-        $data['page_link'] = $data['NoteFieldList']->create_links(array('base_url_Str' => 'admin/'.$data['child1_name_Str'].'/'.$data['child2_name_Str'].'/'.$data['child3_name_Str'].'/'.$data['child4_name_Str']));
+        $data['page_links'] = $data['NoteFieldList']->create_links(array('base_url_Str' => 'knowledge/'));
         
         //global
 		$data['global']['style'][] = 'style';

@@ -38,8 +38,6 @@ $(document).on('click', '.scroll_arrow', function(){
 <div class="Area">
 		<img src="app/img/index/dessert02.png" class="dessert02">
 		<img src="app/img/index/dessert05.png" class="dessert05">
-
-		
 		<div class="contantArea">
 			<div class="topBox">
 				<img src="app/img/course/title.png" class="title">
@@ -49,7 +47,7 @@ $(document).on('click', '.scroll_arrow', function(){
 					<div class="picBox_border">
 						<div class="picBox">
 							<div class="pic">
-								<img src="app/img/course/pic_big.jpg" class="img">
+								<img src="<?=$CourseMonth->pic_PicObjList->obj_Arr[0]->path_Arr['w0h0']?>" class="img">
 								<img src="app/img/about/dessert/dot.png" class="dot">
 							</div>
 							<img src="app/img/about/dessert/shadow2.png" class="shadow2">
@@ -58,18 +56,18 @@ $(document).on('click', '.scroll_arrow', function(){
 				</div>
 				<div class="box2">
 					<div class="leftbox">
-						<h2>費南雪-原味、榛果、抹茶栗子</h2>
+						<h2><?=$CourseMonth->name_Str?></h2>
 						<div class="box">
 							<div class="circle">上課時間</div>
 							<div class="right">
-								<p>3/07(六)14:00~17:00</p>
-								<p>3/26(四)09:30~12:30</p>
+								<p><?=$CourseMonth->coursetime1_Str?></p>
+								<p><?=$CourseMonth->coursetime2_Str?></p>
 							</div>
 						</div>
 						<div class="box">
 							<div class="circle">課程費用</div>
 							<div class="right">
-								<p>3,000元</p>
+								<p>NT$ <?=$CourseMonth->price_Num?></p>
 								<p>(含教學及個人實作食材費用)</p>
 								
 							</div>
@@ -77,25 +75,15 @@ $(document).on('click', '.scroll_arrow', function(){
 						<div class="box">						
 							<div class="circle">注意事項</div>
 							<div class="right">
-								<p>響應環保，請攜帶約18cm大小的保鮮盒或盒子裝成品。</p>
+								<p><?=$CourseMonth->precautions_Str?></p>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="box1">
-					<p>這款來自法國的經典小蛋糕Financier，直接音譯便是大家所熟悉的「費南雪」，由字義翻則是「金融家蛋糕」!
-
-					關於費南雪的由來，其實有個可愛的小故事。
-					當時忙著投資、洽談生意的金融家們，每天都連吃飯的空檔沒有，於是在巴黎金融區的蛋糕師便發明了這種不用刀叉、不黏手的小糕點費南雪。
-
-					除了長得像金磚外，還有兩個特點杏仁粉和榛果奶油，前者讓蛋糕充滿堅果香酥，後者則有焦糖奶油的獨特風味。
-
-					這個看似簡單的小糕點，其實蘊藏了很多烘焙的基礎概念，焦化奶油該怎麼處理，才能香而不焦？常溫小糕點該怎麼澎的漂亮？怎麼保持濕潤的口感？
-					三個口味：原味、榛果、抹茶栗子，一次學會吧！
-					
-					</p>
+					<?=$CourseMonth->content_Html?>
 				</div>
-				<a href="page/register"><div class="box3">
+				<a href="contact"><div class="box3">
 					<div class="border">
 						<div class="border_a"></div>
 						<div class="border_b"></div>

@@ -6,26 +6,20 @@ class dessert_controller extends FS_controller {
 	{
         $data = $this->data;
 
-        $limitstart_Num = $this->input->get('limitstart');
-        $limitcount_Num = $this->input->get('limitcount');
-        $limitcount_Num = !empty($limitcount_Num) ? $limitcount_Num : 20;
+        $data['search_class_slug_Str'] = $this->input->get('class_slug');
 
         $class_ClassMeta = new ClassMeta();
         $class_ClassMeta->construct_db(array(
             'db_where_Arr' => array(
-                'slug' => 'dessert'
-            )
+                'modelname' => 'dessert',
+                'slug' => $data['search_class_slug_Str']
+            ),
+            'db_where_deletenull_Bln' => FALSE
         ));
 
-        $data['class_ClassMetaList'] = new ObjList();
-        $data['class_ClassMetaList']->construct_db(array(
-            'db_where_Arr' => array(
-                'modelname_Str' => 'dessert'
-            ),
-            'model_name_Str' => 'ClassMeta',
-            'limitstart_Num' => 0,
-            'limitcount_Num' => 100
-        ));
+        $limitstart_Num = $this->input->get('limitstart');
+        $limitcount_Num = $this->input->get('limitcount');
+        $limitcount_Num = !empty($limitcount_Num) ? $limitcount_Num : 20;
 
         $data['dessert_DessertList'] = new ObjList();
         $data['dessert_DessertList']->construct_db(array(
@@ -47,7 +41,17 @@ class dessert_controller extends FS_controller {
             'limitstart_Num' => $limitstart_Num,
             'limitcount_Num' => $limitcount_Num
         ));
-        $data['dessert_links'] = $data['dessert_DessertList']->create_links(array('base_url_Str' => 'admin/'.$data['child1_name_Str'].'/'.$data['child2_name_Str'].'/'.$data['child3_name_Str'].'/'.$data['child4_name_Str']));
+        $data['page_links'] = $data['dessert_DessertList']->create_links(array('base_url_Str' => 'dessert/?class_slug='.$data['search_class_slug_Str']));
+
+        $data['class_ClassMetaList'] = new ObjList();
+        $data['class_ClassMetaList']->construct_db(array(
+            'db_where_Arr' => array(
+                'modelname_Str' => 'dessert'
+            ),
+            'model_name_Str' => 'ClassMeta',
+            'limitstart_Num' => 0,
+            'limitcount_Num' => 100
+        ));
 
         //global
 		$data['global']['style'][] = 'style';

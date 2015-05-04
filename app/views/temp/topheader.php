@@ -36,7 +36,7 @@ $(document).scroll(function(){
 			<div class="fb">
 				<a href="https://www.facebook.com/187patissiere"><img src="app/img/fb.png"></a>
 			</div>
-			<a href="page/register"><div class="li">
+			<a href="contact"><div class="li">
 				線上報名<br>Register
 				<div class="borderTop"></div>
 			</div></a>
@@ -49,13 +49,13 @@ $(document).scroll(function(){
 					</div>
 				</div>
 			</a>
-			<a href="page/course_monthly">
+			<a href="month_course">
 				<div class="li">
 					<p>課程介紹<br>Course</p>
 						<div class="downbox course">
-							<a href="page/course_monthly" class="item">當月課程<br>Monthly course</a>
+							<a href="month_course" class="item">當月課程<br>Monthly course</a>
 							<a href="course" class="item">專修班<br> Specialize Course</a>
-							<a href="page/course_series" class="item">系列課<br> Series Course</a>
+							<a href="series_course" class="item">系列課<br> Series Course</a>
 						</div>
 				</div>
 			</a>

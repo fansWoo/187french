@@ -8,12 +8,12 @@ body{}
  .dessert06{position:absolute;z-index:1;width:350px;right:-50px; bottom:500px;}
 .Area .dessert03{position:absolute;z-index:1;width:300px; left:-60px; top:900px;}
 .Area .pie{position:absolute;z-index:1;width:550px; right:0px; top:900px;}
-.contantArea  .title{width:400px; margin-bottom:0px;}
-.Area .contantArea{width:700px;margin:0px auto;position:relative; z-index:2;}
-.Area .contantArea  .boxArea{width:700px; margin:50px auto;padding-left:20px; position:relative;overflow:hidden; }
+.contantArea  .title{width:430px; margin-bottom:0px;}
+.Area .contantArea{width:900px;margin:0px auto;position:relative; z-index:2;}
+.Area .contantArea  .boxArea{width:900px; margin:50px auto;padding-left:20px; position:relative;overflow:hidden; }
 
-.Area .contantArea  .boxArea .itemArea{width:700px;margin-bottom:20px; padding-bottom:15px;overflow:hidden; }
-.picBox_border{width:248px; height:248px;border:1px solid rgba(255,255,255,0.7);float:left;}
+.Area .contantArea  .boxArea .itemArea{width:248px;  margin-right:50px; float:left; margin-bottom:20px; padding-bottom:15px; }
+.picBox_border{width:248px; height:248px;border:1px solid rgba(255,255,255,0.7);}
 .itemArea .picBox{float:left; width:240px; height:240px; background-color:#777; margin-bottom:20px;position:relative;overflow:hidden; margin-left:4px; margin-top:4px; }
 .itemArea .picBox .pic{overflow:hidden;width:240px; height:240px;position:absolute; top:0px; left:0px; }
 .itemArea .picBox .pic .img{width:100%;-webkit-transform: scale(1);transform: scale(1);-webkit-transition: 0.5s; transition: 0.5s;}
@@ -26,15 +26,12 @@ body{}
 .itemArea .picBox .hoverBox p{width:220px;height:100px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:14px; letter-spacing:2px;line-height:24px;color:#fff;padding:10px;display: }
 .itemArea:hover .hoverBox{opacity:1; -webkit-transform: translate(0px, 0px);transform: translate(0px, 0px);}
 
-.itemArea  .textBox{width:400px;color:#6a3c22; font-weight:600;float:left; margin-left:30px;}
+.itemArea  .textBox{font-size:14px; letter-spacing:2px;line-height:24px;color:#6a3c22; font-weight:600; }
 .itemArea  .textBox .title2{width:100px;}
-.itemArea  .textBox h2{font-size:18px; color:#fff; margin-bottom:10px;font-weight:600; border-bottom:1px dotted #eee; padding-bottom:10px;}
-.itemArea  .textBox h2 a { color:#FFF; }
-.itemArea  .textBox p{font-size:14px; letter-spacing:2px;line-height:24px;}
-.itemArea  .textBox .more{width:60px; height:15px; padding:10px; line-height:15px; text-align:center;  border-radius:5px; border:2px solid #fff; color:#fff;-webkit-transition:all 0.5s; transition:all  0.5s; margin:20px auto; float:right;}
+.itemArea  .textBox h2{font-size:16px; color:#fff; margin-bottom:10px;font-weight:600; border-bottom:1px dotted #eee; padding-bottom:10px;}
+.itemArea  .textBox .more{width:60px; height:15px; padding:10px; line-height:15px; text-align:center;  border-radius:5px; border:2px solid #fff; color:#fff;-webkit-transition:all 0.5s; transition:all  0.5s; margin:20px auto;}
 .itemArea  .textBox .more:hover{background-color:rgba(255,255,255,0.5);color:#fff;}
 .itemArea  .textBox .more:active{background-color:rgba(0,0,0,0.3);color:#fff;}
-
 
 .pageLinks { display:block; width:350px; color: #FFF; margin:50px auto 30px; padding-left:50px;}
 .pageLinks strong { display: inline-block; width: 15px; background-color:rgba(255,255,255,0.3); height:15px; padding:7px; font-size:14px; border-radius:200px;overflow:hidden; text-align:center;line-height:15px; margin-right:10px; }
@@ -48,6 +45,9 @@ body{}
 .pageLinks .next:hover{opacity:1;}
 .pageLinks a{ display: inline-block; width:15px; height:15px; padding:7px;color:#fff;  font-size:14px; border-radius:200px;overflow:hidden; text-align:center;line-height:15px; margin-right:10px;-webkit-transition: all 0.8s; transition: all 0.8s;}
 .pageLinks a:hover{color:#fff; background-color:rgba(255,255,255,0.3);}
+
+
+
 
 
 

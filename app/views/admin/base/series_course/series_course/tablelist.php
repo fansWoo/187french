@@ -2,28 +2,28 @@
 <?=$temp['admin_header_down']?>
 <h2><?=$child2_title_Str?> - <?=$child3_title_Str?></h2>
 <div class="contentBox allWidth">
-	<h3><?=$child3_title_Str?> > <?=$child4_title_Str?></h3>
-	<h4>請選擇欲修改之<?=$child3_title_Str?></h4>
-	<div class="spanLine noneBg">
+    <h3><?=$child3_title_Str?> > <?=$child4_title_Str?></h3>
+    <h4>請選擇欲修改之<?=$child3_title_Str?></h4>
+    <div class="spanLine noneBg">
         <div class="spanLineLeft">
-			<a href="admin/<?=$child1_name_Str?>/<?=$child2_name_Str?>/<?=$child3_name_Str?>/edit" class="button">新增<?=$child3_title_Str?></a>
+            <a href="admin/<?=$child1_name_Str?>/<?=$child2_name_Str?>/<?=$child3_name_Str?>/edit" class="button">新增<?=$child3_title_Str?></a>
         </div>
-	</div>
-	<div class="spanLine tableTitle">
+    </div>
+    <div class="spanLine tableTitle">
         <div class="spanLineLeft text width100">
-			產品ID
+            產品ID
         </div>
         <div class="spanLineLeft text width500">
-			產品名稱
+            產品名稱
         </div>
         <div class="spanLineLeft text width150">
             產品分類標籤
         </div>
-	</div>
+    </div>
     <?php echo form_open("admin/$child1_name_Str/$child2_name_Str/$child3_name_Str/{$child4_name_Str}_post/") ?>
         <div class="spanLine">
             <div class="spanLineLeft text width100">
-                <input type="number" class="text" style="margin-left:-6px;" value="<?=!empty($search_dessertid_Num)?$search_dessertid_Num:''?>" name="search_dessertid_Num" placeholder="請填寫ID">
+                <input type="number" class="text" style="margin-left:-6px;" value="<?=!empty($search_series_courseid_Num)?$search_series_courseid_Num:''?>" name="search_series_courseid_Num" placeholder="請填寫ID">
             </div>
             <div class="spanLineLeft text width500">
                 <input type="text" class="text" style="margin-left:-6px;" value="<?=!empty($search_name_Str)?$search_name_Str:''?>" name="search_name_Str" placeholder="請填寫產品名稱">
@@ -41,18 +41,18 @@
             </div>
         </div>
     </form>
-    <?if(!empty($dessert_DessertList->obj_Arr)):?>
-    <?foreach($dessert_DessertList->obj_Arr as $key => $value_Dessert):?>
+    <?if(!empty($series_course_CourseSeriesList->obj_Arr)):?>
+    <?foreach($series_course_CourseSeriesList->obj_Arr as $key => $value_CourseSeries):?>
     <div class="spanLine">
         <div class="spanLineLeft text width100">
-            <?=$value_Dessert->dessertid_Num?>
+            <?=$value_CourseSeries->series_courseid_Num?>
         </div>
         <div class="spanLineLeft text width500">
-            <a href="admin/<?=$child1_name_Str?>/<?=$child2_name_Str?>/<?=$child3_name_Str?>/edit/?dessertid=<?=$value_Dessert->dessertid_Num?>"><?=$value_Dessert->name_Str?></a>
+            <a href="admin/<?=$child1_name_Str?>/<?=$child2_name_Str?>/<?=$child3_name_Str?>/edit/?series_courseid=<?=$value_CourseSeries->series_courseid_Num?>"><?=$value_CourseSeries->name_Str?></a>
         </div>
         <div class="spanLineLeft text width150">
-            <?if(!empty($value_Dessert->class_ClassMetaList->obj_Arr)):?>
-            <?foreach($value_Dessert->class_ClassMetaList->obj_Arr as $key => $value_ClassMeta):?>
+            <?if(!empty($value_CourseSeries->class_ClassMetaList->obj_Arr)):?>
+            <?foreach($value_CourseSeries->class_ClassMetaList->obj_Arr as $key => $value_ClassMeta):?>
                 <?if($key !== 0):?>,<?endif?><?=$value_ClassMeta->classname_Str?>
             <?endforeach?>
             <?else:?>
@@ -60,10 +60,10 @@
             <?endif?>
         </div>
         <div class="spanLineLeft width300 hoverHidden">
-            <a href="admin/<?=$child1_name_Str?>/<?=$child2_name_Str?>/<?=$child3_name_Str?>/edit/?dessertid=<?=$value_Dessert->dessertid_Num?>">編輯</a>
-            <span class="ahref" onClick="fanswoo.check_href_action('確定要刪除嗎？', 'admin/<?=$child1_name_Str?>/<?=$child2_name_Str?>/<?=$child3_name_Str?>/delete/?dessertid=<?=$value_Dessert->dessertid_Num?>&hash=<?=$this->security->get_csrf_hash()?>');">刪除</span>
+            <a href="admin/<?=$child1_name_Str?>/<?=$child2_name_Str?>/<?=$child3_name_Str?>/edit/?series_courseid=<?=$value_CourseSeries->series_courseid_Num?>">編輯</a>
+            <span class="ahref" onClick="fanswoo.check_href_action('確定要刪除嗎？', 'admin/<?=$child1_name_Str?>/<?=$child2_name_Str?>/<?=$child3_name_Str?>/delete/?series_courseid=<?=$value_CourseSeries->series_courseid_Num?>&hash=<?=$this->security->get_csrf_hash()?>');">刪除</span>
         </div>
-	</div>
+    </div>
     <?endforeach?>
     <?else:?>
     <div class="spanLine">
