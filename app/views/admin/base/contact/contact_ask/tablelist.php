@@ -32,10 +32,9 @@
                 <input type="text" class="text" style="margin-left:-6px;" value="<?=!empty($search_name_Str)?$search_name_Str:''?>" name="search_name_Str" placeholder="請填寫姓名">
             </div>
             <div class="spanLineLeft text width200">
-                <select>
-                    <option>不透過處理狀態篩選</option>
-                    <option>未處理</option>
-                    <option>已處理</option>
+                <select name="search_status_process_Num">
+                    <option value="0"<?if($search_status_process_Num == 0):?> selected<?endif?>>未處理</option>
+                    <option value="1"<?if($search_status_process_Num == 1):?> selected<?endif?>>已處理</option>
                 </select>
             </div>
             <div class="spanLineLeft text width200">

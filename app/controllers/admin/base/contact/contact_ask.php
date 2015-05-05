@@ -101,7 +101,7 @@ class contact_ask_controller extends FS_controller {
 
         $data['search_contactid_Num'] = $this->input->get('contactid');
         $data['search_name_Str'] = $this->input->get('name');
-        $data['search_class_slug_Str'] = $this->input->get('class_slug');
+        $data['search_status_process_Num'] = $this->input->get('status_process');
 
         $limitstart_Num = $this->input->get('limitstart');
         $limitcount_Num = $this->input->get('limitcount');
@@ -117,7 +117,8 @@ class contact_ask_controller extends FS_controller {
         $data['ContactAskList'] = new ObjList();
         $data['ContactAskList']->construct_db(array(
             'db_where_Arr' => array(
-                'contactid_Num' => $data['search_contactid_Num']
+                'contactid_Num' => $data['search_contactid_Num'],
+                'status_process' => $data['search_status_process_Num']
             ),
             'db_where_like_Arr' => array(
                 'name_Str' => $data['search_name_Str']
@@ -165,8 +166,9 @@ class contact_ask_controller extends FS_controller {
         $data = $this->data;//取得公用數據
 
         $search_contactid_Num = $this->input->post('search_contactid_Num', TRUE);
-        $search_class_slug_Str = $this->input->post('search_class_slug_Str', TRUE);
+        $search_status_process_Num = $this->input->post('search_status_process_Num', TRUE);
         $search_name_Str = $this->input->post('search_name_Str', TRUE);
+
 
         $url_Str = base_url('admin/base/contact/contact_ask/tablelist/?');
 
@@ -175,9 +177,9 @@ class contact_ask_controller extends FS_controller {
             $url_Str = $url_Str.'&contactid='.$search_contactid_Num;
         }
 
-        if(!empty($search_class_slug_Str))
+        if(!empty($search_status_process_Num))
         {
-            $url_Str = $url_Str.'&class_slug='.$search_class_slug_Str;
+            $url_Str = $url_Str.'&status_process='.$search_status_process_Num;
         }
 
         if(!empty($search_name_Str))
