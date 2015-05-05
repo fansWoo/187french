@@ -109,10 +109,10 @@
 						</div>
 					</a>
 					<div class="TextBox">
-						<a href="page/course_monthly"><p><span>當月課程</span> <br>Monthly course </p></a>
+						<a href="month_course"><p><span>當月課程</span> <br>Monthly course </p></a>
 						
-						<a href="page/course_specialize"><p><span>專修班</span> <br> Specialize Course</p></a>
-						<a href="page/course_series"><p><span>系列課</span> <br> Series Course</p></a>
+						<a href="course"><p><span>專修班</span> <br> Specialize Course</p></a>
+						<a href="series_course"><p><span>系列課</span> <br> Series Course</p></a>
 						<div class="enter"></div>
 					</div>
 				</div>
@@ -130,11 +130,9 @@
 						</div>
 					</a>
 					<div class="TextBox">
-						<a href=""><p>【每月課程】2月份課程資訊</p></a>
-						<a href=""><p>【每月課程】3月份課程資訊</p></a>
-						<a href=""><p>【每月課程】4月份課程資訊</p></a>
-						<a href=""><p>【每月課程】5月份課程資訊</p></a>
- 
+						<?foreach($NoteList->obj_Arr as $key => $value_Note):?>
+						<p><a href="news/view/?noteid=<?=$value_Note->noteid_Num?>"><?=$value_Note->title_Str?></a></p>
+						<?endforeach?>
 						<div class="enter"></div>
 					</div>
 				</div>
@@ -152,9 +150,9 @@
 						</div>
 					</a>
 					<div class="TextBox">
-						<a href=""><p>每月課程報名</p></a>
-						<a href=""><p>意見回覆 </p></a>
-						<a href=""><p>匯款資訊回填 </p></a>
+						<a href="contact"><p>每月課程報名</p></a>
+						<a href="contact"><p>意見回覆 </p></a>
+						<a href="contact"><p>匯款資訊回填 </p></a>
 						<div class="enter"></div>
 					</div>
 				</div>

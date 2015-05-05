@@ -16,32 +16,58 @@
         <div class="spanLineLeft text width200">
 			聯絡人姓名
         </div>
+        <div class="spanLineLeft text width200">
+            處理狀態
+        </div>
+        <div class="spanLineLeft text width200">
+            聯繫日期
+        </div>
 	</div>
     <?php echo form_open("admin/$child1_name_Str/$child2_name_Str/$child3_name_Str/{$child4_name_Str}_post/") ?>
         <div class="spanLine">
             <div class="spanLineLeft text width100">
-                <input type="number" class="text" style="margin-left:-6px;" value="<?=!empty($search_showpieceid_Num)?$search_showpieceid_Num:''?>" name="search_showpieceid_Num" placeholder="請填寫ID">
+                <input type="number" class="text" style="margin-left:-6px;" value="<?=!empty($search_contactid_Num)?$search_contactid_Num:''?>" name="search_contactid_Num" placeholder="請填寫ID">
             </div>
             <div class="spanLineLeft text width200">
                 <input type="text" class="text" style="margin-left:-6px;" value="<?=!empty($search_name_Str)?$search_name_Str:''?>" name="search_name_Str" placeholder="請填寫姓名">
+            </div>
+            <div class="spanLineLeft text width200">
+                <select>
+                    <option>不透過處理狀態篩選</option>
+                    <option>未處理</option>
+                    <option>已處理</option>
+                </select>
+            </div>
+            <div class="spanLineLeft text width200">
+                聯繫日期
             </div>
             <div class="spanLineLeft text width150">
                 <input type="submit" class="button" style="height: 30px; margin-left:-6px;" value="篩選">
             </div>
         </div>
     </form>
-    <?if(!empty($showpiece_ShowPieceList->obj_Arr)):?>
-    <?foreach($showpiece_ShowPieceList->obj_Arr as $key => $value_ShowPiece):?>
+    <?if(!empty($ContactAskList->obj_Arr)):?>
+    <?foreach($ContactAskList->obj_Arr as $key => $value_ContactAsk):?>
     <div class="spanLine">
         <div class="spanLineLeft text width100">
-            <?=$value_ShowPiece->showpieceid_Num?>
+            <?=$value_ContactAsk->contactid_Num?>
         </div>
         <div class="spanLineLeft text width200">
-            <a href="admin/<?=$child1_name_Str?>/<?=$child2_name_Str?>/<?=$child3_name_Str?>/edit/?showpieceid=<?=$value_ShowPiece->showpieceid_Num?>"><?=$value_ShowPiece->name_Str?></a>
+            <a href="admin/<?=$child1_name_Str?>/<?=$child2_name_Str?>/<?=$child3_name_Str?>/edit/?contactid=<?=$value_ContactAsk->contactid_Num?>"><?=$value_ContactAsk->name_Str?></a>
+        </div>
+        <div class="spanLineLeft text width200">
+            <?if($value_ContactAsk->status_process_Num == 0):?>
+            未處理
+            <?elseif($value_ContactAsk->status_process_Num == 1):?>
+            已處理
+            <?endif?>
+        </div>
+        <div class="spanLineLeft text width200">
+            <?=$value_ContactAsk->updatetime_DateTime->datetime_Str?>
         </div>
         <div class="spanLineLeft width300 hoverHidden">
-            <a href="admin/<?=$child1_name_Str?>/<?=$child2_name_Str?>/<?=$child3_name_Str?>/edit/?showpieceid=<?=$value_ShowPiece->showpieceid_Num?>">編輯</a>
-            <span class="ahref" onClick="fanswoo.check_href_action('確定要刪除嗎？', 'admin/<?=$child1_name_Str?>/<?=$child2_name_Str?>/<?=$child3_name_Str?>/delete/?showpieceid=<?=$value_ShowPiece->showpieceid_Num?>&hash=<?=$this->security->get_csrf_hash()?>');">刪除</span>
+            <a href="admin/<?=$child1_name_Str?>/<?=$child2_name_Str?>/<?=$child3_name_Str?>/edit/?contactid=<?=$value_ContactAsk->contactid_Num?>">編輯</a>
+            <span class="ahref" onClick="fanswoo.check_href_action('確定要刪除嗎？', 'admin/<?=$child1_name_Str?>/<?=$child2_name_Str?>/<?=$child3_name_Str?>/delete/?contactid=<?=$value_ContactAsk->contactid_Num?>&hash=<?=$this->security->get_csrf_hash()?>');">刪除</span>
         </div>
 	</div>
     <?endforeach?>
@@ -52,6 +78,6 @@
         </div>
     </div>
     <?endif?>
-    <div class="pageLink"><?=$showpiece_links?></div>
+    <div class="pageLink"><?=$contact_links?></div>
 </div>
 <?=$temp['admin_footer']?>

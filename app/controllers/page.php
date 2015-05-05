@@ -26,6 +26,23 @@ class page_controller extends FS_controller {
         {
 		  $data['global']['style'][] = $page;
         }
+
+        if($page === 'index')
+        {
+	        $data['NoteList'] = new ObjList();
+	        $data['NoteList']->construct_db(array(
+	            'db_where_Arr' => array(
+	                'modelname' => 'note'
+	            ),
+	            'db_orderby_Arr' => array(
+	                array('prioritynum', 'DESC'),
+	                array('updatetime', 'DESC')
+	            ),
+	            'model_name_Str' => 'NoteField',
+	            'limitstart_Num' => 0,
+	            'limitcount_Num' => 4
+	        ));
+        }
         
         //temp
 		$data['temp']['header_up'] = $this->load->view('temp/header_up', $data, TRUE);
