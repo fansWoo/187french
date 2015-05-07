@@ -2,9 +2,9 @@ body{}
 /**********************左邊選單*********************************/
 .Area{width:100%;  margin-bottom:100px; overflow:hidden;position:relative; margin-top:250px;}
 
-.dessert01{position:absolute;z-index:1;width:400px;left:-80px; bottom:700px;}
+.dessert01{position:absolute;z-index:1;width:400px;left:-80px; top:700px;}
 .Area .dessert02{position:absolute;z-index:1;width:350px; right:0px; top:1000px;}
-.Area .dessert03{position:absolute;z-index:1;width:250px; left:-60px; top:500px;}
+.Area .dessert03{position:absolute;z-index:1;width:250px; left:-60px; top:450px;}
 .dessert04{position:absolute;z-index:1;width:400px; right:0px; top:130px;}
 .contantArea  .title{width:350px; margin-bottom:30px;}
 .Area .contantArea{width:850px;margin:0px auto;position:relative; z-index:2;}

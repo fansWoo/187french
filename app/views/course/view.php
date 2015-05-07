@@ -36,8 +36,10 @@ $(document).on('click', '.scroll_arrow', function(){
 	<img src="app/img/index/dessert02.png" class="dessert02">
 	
 <div class="Area">
-		<img src="app/img/index/dessert05.png" class="dessert05">
 		<img src="app/img/index/dessert06.png" class="dessert06">
+		<img src="app/img/index/dessert01.png" class="dessert01">
+		<img src="app/img/index/dessert03.png" class="dessert03">
+		<img src="app/img/index/dessert05.png" class="dessert05">
 		<div class="contantArea">
 			<img src="app/img/course/title2.png" class="title">
 			<div class="boxArea">

@@ -55,7 +55,7 @@ $(document).scroll(function(){
 						<div class="downbox course">
 							<a href="month_course" class="item">當月課程<br>Monthly course</a>
 							<a href="course" class="item">專修班<br> Specialize Course</a>
-							<a href="series_course" class="item">系列課<br> Series Course</a>
+							<a href="series_course/?class_slug=22691271" class="item">系列課<br> Series Course</a>
 						</div>
 				</div>
 			</a>

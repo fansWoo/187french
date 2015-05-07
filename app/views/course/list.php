@@ -32,8 +32,12 @@ $(document).on('click', '.scroll_arrow', function(){
 </script>
 <?=$temp['header_down']?>
 <?=$temp['topheader']?>	
-<img src="app/img/index/dessert02.png" class="dessert02">
+	<img src="app/img/index/dessert02.png" class="dessert02">
 <div class="Area">
+		
+		<img src="app/img/index/dessert06.png" class="dessert06">
+		<img src="app/img/index/dessert01.png" class="dessert01">
+		<img src="app/img/index/dessert03.png" class="dessert03">
 		<img src="app/img/index/dessert05.png" class="dessert05">
 		<div class="contantArea">
 				<img src="app/img/course/title2.png" class="title">
@@ -58,6 +62,7 @@ $(document).on('click', '.scroll_arrow', function(){
 				</div>
 				<?endforeach?>
 			</div>
+
     		<div class="pageLinks"><?=$page_links?></div>
 		</div>
 		

@@ -36,11 +36,14 @@ $(document).on('click', '.scroll_arrow', function(){
 	<img src="app/img/index/dessert02.png" class="dessert02">
 	
 <div class="Area">
+		<img src="app/img/index/dessert06.png" class="dessert06">
+		<img src="app/img/index/dessert01.png" class="dessert01">
+		<img src="app/img/index/dessert03.png" class="dessert03">
 		<img src="app/img/index/dessert05.png" class="dessert05">
 		<div class="contantArea">
 			<img src="app/img/course/title3.png" class="title">
 			<div class="top_button">
-				<a href="series_course/" class="buttonBox<?if(empty($search_class_slug_Str)):?> clicked<?endif?>">全部分類</a>
+				<!--<a href="series_course/" class="buttonBox<?if(empty($search_class_slug_Str)):?> clicked<?endif?>">全部分類</a>-->
     			<?foreach($class_ClassMetaList->obj_Arr as $key => $value_ClassMeta):?>
 				<a href="series_course/?class_slug=<?=$value_ClassMeta->slug_Str?>" class="buttonBox<?if($search_class_slug_Str == $value_ClassMeta->slug_Str):?> clicked<?endif?>"><?=$value_ClassMeta->classname_Str?></a>
 				<?endforeach?>
