@@ -19,7 +19,7 @@ class dessert_controller extends FS_controller {
 
         $limitstart_Num = $this->input->get('limitstart');
         $limitcount_Num = $this->input->get('limitcount');
-        $limitcount_Num = !empty($limitcount_Num) ? $limitcount_Num : 20;
+        $limitcount_Num = !empty($limitcount_Num) ? $limitcount_Num : 1;
 
         $data['dessert_DessertList'] = new ObjList();
         $data['dessert_DessertList']->construct_db(array(

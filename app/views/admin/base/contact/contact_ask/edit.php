@@ -52,8 +52,8 @@
             </div>
             <div class="spanLineLeft width500">
                 <select name="status_process_Num">
-                    <option value="0"<?if($ContactAsk->status_process_Num == 0):?> selected<?endif?>>未處理</option>
-                    <option value="1"<?if($ContactAsk->status_process_Num == 1):?> selected<?endif?>>已處理</option>
+                    <option value="1"<?if($ContactAsk->status_process_Num == 1):?> selected<?endif?>>未處理</option>
+                    <option value="2"<?if($ContactAsk->status_process_Num == 2):?> selected<?endif?>>已處理</option>
                 </select>
             </div>
         </div>

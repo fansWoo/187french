@@ -33,8 +33,9 @@
             </div>
             <div class="spanLineLeft text width200">
                 <select name="search_status_process_Num">
-                    <option value="0"<?if($search_status_process_Num == 0):?> selected<?endif?>>未處理</option>
-                    <option value="1"<?if($search_status_process_Num == 1):?> selected<?endif?>>已處理</option>
+                    <option value="">不篩選</option>
+                    <option value="1"<?if($search_status_process_Num == 1):?> selected<?endif?>>未處理</option>
+                    <option value="2"<?if($search_status_process_Num == 2):?> selected<?endif?>>已處理</option>
                 </select>
             </div>
             <div class="spanLineLeft text width200">
@@ -55,9 +56,9 @@
             <a href="admin/<?=$child1_name_Str?>/<?=$child2_name_Str?>/<?=$child3_name_Str?>/edit/?contactid=<?=$value_ContactAsk->contactid_Num?>"><?=$value_ContactAsk->name_Str?></a>
         </div>
         <div class="spanLineLeft text width200">
-            <?if($value_ContactAsk->status_process_Num == 0):?>
+            <?if($value_ContactAsk->status_process_Num == 1):?>
             未處理
-            <?elseif($value_ContactAsk->status_process_Num == 1):?>
+            <?elseif($value_ContactAsk->status_process_Num == 2):?>
             已處理
             <?endif?>
         </div>

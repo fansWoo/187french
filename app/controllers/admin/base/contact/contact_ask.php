@@ -117,7 +117,7 @@ class contact_ask_controller extends FS_controller {
         $data['ContactAskList'] = new ObjList();
         $data['ContactAskList']->construct_db(array(
             'db_where_Arr' => array(
-                'contactid_Num' => $data['search_contactid_Num'],
+                'contactid' => $data['search_contactid_Num'],
                 'status_process' => $data['search_status_process_Num']
             ),
             'db_where_like_Arr' => array(

@@ -1,6 +1,5 @@
 <?=$temp['header_up']?>
 <?=$temp['header_down']?>
-<?=$temp['topheader']?>
 <div class="userBox">
 	<h2>會員登入</h2>
 	<div class="userBoxContent">
@@ -29,4 +28,6 @@
 		<p><a href="page/index">回到首頁</a></p>
 	</div>
 </div>
-<?=$temp['footer']?>
+</div>
+</body>
+</html>
