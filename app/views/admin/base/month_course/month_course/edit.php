@@ -25,26 +25,6 @@
 		    </div>
 		</div>
 	</div>
-    <div class="spanLine">
-        <div class="spanStage">
-            <div class="spanLineLeft">
-                課程時間1
-            </div>
-            <div class="spanLineLeft width500">
-                <input type="text" class="text" name="coursetime1_Str" placeholder="請輸入課程時間" value="<?=$month_course_CourseMonth->coursetime1_Str?>">
-            </div>
-        </div>
-    </div>
-    <div class="spanLine">
-        <div class="spanStage">
-            <div class="spanLineLeft">
-                課程時間2
-            </div>
-            <div class="spanLineLeft width500">
-                <input type="text" class="text" name="coursetime2_Str" placeholder="請輸入課程時間" value="<?=$month_course_CourseMonth->coursetime2_Str?>">
-            </div>
-        </div>
-    </div>
 	<div class="spanLine">
 	    <div class="spanStage">
             <div class="spanLineLeft">
@@ -73,6 +53,23 @@
 		    </div>
 		</div>
 	</div>
+    <div class="spanLine">
+        <div class="spanStage">
+            <div class="spanLineLeft">
+                課程時間
+            </div>
+            <div class="spanLineLeft width500">
+                <textarea name="coursetime_Str" placeholder="請輸入課程時間，每個課程時間一行"><?=$month_course_CourseMonth->coursetime_Str?></textarea>
+            </div>
+        </div>
+        <div class="spanStage">
+            <div class="spanLineLeft">
+            </div>
+            <div class="spanLineLeft width500">
+                <p>請輸入課程時間，每個課程時間一行</p>
+            </div>
+        </div>
+    </div>
 	<div class="spanLine">
 	    <div class="spanStage">
             <div class="spanLineLeft">
@@ -101,6 +98,17 @@
             </div>
 		</div>
 	</div>
+    <div class="spanLine">
+        <div class="spanStage">
+            <div class="spanLineLeft">
+                顯示課程
+            </div>
+            <div class="spanLineLeft width500">
+                <label><input type="radio" name="open_use_Num"<?if($month_course_CourseMonth->open_use_Num == 1):?> checked<?endif?>> 顯示</label>
+                <label><input type="radio" name="open_use_Num"<?if($month_course_CourseMonth->open_use_Num == 0):?> checked<?endif?>> 隱藏</label>
+            </div>
+        </div>
+    </div>
 	<div class="spanLine">
 	    <div class="spanStage">
             <div class="spanLineLeft">

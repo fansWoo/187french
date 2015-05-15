@@ -749,11 +749,11 @@
 	            }
 	        }
 	        var select_value = $(this).val();
-	        $(this).next('[fanswoo-selectEachLineSlave=' + select_each_line_master + ']').find('select').css('display', 'none');
-	        $(this).next('[fanswoo-selectEachLineSlave=' + select_each_line_master + ']').find('select').removeAttr('name');
-	        $(this).next('[fanswoo-selectEachLineSlave=' + select_each_line_master + ']').find('option').removeAttr('selected');
-	        $(this).next('[fanswoo-selectEachLineSlave=' + select_each_line_master + ']').children('select[fanswoo-selectValue=' + select_value + ']').css('display', 'block');
-	        $(this).next('[fanswoo-selectEachLineSlave=' + select_each_line_master + ']').children('select[fanswoo-selectValue=' + select_value + ']').attr('name', $('[fanswoo-selectEachLineSlave=' + select_each_line_master + '] > select[fanswoo-selectValue=' + select_value + ']').attr('fanswoo-selectName'));
+	        $('[fanswoo-selectEachLineSlave=' + select_each_line_master + ']').find('select').css('display', 'none');
+	        $('[fanswoo-selectEachLineSlave=' + select_each_line_master + ']').find('select').removeAttr('name');
+	        $('[fanswoo-selectEachLineSlave=' + select_each_line_master + ']').find('option').removeAttr('selected');
+	        $('[fanswoo-selectEachLineSlave=' + select_each_line_master + ']').children('select[fanswoo-selectValue=' + select_value + ']').css('display', 'block');
+	        $('[fanswoo-selectEachLineSlave=' + select_each_line_master + ']').children('select[fanswoo-selectValue=' + select_value + ']').attr('name', $('[fanswoo-selectEachLineSlave=' + select_each_line_master + '] > select[fanswoo-selectValue=' + select_value + ']').attr('fanswoo-selectName'));
 	    });
 		
 		//fanswoo-imgLoading

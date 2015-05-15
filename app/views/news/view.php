@@ -42,9 +42,9 @@ $(document).on('click', '.scroll_arrow', function(){
 		<div class="contantArea">
 				
 			<div class="boxArea one">
-			<div class="topBox">
-				<img src="app/img/news/title.png" class="title">
-			</div>
+				<div class="topBox">
+					<img src="app/img/news/title.png" class="title">
+				</div>
 				<div class="news_item">
 					<div class="right_text">
 						<h2><?=$NoteField->title_Str?></h2>
@@ -52,16 +52,20 @@ $(document).on('click', '.scroll_arrow', function(){
 					</div>
 					
 				</div>
-				
-			
-				
-				
+				<?if($NoteField->signup_Num == 1):?>
+				<a href="contact" class="box3">
+					<div class="border">
+						<div class="border_a"></div>
+						<div class="border_b"></div>
+						<div class="border_c"></div>
+						<div class="border_d"></div>
+						<div class="hoverBox"></div>
+					</div>
+					<img src="app/img/course/sign.png" class="sign">
+				</a>
+				<?endif?>
 			</div>
-
-		
 		</div>	
-
-		
 		<img src="app/img/index/dessert01.png" class="dessert01">
 	</div>
 		

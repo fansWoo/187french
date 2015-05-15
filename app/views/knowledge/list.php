@@ -49,7 +49,7 @@ $(document).on('click', '.scroll_arrow', function(){
 				$img = $html->find('img', 0);
 				?>
 				<?if(!empty($img->src)):?>
-				<a href="news/view/?noteid=<?=$value_Note->noteid_Num?>">
+				<a href="knowledge/view/?noteid=<?=$value_Note->noteid_Num?>">
 					<div class="pic">
 						<img src="<?=$img->src?>">
 					</div>

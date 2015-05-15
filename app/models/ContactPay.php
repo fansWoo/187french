@@ -8,8 +8,12 @@ class ContactPay extends Contact
     public $email_Str = '';
     public $phone_Str = '';
     public $content_Str = '';
+    public $pay_time_Str = '';
+    public $pay_account_Str = '';
+    public $pay_name_Str = '';
+    public $pay_learn_name_Str = '';
     public $status_process_Num = 0;
-    public $status_Num = 0;
+    public $status_Num = 1;
     public $db_name_Str = 'contact_pay';//填寫物件聯繫資料庫之名稱
     public $db_uniqueid_Str = 'contactid';//填寫物件聯繫資料庫之唯一ID
     public $db_field_Arr = array(//填寫資料庫欄位與本物件屬性之關係，前者為資料庫欄位，後者為屬性
@@ -18,6 +22,10 @@ class ContactPay extends Contact
         'email' => 'email_Str',
         'phone' => 'phone_Str',
         'content' => 'content_Str',
+        'pay_time' => 'pay_time_Str',
+        'pay_account' => 'pay_account_Str',
+        'pay_name' => 'pay_name_Str',
+        'pay_learn_name' => 'pay_learn_name_Str',
         'status_process' => 'status_process_Num',
         'updatetime' => array('updatetime_DateTime', 'datetime_Str'),
         'status' => 'status_Num'
@@ -27,7 +35,7 @@ class ContactPay extends Contact
     {
         parent::construct($arg);
         //引入引數並將空值的變數給予空值
-        reset_null_arr($arg, ['contactid_Num', 'name_Str', 'email_Str', 'phone_Str', 'content_Str', 'status_process_Num', 'updatetime_Str', 'updatetime_inputtime_date_Str', 'updatetime_inputtime_time_Str', 'status_Num']);
+        reset_null_arr($arg, ['contactid_Num', 'name_Str', 'email_Str', 'phone_Str', 'content_Str', 'pay_time_Str', 'pay_account_Str', 'pay_name_Str', 'pay_learn_name_Str', 'status_process_Num', 'updatetime_Str', 'updatetime_inputtime_date_Str', 'updatetime_inputtime_time_Str', 'status_Num']);
         foreach($arg as $key => $value) ${$key} = $arg[$key];
         
         //將引數設為物件屬性，或將引數作為物件型屬性的建構值
@@ -36,6 +44,10 @@ class ContactPay extends Contact
         $this->set('email_Str', $email_Str);
         $this->set('phone_Str', $phone_Str);
         $this->set('content_Str', $content_Str);
+        $this->set('pay_time_Str', $pay_time_Str);
+        $this->set('pay_account_Str', $pay_account_Str);
+        $this->set('pay_name_Str', $pay_name_Str);
+        $this->set('pay_learn_name_Str', $pay_learn_name_Str);
         $this->set('status_process_Num', $status_process_Num);
         $this->set('status_Num', $status_Num);
         $this->set('updatetime_DateTime', [

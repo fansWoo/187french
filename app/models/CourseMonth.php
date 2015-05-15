@@ -12,8 +12,8 @@ class CourseMonth extends ObjDbBase
     public $price_Num = 0;
     public $class_ClassMetaList;//分類標籤類別列表
     public $prioritynum_Num = 0;
-    public $coursetime1_Str = '';
-    public $coursetime2_Str = '';
+    public $coursetime_Str = '';
+    public $open_use_Num = 0;
     public $updatetime_DateTime;
     public $status_Num = 1;
     public $db_name_Str = 'course_month';//填寫物件聯繫資料庫之名稱
@@ -23,8 +23,8 @@ class CourseMonth extends ObjDbBase
         'uid' => 'uid_Num',
         'name' => 'name_Str',
         'price' => 'price_Num',
-        'coursetime1' => 'coursetime1_Str',
-        'coursetime2' => 'coursetime2_Str',
+        'coursetime' => 'coursetime_Str',
+        'open_use' => 'open_use_Num',
         'picids' => array('pic_PicObjList', 'uniqueids_Str'),
         'classids' => array('class_ClassMetaList', 'uniqueids_Str'),
         'content' => 'content_Html',
@@ -37,7 +37,7 @@ class CourseMonth extends ObjDbBase
 	public function construct($arg)
 	{
         //引入引數並將空值的變數給予空值
-        reset_null_arr($arg, ['month_courseid_Num', 'uid_Num', 'name_Str', 'picids_Str', 'picids_Arr', 'content_Str', 'price_Num', 'precautions_Str', 'coursetime1_Str', 'coursetime2_Str', 'classids_Str', 'classids_Arr', 'prioritynum_Num', 'updatetime_Str', 'updatetime_inputtime_date_Str', 'updatetime_inputtime_time_Str', 'status_Num']);
+        reset_null_arr($arg, ['month_courseid_Num', 'uid_Num', 'name_Str', 'picids_Str', 'picids_Arr', 'content_Str', 'price_Num', 'precautions_Str', 'open_use_Num', 'coursetime_Str', 'classids_Str', 'classids_Arr', 'prioritynum_Num', 'updatetime_Str', 'updatetime_inputtime_date_Str', 'updatetime_inputtime_time_Str', 'status_Num']);
         foreach($arg as $key => $value) ${$key} = $arg[$key];
         
         //將引數設為物件屬性，或將引數作為物件型屬性的建構值
@@ -46,9 +46,9 @@ class CourseMonth extends ObjDbBase
         $this->set('name_Str', $name_Str);
         $this->set('content_Html', $content_Str);
         $this->set('precautions_Str', $precautions_Str);
-        $this->set('coursetime1_Str', $coursetime1_Str);
-        $this->set('coursetime2_Str', $coursetime2_Str);
+        $this->set('coursetime_Str', $coursetime_Str);
         $this->set('price_Num', $price_Num);
+        $this->set('open_use_Num', $open_use_Num);
         $this->set('prioritynum_Num', $prioritynum_Num);
         $this->set('status_Num', $status_Num);
         $this->set('class_ClassMetaList', [

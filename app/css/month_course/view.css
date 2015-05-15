@@ -27,7 +27,7 @@ body{}
 .itemArea .picBox .shadow2{width:350px;height:350px;position:absolute;z-index:2;top:0px;left:0px;}
 
 .boxArea h2{font-size:24px; letter-spacing:2px;color:#fff;font-weight:600; margin-bottom:40px;}
-.boxArea p{font-size:15px; letter-spacing:4px;line-height:24px; margin-bottom:20px; font-weight:600;}
+.boxArea {font-size:15px; letter-spacing:4px;line-height:24px; margin-bottom:20px; font-weight:600;}
 
 .Area .contantArea  .boxArea .box2{float:right;}
 .Area .contantArea  .boxArea .box2 .leftbox{width:450px; float:left; margin-left:50px;}

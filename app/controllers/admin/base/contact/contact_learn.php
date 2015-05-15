@@ -35,21 +35,22 @@ class contact_learn_controller extends FS_controller {
             
         $contactid_Num = $this->input->get('contactid');
 
-        $data['ContactAsk'] = new ContactAsk();
-        $data['ContactAsk']->construct_db(array(
+        if(empty($contactid_Num))
+        {
+            //送出成功訊息
+            $this->load->model('Message');
+            $this->Message->show(array(
+                'message' => '請選擇欲編輯的聯繫單',
+                'url' => 'admin/base/contact/contact_learn/tablelist'
+            ));
+            return FALSE;
+        }
+
+        $data['ContactLearn'] = new ContactLearn();
+        $data['ContactLearn']->construct_db(array(
             'db_where_Arr' => array(
                 'contactid_Num' => $contactid_Num
             )
-        ));
-        
-        $data['class_ClassMetaList'] = new ObjList();
-        $data['class_ClassMetaList']->construct_db(array(
-            'db_where_Arr' => array(
-                'modelname_Str' => 'contact_ask'
-            ),
-            'model_name_Str' => 'ClassMeta',
-            'limitstart_Num' => 0,
-            'limitcount_Num' => 100
         ));
 
         //global
@@ -74,13 +75,13 @@ class contact_learn_controller extends FS_controller {
         $contactid_Num = $this->input->post('contactid_Num', TRUE);
         $status_process_Num = $this->input->post('status_process_Num');
 
-        //建構ContactAsk物件，並且更新
-        $ContactAsk = new ContactAsk();
-        $ContactAsk->construct(array(
+        //建構ContactLearn物件，並且更新
+        $ContactLearn = new ContactLearn();
+        $ContactLearn->construct(array(
             'contactid_Num' => $contactid_Num,
             'status_process_Num' => $status_process_Num
         ));
-        $ContactAsk->update(array(
+        $ContactLearn->update(array(
             'db_update_Arr' => ['status_process']
         ));
 
@@ -88,7 +89,7 @@ class contact_learn_controller extends FS_controller {
         $this->load->model('Message');
         $this->Message->show(array(
             'message' => '設定成功',
-            'url' => 'admin/base/contact/contact_ask/tablelist'
+            'url' => 'admin/base/contact/contact_learn/tablelist'
         ));
     }
 
@@ -107,15 +108,8 @@ class contact_learn_controller extends FS_controller {
         $limitcount_Num = $this->input->get('limitcount');
         $limitcount_Num = !empty($limitcount_Num) ? $limitcount_Num : 20;
 
-        $class_ClassMeta = new ClassMeta();
-        $class_ClassMeta->construct_db(array(
-            'db_where_Arr' => array(
-                'slug_Str' => $data['search_class_slug_Str']
-            )
-        ));
-
-        $data['ContactAskList'] = new ObjList();
-        $data['ContactAskList']->construct_db(array(
+        $data['ContactLearnList'] = new ObjList();
+        $data['ContactLearnList']->construct_db(array(
             'db_where_Arr' => array(
                 'contactid' => $data['search_contactid_Num'],
                 'status_process' => $data['search_status_process_Num']
@@ -123,28 +117,15 @@ class contact_learn_controller extends FS_controller {
             'db_where_like_Arr' => array(
                 'name_Str' => $data['search_name_Str']
             ),
-            'db_where_or_Arr' => array(
-                'classids' => array($class_ClassMeta->classid_Num)
-            ),
             'db_orderby_Arr' => array(
                 array('contactid', 'DESC')
             ),
             'db_where_deletenull_Bln' => TRUE,
-            'model_name_Str' => 'ContactAsk',
+            'model_name_Str' => 'ContactLearn',
             'limitstart_Num' => $limitstart_Num,
             'limitcount_Num' => $limitcount_Num
         ));
-        $data['page_links'] = $data['ContactAskList']->create_links(array('base_url_Str' => 'admin/'.$data['child1_name_Str'].'/'.$data['child2_name_Str'].'/'.$data['child3_name_Str'].'/'.$data['child4_name_Str']));
-
-        $data['class_ClassMetaList'] = new ObjList();
-        $data['class_ClassMetaList']->construct_db(array(
-            'db_where_Arr' => array(
-                'modelname_Str' => 'contact_ask'
-            ),
-            'model_name_Str' => 'ClassMeta',
-            'limitstart_Num' => 0,
-            'limitcount_Num' => 100
-        ));
+        $data['page_links'] = $data['ContactLearnList']->create_links(array('base_url_Str' => 'admin/'.$data['child1_name_Str'].'/'.$data['child2_name_Str'].'/'.$data['child3_name_Str'].'/'.$data['child4_name_Str']));
 
         //global
         $data['global']['style'][] = 'admin';
@@ -170,7 +151,7 @@ class contact_learn_controller extends FS_controller {
         $search_name_Str = $this->input->post('search_name_Str', TRUE);
 
 
-        $url_Str = base_url('admin/base/contact/contact_ask/tablelist/?');
+        $url_Str = base_url('admin/base/contact/contact_learn/tablelist/?');
 
         if(!empty($search_contactid_Num))
         {
@@ -198,14 +179,14 @@ class contact_learn_controller extends FS_controller {
         //CSRF過濾
         if($hash_Str == $this->security->get_csrf_hash())
         {
-            $ContactAsk = new ContactAsk();
-            $ContactAsk->construct(array('contactid_Num' => $contactid_Num));
-            $ContactAsk->delete();
+            $ContactLearn = new ContactLearn();
+            $ContactLearn->construct(array('contactid_Num' => $contactid_Num));
+            $ContactLearn->delete();
 
             $this->load->model('Message');
             $this->Message->show(array(
                 'message' => '刪除成功',
-                'url' => 'admin/base/contact/contact_ask/tablelist'
+                'url' => 'admin/base/contact/contact_learn/tablelist'
             ));
         }
         else
@@ -213,7 +194,7 @@ class contact_learn_controller extends FS_controller {
             $this->load->model('Message');
             $this->Message->show(array(
                 'message' => 'hash驗證失敗，請使用標準瀏覽器進行刪除動作',
-                'url' => 'admin/base/contact/contact_ask/tablelist'
+                'url' => 'admin/base/contact/contact_learn/tablelist'
             ));
         }
     }

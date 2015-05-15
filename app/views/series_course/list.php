@@ -49,7 +49,6 @@ $(document).on('click', '.scroll_arrow', function(){
 				<?endforeach?>
 			</div>
 			<div class="top_introduction">
-				<h1>初級系列課</h1>
 				<p>「187巷的法式」推出的初級系列課的十堂中包含了8個類別、17個初階的法式甜點。沒有任何經驗的新手，可以在這30個小時中，透過理論的學習和實作的經驗，讓您對法式甜點有更進一步的認識。</p>
 				<p class="price">30,000元/10堂 (含個人材料和教學費用)<p>
 			</div>

@@ -35,21 +35,22 @@ class contact_ask_controller extends FS_controller {
             
         $contactid_Num = $this->input->get('contactid');
 
+        if(empty($contactid_Num))
+        {
+            //送出成功訊息
+            $this->load->model('Message');
+            $this->Message->show(array(
+                'message' => '請選擇欲編輯的聯繫單',
+                'url' => 'admin/base/contact/contact_ask/tablelist'
+            ));
+            return FALSE;
+        }
+
         $data['ContactAsk'] = new ContactAsk();
         $data['ContactAsk']->construct_db(array(
             'db_where_Arr' => array(
                 'contactid_Num' => $contactid_Num
             )
-        ));
-        
-        $data['class_ClassMetaList'] = new ObjList();
-        $data['class_ClassMetaList']->construct_db(array(
-            'db_where_Arr' => array(
-                'modelname_Str' => 'contact_ask'
-            ),
-            'model_name_Str' => 'ClassMeta',
-            'limitstart_Num' => 0,
-            'limitcount_Num' => 100
         ));
 
         //global
@@ -136,16 +137,6 @@ class contact_ask_controller extends FS_controller {
         ));
         $data['page_links'] = $data['ContactAskList']->create_links(array('base_url_Str' => 'admin/'.$data['child1_name_Str'].'/'.$data['child2_name_Str'].'/'.$data['child3_name_Str'].'/'.$data['child4_name_Str']));
 
-        $data['class_ClassMetaList'] = new ObjList();
-        $data['class_ClassMetaList']->construct_db(array(
-            'db_where_Arr' => array(
-                'modelname_Str' => 'contact_ask'
-            ),
-            'model_name_Str' => 'ClassMeta',
-            'limitstart_Num' => 0,
-            'limitcount_Num' => 100
-        ));
-
         //global
         $data['global']['style'][] = 'admin';
         $data['global']['js'][] = 'script_common';
@@ -168,7 +159,6 @@ class contact_ask_controller extends FS_controller {
         $search_contactid_Num = $this->input->post('search_contactid_Num', TRUE);
         $search_status_process_Num = $this->input->post('search_status_process_Num', TRUE);
         $search_name_Str = $this->input->post('search_name_Str', TRUE);
-
 
         $url_Str = base_url('admin/base/contact/contact_ask/tablelist/?');
 

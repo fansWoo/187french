@@ -35,7 +35,6 @@ $(document).on('click', '.scroll_arrow', function(){
 <?=$temp['topheader']?>	
 	<img src="app/img/index/dessert02.png" class="dessert02">
 <div class="Area">
-		
 		<img src="app/img/index/dessert06.png" class="dessert06">
 		<img src="app/img/index/dessert01.png" class="dessert01">
 		<img src="app/img/index/dessert03.png" class="dessert03">
@@ -60,7 +59,6 @@ $(document).on('click', '.scroll_arrow', function(){
 					</div>
 					<div class="textBox">
 						<h2><?=$value_CourseMonth->name_Str?></h2>
-						<h3>2015 / 05 / 07</h3>
 						<a href="month_course/view/?month_courseid=<?=$value_CourseMonth->month_courseid_Num?>"><div class="more">
 							more
 						</div></a>

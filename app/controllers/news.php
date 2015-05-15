@@ -68,7 +68,7 @@ class news_controller extends FS_controller {
 		}
 
 		$noteid = $this->input->get('noteid');
-		$data['NoteField'] = new NoteField();
+		$data['NoteField'] = new NoteField187();
         $data['NoteField']->construct_db(array(
             'db_where_Arr' => array(
                 'note.noteid' => $noteid

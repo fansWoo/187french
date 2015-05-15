@@ -38,6 +38,46 @@
     <div class="spanLine">
         <div class="spanStage">
             <div class="spanLineLeft">
+                付費課程
+            </div>
+            <div class="spanLineLeft width500">
+                <?=$ContactPay->pay_learn_name_Str?>
+            </div>
+        </div>
+    </div>
+    <div class="spanLine">
+        <div class="spanStage">
+            <div class="spanLineLeft">
+                付款人姓名
+            </div>
+            <div class="spanLineLeft width500">
+                <?=$ContactPay->pay_name_Str?>
+            </div>
+        </div>
+    </div>
+    <div class="spanLine">
+        <div class="spanStage">
+            <div class="spanLineLeft">
+                付款帳號
+            </div>
+            <div class="spanLineLeft width500">
+                <?=$ContactPay->pay_account_Str?>
+            </div>
+        </div>
+    </div>
+    <div class="spanLine">
+        <div class="spanStage">
+            <div class="spanLineLeft">
+                付款時間
+            </div>
+            <div class="spanLineLeft width500">
+                <?=$ContactPay->pay_time_Str?>
+            </div>
+        </div>
+    </div>
+    <div class="spanLine">
+        <div class="spanStage">
+            <div class="spanLineLeft">
                 聯繫內容
             </div>
             <div class="spanLineLeft width500">
@@ -52,8 +92,8 @@
             </div>
             <div class="spanLineLeft width500">
                 <select name="status_process_Num">
-                    <option value="0"<?if($ContactPay->status_process_Num == 0):?> selected<?endif?>>未處理</option>
-                    <option value="1"<?if($ContactPay->status_process_Num == 1):?> selected<?endif?>>已處理</option>
+                    <option value="1"<?if($ContactPay->status_process_Num == 1):?> selected<?endif?>>未處理</option>
+                    <option value="2"<?if($ContactPay->status_process_Num == 2):?> selected<?endif?>>已處理</option>
                 </select>
             </div>
         </div>

@@ -38,6 +38,26 @@
     <div class="spanLine">
         <div class="spanStage">
             <div class="spanLineLeft">
+                課程名稱
+            </div>
+            <div class="spanLineLeft width500">
+                <?=$ContactLearn->learn_name_Str?>
+            </div>
+        </div>
+    </div>
+    <div class="spanLine">
+        <div class="spanStage">
+            <div class="spanLineLeft">
+                上課時間
+            </div>
+            <div class="spanLineLeft width500">
+                <?=$ContactLearn->learn_time_Str?>
+            </div>
+        </div>
+    </div>
+    <div class="spanLine">
+        <div class="spanStage">
+            <div class="spanLineLeft">
                 聯繫內容
             </div>
             <div class="spanLineLeft width500">
@@ -52,8 +72,8 @@
             </div>
             <div class="spanLineLeft width500">
                 <select name="status_process_Num">
-                    <option value="0"<?if($ContactLearn->status_process_Num == 0):?> selected<?endif?>>未處理</option>
-                    <option value="1"<?if($ContactLearn->status_process_Num == 1):?> selected<?endif?>>已處理</option>
+                    <option value="1"<?if($ContactLearn->status_process_Num == 1):?> selected<?endif?>>未處理</option>
+                    <option value="2"<?if($ContactLearn->status_process_Num == 2):?> selected<?endif?>>已處理</option>
                 </select>
             </div>
         </div>

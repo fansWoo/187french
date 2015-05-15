@@ -81,9 +81,18 @@ class month_course_controller extends FS_controller {
             $precautions_Str = $this->input->post('precautions_Str', TRUE);
             $classids_Arr = $this->input->post('classids_Arr', TRUE);
             $content_Str = $this->input->post('content_Str');
-            $coursetime1_Str = $this->input->post('coursetime1_Str');
-            $coursetime2_Str = $this->input->post('coursetime2_Str');
+            $coursetime_Str = $this->input->post('coursetime_Str');
+            $open_use_Num = $this->input->post('open_use_Num');
             $prioritynum_Num = $this->input->post('prioritynum_Num', TRUE);
+
+            if($open_use_Num == TRUE)
+            {
+                $open_use_Num = 1;
+            }
+            else
+            {
+                $open_use_Num = 0;
+            }
 
             //其它圖片上傳（多張上傳）
             $picids_Arr = $this->input->post('picids_Arr', TRUE);
@@ -115,8 +124,8 @@ class month_course_controller extends FS_controller {
                 'classids_Arr' => $classids_Arr,
                 'content_Str' => $content_Str,
                 'precautions_Str' => $precautions_Str,
-                'coursetime1_Str' => $coursetime1_Str,
-                'coursetime2_Str' => $coursetime2_Str,
+                'coursetime_Str' => $coursetime_Str,
+                'open_use_Num' => $open_use_Num,
                 'prioritynum_Num' => $prioritynum_Num
             ));
             $month_course_CourseMonth->update(array());

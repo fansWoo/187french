@@ -74,7 +74,7 @@
         <div class="spanLineRight">
             <?if(!empty($class_ClassMeta->classid_Num)):?><input type="hidden" name="classid_Num" value="<?=$class_ClassMeta->classid_Num?>"><?endif?>
             <input type="submit" class="submit" value="<?if(!empty($class_ClassMeta->classid_Num)):?>儲存變更<?else:?>新增標籤<?endif?>">
-            <?if(!empty($class_ClassMeta->classid_Num)):?><span class="submit gray" onClick="fanswoo.check_href_action('確定要刪除嗎？', 'admin/<?=$child1_name_Str?>/<?=$child2_name_Str?>/<?=$child3_name_Str?>/delete/?classid=<?=$class_ClassMeta->classid_Num?>&hash=<?=$this->security->get_csrf_hash()?>');">刪除<?=$child3_title_Str?></span><?endif?>
+            <?if(!empty($class_ClassMeta->classid_Num) && 0):?><span class="submit gray" onClick="fanswoo.check_href_action('確定要刪除嗎？', 'admin/<?=$child1_name_Str?>/<?=$child2_name_Str?>/<?=$child3_name_Str?>/delete/?classid=<?=$class_ClassMeta->classid_Num?>&hash=<?=$this->security->get_csrf_hash()?>');">刪除<?=$child3_title_Str?></span><?endif?>
         </div>
     </div>
     </form>

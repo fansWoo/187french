@@ -38,24 +38,26 @@ body{}
 }
 
 
-.contantArea .SignUpBox .form1{width:400px; float:right; padding-bottom:30px; clear:both; border-bottom:1px dotted #fff;overflow:hidden; margin-bottom:60px;}
-.contantArea .SignUpBox .form1 h1{width:170px; height:30px; line-height:30px; border:2px solid #fff;text-align:center; margin-bottom:30px; font-size:18px; background-color:rgba(255,255,255,0.3); margin-left:0px;}
-.contantArea .SignUpBox .form1.one{margin-right:110px;}
-.contantArea .SignUpBox .form1.one textarea{width:360px; height:100px;background-color:rgba(255,255,255,0.7);border-radius:10px; margin-top:10px; padding:10px; color:#888; font-size:12px;margin-bottom:20px; }
-.contantArea .SignUpBox .form1 .box{width:360px;margin-bottom:15px; float:left;}
-.contantArea .SignUpBox .form1 .box .checkbox{width:440px; clear:both;}
-.contantArea .SignUpBox .form1 .box .checkbox p{float:left; margin-right:10px;}
-.contantArea .SignUpBox .form1 .box .checkbox h3{font-weight:600; }
-.contantArea .SignUpBox .form1 .box p{float:left; letter-spacing:2px; padding-top:3px;}
-.contantArea .SignUpBox .form1 .box .input1{float:right;background-color:rgba(255,255,255,0.7); border:1 solid #bababa;border-radius:8px; color:#888;  font-size:12px;padding:2px; padding-left:6px;width:200px;}
-.contantArea .SignUpBox .form1 .box select{background-color:rgba(255,255,255,0.7);border-radius:8px; font-size:12px;padding:2px; float:right; margin-right:3px;}
-.contantArea .SignUpBox .form1 .submitLine { width: 120px; margin: 20px auto ; }
-.contantArea .SignUpBox .form1 .submitLine input[type=submit]{width:110px;height:40px; background-color:#eee;color:#999; padding: 0 5px; line-height:40px; text-align:center; border:1px solid #DDD; border-radius:5px;letter-spacing:2px cursor: pointer; -webkit-transition: all 0.5s; transition: all 0.5s;cursor:pointer; }
-.contantArea .SignUpBox .form1 .submitLine input[type=submit]:hover{color:#43a7d8;}
-.contantArea .SignUpBox .form1 .submitLine input[type=submit]:active{background-color:#e0e0e0;}
+.contantArea .SignUpBox .contactForm{width:400px; height:720px; float:right; padding-bottom:30px; clear:both; border-bottom:1px dotted #fff;overflow:hidden; margin-bottom:60px;}
+.contantArea .SignUpBox .contactForm h1{width:170px; height:30px; line-height:30px; border:2px solid #fff;text-align:center; margin-bottom:30px; font-size:18px; background-color:rgba(255,255,255,0.3); margin-left:0px;}
+.contantArea .SignUpBox .contactForm{margin-right:110px;}
+.contantArea .SignUpBox .contactForm textarea{width:360px; height:100px;background-color:rgba(255,255,255,0.7);border-radius:5px; margin-top:10px; padding:10px; color:#888; font-size:12px;margin-bottom:20px; }
+.contantArea .SignUpBox .contactForm .box{width:360px;margin-bottom:15px; float:left;}
+.contantArea .SignUpBox .contactForm .box .checkbox{width:440px; clear:both;}
+.contantArea .SignUpBox .contactForm .box .checkbox p{float:left; margin-right:10px;}
+.contantArea .SignUpBox .contactForm .box .checkbox h3{font-weight:600; }
+.contantArea .SignUpBox .contactForm .box p{float:left; letter-spacing:2px; padding-top:3px;}
+.contantArea .SignUpBox .contactForm .box .input1{float:right;background-color:rgba(255,255,255,0.7); border:1 solid #bababa;border-radius:5px; color:#888;  font-size:12px;padding:2px; padding-left:6px;width:200px;}
+.contantArea .SignUpBox .contactForm .box select{ font-weight: 100; width: 210px; background-color:rgba(255,255,255,0.7);border-radius:5px; font-size:12px;padding:2px; float:right; margin-right:3px;}
+.contantArea .SignUpBox .contactForm .box input { font-weight: 100; }
+.contantArea .SignUpBox .contactForm textarea { font-weight: 100; }
+.contantArea .SignUpBox .contactForm .submitLine { width: 120px; margin: 20px auto ; }
+.contantArea .SignUpBox .contactForm .submitLine input[type=submit]{width:110px;height:40px; background-color:#eee;color:#999; padding: 0 5px; line-height:40px; text-align:center; border:1px solid #DDD; border-radius:5px;letter-spacing:2px cursor: pointer; -webkit-transition: all 0.5s; transition: all 0.5s;cursor:pointer; }
+.contantArea .SignUpBox .contactForm .submitLine input[type=submit]:hover{color:#43a7d8;}
+.contantArea .SignUpBox .contactForm .submitLine input[type=submit]:active{background-color:#e0e0e0;}
 
 
-.contantArea .SignUpBox .form1.three  textarea{width:300px;background-color:rgba(255,255,255,0.7); height:100px;border-radius:10px; margin-top:20px; padding:10px; color:#888; font-size:12px; float:right; margin-top:-85px;  margin-bottom:40px;}
+.contantArea .SignUpBox .contactForm.three  textarea{width:300px;background-color:rgba(255,255,255,0.7); height:100px;border-radius:10px; margin-top:20px; padding:10px; color:#888; font-size:12px; float:right; margin-top:-85px;  margin-bottom:40px;}
 
 
 

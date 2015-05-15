@@ -94,6 +94,18 @@
 		    </div>
 		</div>
 	</div>
+    <div class="spanLine">
+        <div class="spanStage">
+            <div class="spanLineLeft">
+                線上報名
+            </div>
+            <div class="spanLineLeft">
+                <label>
+                    <input type="checkbox" name="signup_Num"<?if($NoteField->signup_Num == 1):?> checked<?endif?>> 顯示線上報名連結
+                </label>
+            </div>
+        </div>
+    </div>
 	<div class="spanLine">
 	    <div class="spanStage">
             <div class="spanLineLeft">

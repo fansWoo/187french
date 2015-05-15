@@ -24,8 +24,8 @@ body{}
 
  
  
- .Area .contantArea  .boxArea .buttonBox{width:480px; margin-left:auto; margin-right:auto; height:133px;margin-top:60px;}
- .Area .contantArea  .boxArea .buttonBox .box3 {width:230px; height:133px; float:left;position:relative; }
+ .Area .contantArea .boxArea .buttonBox{width:480px; margin-left:auto; margin-right:auto; height:133px;margin-top:60px;}
+ .Area .contantArea .boxArea .box3 { display:block; margin-left: 280px; width:230px; height:133px; float:left;position:relative; }
 
 .Area .contantArea  .boxArea .box3 img{width:100%;opacity:0.8;-webkit-transition: 0.5s; transition: 0.5s;position:relative;z-index:2;}
 .Area .contantArea  .boxArea .box3:hover img{opacity:1;}

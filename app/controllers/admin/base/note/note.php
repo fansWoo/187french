@@ -35,7 +35,7 @@ class note_controller extends FS_controller {
             
         $noteid_Num = $this->input->get('noteid');
 
-        $data['NoteField'] = new NoteField();
+        $data['NoteField'] = new NoteField187();
         $data['NoteField']->construct_db(array(
             'db_where_Arr' => array(
                 'note.noteid' => $noteid_Num
@@ -82,14 +82,25 @@ class note_controller extends FS_controller {
             $classids_Arr = $this->input->post('classids_Arr', TRUE);
             $content_Str = $this->input->post('content_Str');
             $prioritynum_Num = $this->input->post('prioritynum_Num', TRUE);
+            $signup_Num = $this->input->post('signup_Num', TRUE);
+
+            if(empty($signup_Num))
+            {
+                $signup_Num = 0;
+            }
+            else
+            {
+                $signup_Num = 1;
+            }
 
             //建構Note物件，並且更新
-            $NoteField = new NoteField();
+            $NoteField = new NoteField187();
             $NoteField->construct(array(
                 'noteid_Num' => $noteid_Num,
                 'title_Str' => $title_Str,
                 'classids_Arr' => $classids_Arr,
                 'content_Str' => $content_Str,
+                'signup_Num' => $signup_Num,
                 'prioritynum_Num' => $prioritynum_Num,
                 'modelname_Str' => 'note'
             ));

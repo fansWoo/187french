@@ -60,8 +60,7 @@ $(document).on('click', '.scroll_arrow', function(){
 						<div class="box">
 							<div class="circle">上課時間</div>
 							<div class="right">
-								<p><?=$CourseMonth->coursetime1_Str?></p>
-								<p><?=$CourseMonth->coursetime2_Str?></p>
+								<?=nl2br($CourseMonth->coursetime_Str)?>
 							</div>
 						</div>
 						<div class="box">

@@ -19,6 +19,9 @@ class month_course_controller extends FS_controller {
 
         $data['CourseMonthList'] = new ObjList();
         $data['CourseMonthList']->construct_db(array(
+            'db_where_Arr' => [
+                'open_use' => 1
+            ],
             'db_orderby_Arr' => array(
                 array('prioritynum', 'DESC'),
                 array('updatetime', 'DESC')
