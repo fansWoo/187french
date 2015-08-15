@@ -244,7 +244,7 @@ $config['encryption_key'] = 'e9cjd93lxz';
 | 'sess_time_to_update'		= how many seconds between CI refreshing Session Information
 |
 */
-$config['sess_cookie_name']		= 'fs_session';
+$config['sess_cookie_name']		= 'fs_sessions';
 $config['sess_expiration']		= 0;
 $config['sess_expire_on_close']	= FALSE;
 $config['sess_encrypt_cookie']	= FALSE;
@@ -267,7 +267,7 @@ $config['sess_time_to_update']	= 2592000;
 */
 $config['cookie_prefix']	= "";
 $config['cookie_domain']	= "";
-$config['cookie_path']		= "/";
+$config['cookie_path']		= $config['base_url'];
 $config['cookie_secure']	= FALSE;
 
 /*
